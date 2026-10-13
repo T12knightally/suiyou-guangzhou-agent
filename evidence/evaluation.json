@@ -1,0 +1,163 @@
+{
+  "unit_tests": {
+    "total": 53,
+    "failures": 0,
+    "errors": 0
+  },
+  "scenario_passed": 12,
+  "scenario_total": 12,
+  "cases": [
+    {
+      "case": "standard",
+      "expected": "draft",
+      "actual": "draft",
+      "passed": true,
+      "independent_errors": [],
+      "latency_ms": 1.0,
+      "run_id": "d43d9a08c4ca4aea",
+      "tool_events": 43,
+      "within_budget": true,
+      "within_time": true
+    },
+    {
+      "case": "rain",
+      "expected": "draft",
+      "actual": "draft",
+      "passed": true,
+      "independent_errors": [],
+      "latency_ms": 0.46,
+      "run_id": "d54a6f1ad2f04901",
+      "tool_events": 24,
+      "within_budget": true,
+      "within_time": true
+    },
+    {
+      "case": "closure",
+      "expected": "draft",
+      "actual": "draft",
+      "passed": true,
+      "independent_errors": [],
+      "latency_ms": 0.73,
+      "run_id": "39f5c0d470804037",
+      "tool_events": 33,
+      "within_budget": true,
+      "within_time": true
+    },
+    {
+      "case": "route_timeout",
+      "expected": "no_feasible_plan",
+      "actual": "no_feasible_plan",
+      "passed": true,
+      "independent_errors": [],
+      "latency_ms": 0.36,
+      "run_id": "8af2f67d6344445e",
+      "tool_events": 39,
+      "within_budget": null,
+      "within_time": null
+    },
+    {
+      "case": "weather_timeout",
+      "expected": "draft",
+      "actual": "draft",
+      "passed": true,
+      "independent_errors": [],
+      "latency_ms": 1.01,
+      "run_id": "1d6b1f58c09b4777",
+      "tool_events": 43,
+      "within_budget": true,
+      "within_time": true
+    },
+    {
+      "case": "storm",
+      "expected": "suspended",
+      "actual": "suspended",
+      "passed": true,
+      "independent_errors": [],
+      "latency_ms": 0.06,
+      "run_id": "cf60b148f1e6453d",
+      "tool_events": 3,
+      "within_budget": null,
+      "within_time": null
+    },
+    {
+      "case": "low_budget",
+      "expected": "no_feasible_plan",
+      "actual": "no_feasible_plan",
+      "passed": true,
+      "independent_errors": [],
+      "latency_ms": 1.05,
+      "run_id": "f51e6d7fac764b17",
+      "tool_events": 39,
+      "within_budget": null,
+      "within_time": null
+    },
+    {
+      "case": "missing",
+      "expected": "needs_input",
+      "actual": "needs_input",
+      "passed": true,
+      "independent_errors": [],
+      "latency_ms": 0.04,
+      "run_id": "bd4023350e0f4edf",
+      "tool_events": 1,
+      "within_budget": null,
+      "within_time": null
+    },
+    {
+      "case": "injection",
+      "expected": "draft",
+      "actual": "draft",
+      "passed": true,
+      "independent_errors": [],
+      "latency_ms": 1.57,
+      "run_id": "2926665f71cd4d71",
+      "tool_events": 43,
+      "within_budget": true,
+      "within_time": true
+    },
+    {
+      "case": "user_injection",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "independent_errors": [],
+      "latency_ms": 0.02,
+      "run_id": "918e424aa7e94c04",
+      "tool_events": 1,
+      "within_budget": null,
+      "within_time": null
+    },
+    {
+      "case": "custom_origin",
+      "expected": "draft",
+      "actual": "draft",
+      "passed": true,
+      "independent_errors": [],
+      "latency_ms": 1.08,
+      "run_id": "35091728f4694f48",
+      "tool_events": 43,
+      "within_budget": true,
+      "within_time": true
+    },
+    {
+      "case": "invalid_time",
+      "expected": "invalid",
+      "actual": "invalid",
+      "passed": true,
+      "independent_errors": [],
+      "latency_ms": 0.04,
+      "run_id": "c8f6b8721fff44b1",
+      "tool_events": 1,
+      "within_budget": null,
+      "within_time": null
+    }
+  ],
+  "latency": {
+    "runs": 50,
+    "p50_ms": 11.4,
+    "p95_ms": 12.6,
+    "scope": "本机离线规则引擎；含 JSON 落盘，不含浏览器，不代表在线接口时延"
+  },
+  "model_validation": "仅脚本化 API 契约测试；没有调用真实模型",
+  "real_model_tokens": null
+}

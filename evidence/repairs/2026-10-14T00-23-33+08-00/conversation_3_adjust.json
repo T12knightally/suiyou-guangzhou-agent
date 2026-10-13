@@ -1,0 +1,988 @@
+{
+  "status": "draft",
+  "message": "已生成约束校验通过的估算草案；出发前须核实开放、预约、价格和路线。",
+  "weather": {
+    "status": "forecast",
+    "rain": true,
+    "severe": false,
+    "probability": 41,
+    "weather_code": 51,
+    "source": "Open-Meteo forecast",
+    "date": "2026-10-17",
+    "fetched_at": "2026-10-14T00:24:01+08:00"
+  },
+  "plan": {
+    "places": [
+      {
+        "id": "gz_library",
+        "name": "广州图书馆",
+        "lon": 113.32602,
+        "lat": 23.116225,
+        "area": "珠江新城",
+        "indoor": true,
+        "tags": [
+          "文化",
+          "安静"
+        ],
+        "visit_minutes": 60,
+        "coordinate_status": "amap_exact_name",
+        "factual_status": "official_reference",
+        "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+        "fetched_at": "2026-10-14T00:24:03+08:00",
+        "open_minutes": [
+          540,
+          1050
+        ],
+        "ticket": 0,
+        "closed": false,
+        "source": "高德 v5/place/text",
+        "notice": "普通阅览与公共文化空间免费，不含付费附加服务；含专题馆的文化参观按17:30前结束安排；专用空间和活动另按报名规则；官方常规开放规则；临时调整以公告为准",
+        "address": "珠江东路4号(大剧院地铁站B口步行100米)",
+        "provider_opening_text": "周一至周二,周四至周日 09:00-21:00",
+        "official_sources": [
+          {
+            "url": "https://www.gzlib.org.cn/opentime/index.jhtml",
+            "title": "广州图书馆开放时间",
+            "fetched_at": "2026-10-14T00:09:34+08:00",
+            "html_sha256": "b89571602ec8b5571bbb12f80f5e695288898b4cc061cdaabf8dc3ec4e1e6ec1",
+            "snapshot": "evidence/official_sources/library_hours.txt"
+          },
+          {
+            "url": "https://www.gzlib.org.cn/aboutlib/index.jhtml",
+            "title": "广州图书馆概况",
+            "fetched_at": "2026-10-14T00:09:34+08:00",
+            "html_sha256": "31d35910a694dfaf9d66aa20f656030a8ac0af48eb0494a30124e641c3915622",
+            "snapshot": "evidence/official_sources/library_intro.txt"
+          }
+        ],
+        "facts_checked_at": "2026-10-14T00:09:34+08:00",
+        "ticket_scope": "普通阅览与公共文化空间免费，不含付费附加服务",
+        "reservation_required": null,
+        "reservation_note": "含专题馆的文化参观按17:30前结束安排；专用空间和活动另按报名规则",
+        "official_url": "https://www.gzlib.org.cn/opentime/index.jhtml",
+        "booking_url": null,
+        "facts_status": "official_regular_rules",
+        "last_entry_minute": null,
+        "opening_basis": "官方常规开放规则；临时调整以公告为准"
+      }
+    ],
+    "routes": [
+      {
+        "minutes": 72,
+        "fare": 5.0,
+        "walk_minutes": 21,
+        "summary": "地铁4号线(南沙客运港--黄村) → 地铁5号线(黄埔新港--滘口)",
+        "source": "高德 v3 公交路线 + 15 分钟缓冲",
+        "estimated": true,
+        "notice": "查询时路线估算，非指定日期班次承诺",
+        "fetched_at": "2026-10-14T00:24:11+08:00",
+        "query_date": "2026-10-17"
+      },
+      {
+        "minutes": 71,
+        "fare": 5.0,
+        "walk_minutes": 21,
+        "summary": "地铁5号线(滘口--黄埔新港) → 地铁4号线(黄村--南沙客运港)",
+        "source": "高德 v3 公交路线 + 15 分钟缓冲",
+        "estimated": true,
+        "notice": "查询时路线估算，非指定日期班次承诺",
+        "fetched_at": "2026-10-14T00:24:12+08:00",
+        "query_date": "2026-10-17"
+      }
+    ],
+    "cost": {
+      "items": [
+        {
+          "category": "门票",
+          "label": "广州图书馆",
+          "amount": 0,
+          "basis": "普通阅览与公共文化空间免费，不含付费附加服务"
+        },
+        {
+          "category": "交通",
+          "label": "第 1 段（含返程）",
+          "amount": 5.0,
+          "basis": "高德 v3 公交路线 + 15 分钟缓冲"
+        },
+        {
+          "category": "交通",
+          "label": "第 2 段（含返程）",
+          "amount": 5.0,
+          "basis": "高德 v3 公交路线 + 15 分钟缓冲"
+        },
+        {
+          "category": "餐饮",
+          "label": "午餐与饮水",
+          "amount": 35,
+          "basis": "用户可控制的消费上限假设"
+        },
+        {
+          "category": "预留",
+          "label": "应急缓冲",
+          "amount": 15,
+          "basis": "规划预留"
+        }
+      ],
+      "per_person": 60.0,
+      "group_total": 120.0,
+      "budget": 80,
+      "within_budget": true,
+      "unknown_prices": false,
+      "remaining": 20.0
+    },
+    "schedule": {
+      "entries": [
+        {
+          "kind": "travel",
+          "start": "09:00",
+          "end": "10:12",
+          "title": "地铁4号线(南沙客运港--黄村) → 地铁5号线(黄埔新港--滘口)",
+          "detail": "广州大学大学城校区 → 广州图书馆",
+          "source": "高德 v3 公交路线 + 15 分钟缓冲"
+        },
+        {
+          "kind": "visit",
+          "id": "gz_library",
+          "start": "10:12",
+          "end": "11:12",
+          "title": "广州图书馆",
+          "detail": "普通阅览与公共文化空间免费，不含付费附加服务；含专题馆的文化参观按17:30前结束安排；专用空间和活动另按报名规则；官方常规开放规则；临时调整以公告为准",
+          "indoor": true
+        },
+        {
+          "kind": "meal",
+          "start": "11:12",
+          "end": "11:57",
+          "title": "用餐与休息",
+          "detail": "餐饮饮水每人 35 元额度，未指定商户"
+        },
+        {
+          "kind": "travel",
+          "start": "11:57",
+          "end": "13:08",
+          "title": "返程：地铁5号线(滘口--黄埔新港) → 地铁4号线(黄村--南沙客运港)",
+          "detail": "广州图书馆 → 广州大学大学城校区",
+          "source": "高德 v3 公交路线 + 15 分钟缓冲"
+        }
+      ],
+      "return_time": "13:08",
+      "return_minute": 788,
+      "deadline": "20:00",
+      "within_time": true,
+      "walk_minutes": 57,
+      "walk_limit": 90,
+      "unknown_hours": false
+    },
+    "score": 235.7
+  },
+  "rain_backup": {
+    "places": [
+      {
+        "id": "gz_library",
+        "name": "广州图书馆",
+        "lon": 113.32602,
+        "lat": 23.116225,
+        "area": "珠江新城",
+        "indoor": true,
+        "tags": [
+          "文化",
+          "安静"
+        ],
+        "visit_minutes": 60,
+        "coordinate_status": "amap_exact_name",
+        "factual_status": "official_reference",
+        "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+        "fetched_at": "2026-10-14T00:24:03+08:00",
+        "open_minutes": [
+          540,
+          1050
+        ],
+        "ticket": 0,
+        "closed": false,
+        "source": "高德 v5/place/text",
+        "notice": "普通阅览与公共文化空间免费，不含付费附加服务；含专题馆的文化参观按17:30前结束安排；专用空间和活动另按报名规则；官方常规开放规则；临时调整以公告为准",
+        "address": "珠江东路4号(大剧院地铁站B口步行100米)",
+        "provider_opening_text": "周一至周二,周四至周日 09:00-21:00",
+        "official_sources": [
+          {
+            "url": "https://www.gzlib.org.cn/opentime/index.jhtml",
+            "title": "广州图书馆开放时间",
+            "fetched_at": "2026-10-14T00:09:34+08:00",
+            "html_sha256": "b89571602ec8b5571bbb12f80f5e695288898b4cc061cdaabf8dc3ec4e1e6ec1",
+            "snapshot": "evidence/official_sources/library_hours.txt"
+          },
+          {
+            "url": "https://www.gzlib.org.cn/aboutlib/index.jhtml",
+            "title": "广州图书馆概况",
+            "fetched_at": "2026-10-14T00:09:34+08:00",
+            "html_sha256": "31d35910a694dfaf9d66aa20f656030a8ac0af48eb0494a30124e641c3915622",
+            "snapshot": "evidence/official_sources/library_intro.txt"
+          }
+        ],
+        "facts_checked_at": "2026-10-14T00:09:34+08:00",
+        "ticket_scope": "普通阅览与公共文化空间免费，不含付费附加服务",
+        "reservation_required": null,
+        "reservation_note": "含专题馆的文化参观按17:30前结束安排；专用空间和活动另按报名规则",
+        "official_url": "https://www.gzlib.org.cn/opentime/index.jhtml",
+        "booking_url": null,
+        "facts_status": "official_regular_rules",
+        "last_entry_minute": null,
+        "opening_basis": "官方常规开放规则；临时调整以公告为准"
+      }
+    ],
+    "routes": [
+      {
+        "minutes": 72,
+        "fare": 5.0,
+        "walk_minutes": 21,
+        "summary": "地铁4号线(南沙客运港--黄村) → 地铁5号线(黄埔新港--滘口)",
+        "source": "高德 v3 公交路线 + 15 分钟缓冲",
+        "estimated": true,
+        "notice": "查询时路线估算，非指定日期班次承诺",
+        "fetched_at": "2026-10-14T00:24:11+08:00",
+        "query_date": "2026-10-17"
+      },
+      {
+        "minutes": 71,
+        "fare": 5.0,
+        "walk_minutes": 21,
+        "summary": "地铁5号线(滘口--黄埔新港) → 地铁4号线(黄村--南沙客运港)",
+        "source": "高德 v3 公交路线 + 15 分钟缓冲",
+        "estimated": true,
+        "notice": "查询时路线估算，非指定日期班次承诺",
+        "fetched_at": "2026-10-14T00:24:12+08:00",
+        "query_date": "2026-10-17"
+      }
+    ],
+    "cost": {
+      "items": [
+        {
+          "category": "门票",
+          "label": "广州图书馆",
+          "amount": 0,
+          "basis": "普通阅览与公共文化空间免费，不含付费附加服务"
+        },
+        {
+          "category": "交通",
+          "label": "第 1 段（含返程）",
+          "amount": 5.0,
+          "basis": "高德 v3 公交路线 + 15 分钟缓冲"
+        },
+        {
+          "category": "交通",
+          "label": "第 2 段（含返程）",
+          "amount": 5.0,
+          "basis": "高德 v3 公交路线 + 15 分钟缓冲"
+        },
+        {
+          "category": "餐饮",
+          "label": "午餐与饮水",
+          "amount": 35,
+          "basis": "用户可控制的消费上限假设"
+        },
+        {
+          "category": "预留",
+          "label": "应急缓冲",
+          "amount": 15,
+          "basis": "规划预留"
+        }
+      ],
+      "per_person": 60.0,
+      "group_total": 120.0,
+      "budget": 80,
+      "within_budget": true,
+      "unknown_prices": false,
+      "remaining": 20.0
+    },
+    "schedule": {
+      "entries": [
+        {
+          "kind": "travel",
+          "start": "09:00",
+          "end": "10:12",
+          "title": "地铁4号线(南沙客运港--黄村) → 地铁5号线(黄埔新港--滘口)",
+          "detail": "广州大学大学城校区 → 广州图书馆",
+          "source": "高德 v3 公交路线 + 15 分钟缓冲"
+        },
+        {
+          "kind": "visit",
+          "id": "gz_library",
+          "start": "10:12",
+          "end": "11:12",
+          "title": "广州图书馆",
+          "detail": "普通阅览与公共文化空间免费，不含付费附加服务；含专题馆的文化参观按17:30前结束安排；专用空间和活动另按报名规则；官方常规开放规则；临时调整以公告为准",
+          "indoor": true
+        },
+        {
+          "kind": "meal",
+          "start": "11:12",
+          "end": "11:57",
+          "title": "用餐与休息",
+          "detail": "餐饮饮水每人 35 元额度，未指定商户"
+        },
+        {
+          "kind": "travel",
+          "start": "11:57",
+          "end": "13:08",
+          "title": "返程：地铁5号线(滘口--黄埔新港) → 地铁4号线(黄村--南沙客运港)",
+          "detail": "广州图书馆 → 广州大学大学城校区",
+          "source": "高德 v3 公交路线 + 15 分钟缓冲"
+        }
+      ],
+      "return_time": "13:08",
+      "return_minute": 788,
+      "deadline": "20:00",
+      "within_time": true,
+      "walk_minutes": 57,
+      "walk_limit": 90,
+      "unknown_hours": false
+    },
+    "score": 235.7
+  },
+  "selection_reason": "必去+室内可避雨；普通阅览免费在已公布范围内，官方常规开放09:00-21:00，单点满足max_stops=1",
+  "factual_coverage": {
+    "official_places": 1,
+    "total_places": 1,
+    "unknown_hours": false,
+    "unknown_prices": false
+  },
+  "provenance": "在线查询与待核实数据混合，仅提供草案",
+  "checklist": [
+    "核实目的地当天是否开放及预约名额",
+    "确认票价与学生优惠条件",
+    "出发当天复查天气及往返交通",
+    "室内备选仍有室外换乘，恶劣天气请改期"
+  ],
+  "run_id": "fc9b393662cd49f5",
+  "request": {
+    "mode": "live",
+    "engine": "llm",
+    "origin": "广州大学大学城校区",
+    "date": "2026-10-17",
+    "people": 2,
+    "budget": 80,
+    "pace": "relaxed",
+    "exclude_place_ids": [
+      "gd_museum"
+    ],
+    "start": "09:00",
+    "end": "20:00",
+    "must_visit_ids": [
+      "gz_library"
+    ],
+    "message": "每人改成80元，不去广东省博物馆，只逛一个地方",
+    "max_stops": 1
+  },
+  "engine": "LLM function calling",
+  "usage": {
+    "prompt_tokens": 6213,
+    "completion_tokens": 330,
+    "model_calls": 4,
+    "usage_complete": true
+  },
+  "duration_ms": 23075.55,
+  "external_calls": 10,
+  "trace": [
+    {
+      "seq": 1,
+      "type": "Tool",
+      "at": "2026-10-14T00:23:50+08:00",
+      "action": "model_response",
+      "arguments": {
+        "provider": "qwen",
+        "model": "qwen3.8-flash",
+        "stage": "requirements",
+        "round": 1
+      },
+      "ok": true,
+      "observation": {
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"updates\": {\"budget\": 80, \"exclude_place_ids\": [\"gd_museum\"], \"max_stops\": 1}, \"evidence\": {\"budget\": \"每人改成80元\", \"exclude_place_ids\": \"不去广东省博物馆\", \"max_stops\": \"只逛一个地方\"}, \"questions\": \n[]\n\n}",
+              "name": "extract_trip_requirements"
+            },
+            "id": "call_9740dbe49fec40fdba310526",
+            "index": 0,
+            "type": "function"
+          }
+        ],
+        "usage": {
+          "completion_tokens": 105,
+          "prompt_tokens": 1112,
+          "prompt_tokens_details": {
+            "cached_tokens": 1024,
+            "text_tokens": 1112
+          },
+          "total_tokens": 1217
+        },
+        "response_id": "chatcmpl-7cc76c69-f5a3-9971-b764-8aa409ac6b0b",
+        "duration_ms": 1834.42
+      },
+      "duration_ms": 0.05
+    },
+    {
+      "seq": 2,
+      "type": "Tool",
+      "at": "2026-10-14T00:23:50+08:00",
+      "action": "extract_trip_requirements",
+      "arguments": {
+        "updates": {
+          "budget": 80,
+          "exclude_place_ids": [
+            "gd_museum"
+          ],
+          "max_stops": 1
+        },
+        "evidence": {
+          "budget": "每人改成80元",
+          "exclude_place_ids": "不去广东省博物馆",
+          "max_stops": "只逛一个地方"
+        },
+        "questions": []
+      },
+      "ok": true,
+      "observation": [
+        {
+          "budget": 80,
+          "exclude_place_ids": [
+            "gd_museum"
+          ],
+          "max_stops": 1
+        },
+        []
+      ],
+      "duration_ms": 0.39
+    },
+    {
+      "seq": 3,
+      "type": "Decision",
+      "at": "2026-10-14T00:23:50+08:00",
+      "summary": "按用户原文证据更新字段：budget, exclude_place_ids, max_stops"
+    },
+    {
+      "seq": 4,
+      "type": "Decision",
+      "at": "2026-10-14T00:23:50+08:00",
+      "summary": "先定位出发地，再获取天气、筛选地点；预算与时间使用确定性工具检查。"
+    },
+    {
+      "seq": 5,
+      "type": "Tool",
+      "at": "2026-10-14T00:23:50+08:00",
+      "action": "resolve_origin",
+      "arguments": {
+        "name": "广州大学大学城校区",
+        "coordinates": null
+      },
+      "ok": true,
+      "observation": [
+        113.400704,
+        23.040717
+      ],
+      "duration_ms": 59.98
+    },
+    {
+      "seq": 6,
+      "type": "Tool",
+      "at": "2026-10-14T00:24:00+08:00",
+      "action": "model_response",
+      "arguments": {
+        "provider": "qwen",
+        "model": "qwen3.8-flash",
+        "stage": "planning",
+        "round": 1
+      },
+      "ok": true,
+      "observation": {
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{}",
+              "name": "query_weather"
+            },
+            "id": "call_5c4c64c25388401ea6db9735",
+            "index": 0,
+            "type": "function"
+          }
+        ],
+        "usage": {
+          "completion_tokens": 25,
+          "prompt_tokens": 985,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "text_tokens": 985
+          },
+          "total_tokens": 1010
+        },
+        "response_id": "chatcmpl-3992067d-aec7-9cab-a334-a25267db05ee",
+        "duration_ms": 9372.89
+      },
+      "duration_ms": 0.05
+    },
+    {
+      "seq": 7,
+      "type": "Decision",
+      "at": "2026-10-14T00:24:00+08:00",
+      "summary": "模型第 1 轮请求 1 个工具。"
+    },
+    {
+      "seq": 8,
+      "type": "Tool",
+      "at": "2026-10-14T00:24:00+08:00",
+      "action": "query_weather",
+      "arguments": {
+        "date": "2026-10-17"
+      },
+      "ok": true,
+      "observation": {
+        "status": "forecast",
+        "rain": true,
+        "severe": false,
+        "probability": 41,
+        "weather_code": 51,
+        "source": "Open-Meteo forecast",
+        "date": "2026-10-17",
+        "fetched_at": "2026-10-14T00:24:01+08:00"
+      },
+      "duration_ms": 1688.04
+    },
+    {
+      "seq": 9,
+      "type": "Tool",
+      "at": "2026-10-14T00:24:03+08:00",
+      "action": "model_response",
+      "arguments": {
+        "provider": "qwen",
+        "model": "qwen3.8-flash",
+        "stage": "planning",
+        "round": 2
+      },
+      "ok": true,
+      "observation": {
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"indoor\": true}",
+              "name": "query_places"
+            },
+            "id": "call_71ef2f0660cf4d3eb01f3706",
+            "index": 0,
+            "type": "function"
+          }
+        ],
+        "usage": {
+          "completion_tokens": 57,
+          "prompt_tokens": 1117,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "text_tokens": 1117
+          },
+          "total_tokens": 1174
+        },
+        "response_id": "chatcmpl-7c5a565c-3b83-9845-a895-a346159f095a",
+        "duration_ms": 1978.57
+      },
+      "duration_ms": 0.04
+    },
+    {
+      "seq": 10,
+      "type": "Decision",
+      "at": "2026-10-14T00:24:03+08:00",
+      "summary": "模型第 2 轮请求 1 个工具。"
+    },
+    {
+      "seq": 11,
+      "type": "Tool",
+      "at": "2026-10-14T00:24:03+08:00",
+      "action": "query_places",
+      "arguments": {
+        "interests": [],
+        "indoor": true
+      },
+      "ok": true,
+      "observation": [
+        {
+          "id": "gz_library",
+          "name": "广州图书馆",
+          "lon": 113.32602,
+          "lat": 23.116225,
+          "area": "珠江新城",
+          "indoor": true,
+          "tags": [
+            "文化",
+            "安静"
+          ],
+          "visit_minutes": 60,
+          "coordinate_status": "amap_exact_name",
+          "factual_status": "official_reference",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:24:03+08:00",
+          "open_minutes": [
+            540,
+            1050
+          ],
+          "ticket": 0,
+          "closed": false,
+          "source": "高德 v5/place/text",
+          "notice": "普通阅览与公共文化空间免费，不含付费附加服务；含专题馆的文化参观按17:30前结束安排；专用空间和活动另按报名规则；官方常规开放规则；临时调整以公告为准",
+          "address": "珠江东路4号(大剧院地铁站B口步行100米)",
+          "provider_opening_text": "周一至周二,周四至周日 09:00-21:00",
+          "official_sources": [
+            {
+              "url": "https://www.gzlib.org.cn/opentime/index.jhtml",
+              "title": "广州图书馆开放时间",
+              "fetched_at": "2026-10-14T00:09:34+08:00",
+              "html_sha256": "b89571602ec8b5571bbb12f80f5e695288898b4cc061cdaabf8dc3ec4e1e6ec1",
+              "snapshot": "evidence/official_sources/library_hours.txt"
+            },
+            {
+              "url": "https://www.gzlib.org.cn/aboutlib/index.jhtml",
+              "title": "广州图书馆概况",
+              "fetched_at": "2026-10-14T00:09:34+08:00",
+              "html_sha256": "31d35910a694dfaf9d66aa20f656030a8ac0af48eb0494a30124e641c3915622",
+              "snapshot": "evidence/official_sources/library_intro.txt"
+            }
+          ],
+          "facts_checked_at": "2026-10-14T00:09:34+08:00",
+          "ticket_scope": "普通阅览与公共文化空间免费，不含付费附加服务",
+          "reservation_required": null,
+          "reservation_note": "含专题馆的文化参观按17:30前结束安排；专用空间和活动另按报名规则",
+          "official_url": "https://www.gzlib.org.cn/opentime/index.jhtml",
+          "booking_url": null,
+          "facts_status": "official_regular_rules",
+          "last_entry_minute": null,
+          "opening_basis": "官方常规开放规则；临时调整以公告为准"
+        },
+        {
+          "id": "opera_museum",
+          "name": "粤剧艺术博物馆",
+          "lon": 113.238235,
+          "lat": 23.115423,
+          "area": "荔湾",
+          "indoor": true,
+          "tags": [
+            "文化",
+            "艺术"
+          ],
+          "visit_minutes": 75,
+          "coordinate_status": "amap_exact_name",
+          "factual_status": "unverified",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:24:04+08:00",
+          "open_minutes": null,
+          "ticket": null,
+          "closed": false,
+          "source": "高德 v5/place/text",
+          "notice": "票价、日期对应开放时间及预约要求待官方核实",
+          "address": "恩宁路127号",
+          "provider_opening_text": "周二至周日 09:00-21:00开放 最晚进入20:30；周一 全天不开放；元旦节,春节,清明节,劳动节,端午节,中秋节,国庆节 09:00-21:00开放 最晚进入20:30；5月18日 09:00-21:00开放 最晚进入20:30；具体营业状态以当天开放情况为准"
+        },
+        {
+          "id": "chen",
+          "name": "陈家祠",
+          "lon": 113.24693,
+          "lat": 23.12705,
+          "area": "荔湾",
+          "indoor": true,
+          "tags": [
+            "文化",
+            "建筑"
+          ],
+          "visit_minutes": 75,
+          "coordinate_status": "amap_exact_name",
+          "factual_status": "unverified",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:24:04+08:00",
+          "open_minutes": null,
+          "ticket": null,
+          "closed": false,
+          "source": "高德 v5/place/text",
+          "notice": "票价、日期对应开放时间及预约要求待官方核实",
+          "address": "荔湾区",
+          "provider_opening_text": "未知"
+        },
+        {
+          "id": "nanyue",
+          "name": "南越王博物院王宫展区",
+          "lon": 113.271,
+          "lat": 23.128,
+          "area": "越秀",
+          "indoor": true,
+          "tags": [
+            "文化",
+            "历史"
+          ],
+          "visit_minutes": 90,
+          "coordinate_status": "approximate_seed",
+          "factual_status": "unverified",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:24:05+08:00",
+          "open_minutes": null,
+          "ticket": null,
+          "closed": false,
+          "source": "unverified_seed",
+          "notice": "票价、日期对应开放时间及预约要求待官方核实；名称未精确匹配，坐标仍为候选种子"
+        },
+        {
+          "id": "peasant",
+          "name": "农讲所纪念馆",
+          "lon": 113.28,
+          "lat": 23.13,
+          "area": "越秀",
+          "indoor": true,
+          "tags": [
+            "文化",
+            "历史"
+          ],
+          "visit_minutes": 60,
+          "coordinate_status": "approximate_seed",
+          "factual_status": "unverified",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:24:05+08:00",
+          "open_minutes": null,
+          "ticket": null,
+          "closed": false,
+          "source": "unverified_seed",
+          "notice": "票价、日期对应开放时间及预约要求待官方核实；名称未精确匹配，坐标仍为候选种子"
+        },
+        {
+          "id": "sun",
+          "name": "中山纪念堂",
+          "lon": 113.264692,
+          "lat": 23.13286,
+          "area": "越秀",
+          "indoor": true,
+          "tags": [
+            "文化",
+            "建筑"
+          ],
+          "visit_minutes": 60,
+          "coordinate_status": "amap_exact_name",
+          "factual_status": "unverified",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:24:05+08:00",
+          "open_minutes": null,
+          "ticket": null,
+          "closed": false,
+          "source": "高德 v5/place/text",
+          "notice": "票价、日期对应开放时间及预约要求待官方核实",
+          "address": "东风中路299号(纪念堂地铁站C口步行130米)",
+          "provider_opening_text": "未知"
+        }
+      ],
+      "duration_ms": 2376.57
+    },
+    {
+      "seq": 12,
+      "type": "Tool",
+      "at": "2026-10-14T00:24:11+08:00",
+      "action": "model_response",
+      "arguments": {
+        "provider": "qwen",
+        "model": "qwen3.8-flash",
+        "stage": "planning",
+        "round": 3
+      },
+      "ok": true,
+      "observation": {
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"candidate_ids\": \n[\"gz_library\"]\n\n, \"reason\": \"必去+室内可避雨；普通阅览免费在已公布范围内，官方常规开放09:00-21:00，单点满足max_stops=1\"}",
+              "name": "build_plan"
+            },
+            "id": "call_eb99ba973d624ac9a28aab8e",
+            "index": 0,
+            "type": "function"
+          }
+        ],
+        "usage": {
+          "completion_tokens": 143,
+          "prompt_tokens": 2999,
+          "prompt_tokens_details": {
+            "cached_tokens": 1024,
+            "text_tokens": 2999
+          },
+          "total_tokens": 3142
+        },
+        "response_id": "chatcmpl-2e2b2e2b-da9f-9924-bbf9-cbab69c7ab51",
+        "duration_ms": 5122.85
+      },
+      "duration_ms": 0.05
+    },
+    {
+      "seq": 13,
+      "type": "Decision",
+      "at": "2026-10-14T00:24:11+08:00",
+      "summary": "模型第 3 轮请求 1 个工具。"
+    },
+    {
+      "seq": 14,
+      "type": "Decision",
+      "at": "2026-10-14T00:24:11+08:00",
+      "summary": "降雨触发室内目的地筛选，重新计算交通和费用。"
+    },
+    {
+      "seq": 15,
+      "type": "Tool",
+      "at": "2026-10-14T00:24:11+08:00",
+      "action": "query_route",
+      "arguments": {
+        "from": [
+          113.400704,
+          23.040717
+        ],
+        "to": [
+          113.32602,
+          23.116225
+        ],
+        "date": "2026-10-17"
+      },
+      "ok": true,
+      "observation": {
+        "minutes": 72,
+        "fare": 5.0,
+        "walk_minutes": 21,
+        "summary": "地铁4号线(南沙客运港--黄村) → 地铁5号线(黄埔新港--滘口)",
+        "source": "高德 v3 公交路线 + 15 分钟缓冲",
+        "estimated": true,
+        "notice": "查询时路线估算，非指定日期班次承诺",
+        "fetched_at": "2026-10-14T00:24:11+08:00",
+        "query_date": "2026-10-17"
+      },
+      "duration_ms": 225.8
+    },
+    {
+      "seq": 16,
+      "type": "Tool",
+      "at": "2026-10-14T00:24:11+08:00",
+      "action": "query_route",
+      "arguments": {
+        "from": [
+          113.32602,
+          23.116225
+        ],
+        "to": [
+          113.400704,
+          23.040717
+        ],
+        "date": "2026-10-17"
+      },
+      "ok": true,
+      "observation": {
+        "minutes": 71,
+        "fare": 5.0,
+        "walk_minutes": 21,
+        "summary": "地铁5号线(滘口--黄埔新港) → 地铁4号线(黄村--南沙客运港)",
+        "source": "高德 v3 公交路线 + 15 分钟缓冲",
+        "estimated": true,
+        "notice": "查询时路线估算，非指定日期班次承诺",
+        "fetched_at": "2026-10-14T00:24:12+08:00",
+        "query_date": "2026-10-17"
+      },
+      "duration_ms": 414.72
+    },
+    {
+      "seq": 17,
+      "type": "Tool",
+      "at": "2026-10-14T00:24:12+08:00",
+      "action": "calculate_cost",
+      "arguments": {
+        "place_ids": [
+          "gz_library"
+        ],
+        "people": 2
+      },
+      "ok": true,
+      "observation": {
+        "items": [
+          {
+            "category": "门票",
+            "label": "广州图书馆",
+            "amount": 0,
+            "basis": "普通阅览与公共文化空间免费，不含付费附加服务"
+          },
+          {
+            "category": "交通",
+            "label": "第 1 段（含返程）",
+            "amount": 5.0,
+            "basis": "高德 v3 公交路线 + 15 分钟缓冲"
+          },
+          {
+            "category": "交通",
+            "label": "第 2 段（含返程）",
+            "amount": 5.0,
+            "basis": "高德 v3 公交路线 + 15 分钟缓冲"
+          },
+          {
+            "category": "餐饮",
+            "label": "午餐与饮水",
+            "amount": 35,
+            "basis": "用户可控制的消费上限假设"
+          },
+          {
+            "category": "预留",
+            "label": "应急缓冲",
+            "amount": 15,
+            "basis": "规划预留"
+          }
+        ],
+        "per_person": 60.0,
+        "group_total": 120.0,
+        "budget": 80,
+        "within_budget": true,
+        "unknown_prices": false,
+        "remaining": 20.0
+      },
+      "duration_ms": 0.04
+    },
+    {
+      "seq": 18,
+      "type": "Tool",
+      "at": "2026-10-14T00:24:12+08:00",
+      "action": "check_schedule",
+      "arguments": {
+        "deadline": "20:00",
+        "indoor": true
+      },
+      "ok": true,
+      "observation": {
+        "return_time": "13:08",
+        "return_minute": 788,
+        "deadline": "20:00",
+        "within_time": true,
+        "walk_minutes": 57,
+        "walk_limit": 90,
+        "unknown_hours": false
+      },
+      "duration_ms": 0.01
+    },
+    {
+      "seq": 19,
+      "type": "Decision",
+      "at": "2026-10-14T00:24:12+08:00",
+      "summary": "室内筛选检查 1 个组合；排除原因：无；找到满足估算约束的草案。"
+    },
+    {
+      "seq": 20,
+      "type": "Tool",
+      "at": "2026-10-14T00:24:12+08:00",
+      "action": "save_itinerary",
+      "arguments": {
+        "run_id": "fc9b393662cd49f5"
+      },
+      "ok": true,
+      "observation": {
+        "file": "fc9b393662cd49f5.json",
+        "status": "saved"
+      },
+      "duration_ms": 0.02
+    }
+  ],
+  "model_info": {
+    "provider": "qwen",
+    "model": "qwen3.8-flash"
+  },
+  "session_id": "1cb351b01b0447d69bee217064ef611d"
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="487" height="254" preserveAspectRatio="xMinYMin meet" viewBox="0 0 487 254" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="487" height="254"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-254)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="196" width="142" height="49" rx="7" ry="0" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="28.249999999999993" y="227" style="font-family: CNB; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,454) scale(1,-1)">表单 / 自然语言补参</text>
+			<text x="28.449999999999996" y="208" style="font-family: CN; font-size: 7.4px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,416) scale(1,-1)">原文证据校验 + 会话记忆</text>
+			<rect x="173" y="196" width="142" height="49" rx="7" ry="0" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="196.75" y="227" style="font-family: CNB; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,454) scale(1,-1)">输入校验 + Qwen Agent</text>
+			<text x="197.75" y="208" style="font-family: CN; font-size: 7.4px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,416) scale(1,-1)">最多 8 轮 / 12 次外层工具</text>
+			<rect x="345" y="196" width="142" height="49" rx="7" ry="0" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="384.5" y="227" style="font-family: CNB; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,454) scale(1,-1)">天气与地点工具</text>
+			<text x="371.6" y="208" style="font-family: CN; font-size: 7.4px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,416) scale(1,-1)">天气 / 地图 / 官方规则库</text>
+			<path d="M 142,223 L 173,223 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="173 223, 167 220, 167 226" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<path d="M 315,227 L 345,227 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="345 227, 339 224, 339 230" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<path d="M 345,212 L 315,212 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="315 212, 321 209, 321 215" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="173" y="112" width="142" height="54" rx="7" ry="0" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="196.75" y="148" style="font-family: CNB; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,296) scale(1,-1)">build_plan 确定性求解</text>
+			<text x="197.75" y="124" style="font-family: CN; font-size: 7.4px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,248) scale(1,-1)">路线 + 费用 + 时间 + 步行</text>
+			<path d="M 244,196 L 244,166 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="244 166, 241 172, 247 172" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="345" y="112" width="142" height="54" rx="7" ry="0" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="384.5" y="148" style="font-family: CNB; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,296) scale(1,-1)">异常与重新选择</text>
+			<text x="369.75" y="124" style="font-family: CN; font-size: 7.4px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,248) scale(1,-1)">下雨选室内 / 失败排除组合</text>
+			<path d="M 315,147 L 345,147 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="345 147, 339 144, 339 150" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<path d="M 345,129 L 315,129 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="315 129, 321 126, 321 132" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="0" y="112" width="142" height="54" rx="7" ry="0" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="30.499999999999993" y="148" style="font-family: CNB; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,296) scale(1,-1)">追问 / 拒绝 / 暂停</text>
+			<text x="34.0" y="124" style="font-family: CN; font-size: 7.4px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,248) scale(1,-1)">缺参、越界、严重天气</text>
+			<path d="M 185,196 L 185,181 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 185,181 L 71,181 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 71,181 L 71,166 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="71 166, 68 172, 74 172" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<path d="M 173,139 L 142,139 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="142 139, 148 136, 148 142" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="173" y="24" width="142" height="54" rx="7" ry="0" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="210.25" y="60" style="font-family: CNB; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,120) scale(1,-1)">行程 + 雨天安排</text>
+			<text x="194.05" y="36" style="font-family: CN; font-size: 7.4px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,72) scale(1,-1)">保存 JSON / 下载 TXT / 打印</text>
+			<path d="M 244,112 L 244,78 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="244 78, 241 84, 247 84" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="345" y="24" width="142" height="54" rx="7" ry="0" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="384.5" y="60" style="font-family: CNB; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,120) scale(1,-1)">跨步骤执行证据</text>
+			<text x="369.75" y="36" style="font-family: CN; font-size: 7.4px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,72) scale(1,-1)">实际输入输出、错误、usage</text>
+			<path d="M 315,51 L 345,51 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="345 51, 339 48, 339 54" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<text x="3" y="43" style="font-family: CN; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,86) scale(1,-1)">模型选择工具与候选；</text>
+			<text x="3" y="28" style="font-family: CN; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,56) scale(1,-1)">硬约束由程序执行。</text>
+		</g>
+	</g>
+</svg>

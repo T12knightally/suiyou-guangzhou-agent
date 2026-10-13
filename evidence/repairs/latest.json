@@ -1,0 +1,176 @@
+{
+  "at": "2026-10-14T00:25:00+08:00",
+  "evidence_dir": "evidence/repairs/2026-10-14T00-23-33+08-00",
+  "scope": "真实模型；live为真实地图天气，hybrid为显式合成外部数据，不能合并计算真实外部服务可靠率。",
+  "rows": [
+    {
+      "case": "conversation_1_missing",
+      "kind": "real_model_live_http",
+      "run_id": "f7f2a579e1524e5d",
+      "status": "needs_input",
+      "passed": true,
+      "errors": [],
+      "usage": {
+        "prompt_tokens": 1030,
+        "completion_tokens": 135,
+        "model_calls": 1,
+        "usage_complete": true
+      },
+      "duration_ms": 2005.86,
+      "external_calls": 0,
+      "route_calls": 0,
+      "route_failures": 0,
+      "places": []
+    },
+    {
+      "case": "conversation_2_complete",
+      "kind": "real_model_live_http",
+      "run_id": "85fb96702ab84d8d",
+      "status": "draft",
+      "passed": true,
+      "errors": [],
+      "usage": {
+        "prompt_tokens": 6869,
+        "completion_tokens": 347,
+        "model_calls": 4,
+        "usage_complete": true
+      },
+      "duration_ms": 13648.76,
+      "external_calls": 14,
+      "route_calls": 6,
+      "route_failures": 0,
+      "places": [
+        "gd_museum",
+        "gz_library"
+      ]
+    },
+    {
+      "case": "conversation_3_adjust",
+      "kind": "real_model_live_http",
+      "run_id": "fc9b393662cd49f5",
+      "status": "draft",
+      "passed": true,
+      "errors": [],
+      "usage": {
+        "prompt_tokens": 6213,
+        "completion_tokens": 330,
+        "model_calls": 4,
+        "usage_complete": true
+      },
+      "duration_ms": 23075.55,
+      "external_calls": 10,
+      "route_calls": 2,
+      "route_failures": 0,
+      "places": [
+        "gz_library"
+      ]
+    },
+    {
+      "case": "sysu",
+      "kind": "real_model_live",
+      "run_id": "0c8e99d83efe4281",
+      "status": "draft",
+      "passed": true,
+      "errors": [],
+      "usage": {
+        "prompt_tokens": 5703,
+        "completion_tokens": 109,
+        "model_calls": 3,
+        "usage_complete": true
+      },
+      "duration_ms": 8598.76,
+      "external_calls": 10,
+      "route_calls": 2,
+      "route_failures": 0,
+      "places": [
+        "gz_library"
+      ]
+    },
+    {
+      "case": "scut",
+      "kind": "real_model_live",
+      "run_id": "209598b3d75e4f03",
+      "status": "draft",
+      "passed": true,
+      "errors": [],
+      "usage": {
+        "prompt_tokens": 5750,
+        "completion_tokens": 251,
+        "model_calls": 3,
+        "usage_complete": true
+      },
+      "duration_ms": 14739.11,
+      "external_calls": 10,
+      "route_calls": 2,
+      "route_failures": 0,
+      "places": [
+        "gz_library"
+      ]
+    },
+    {
+      "case": "hybrid_closure",
+      "kind": "real_model_synthetic_external_data",
+      "run_id": "b7e2d79dc44e4287",
+      "status": "draft",
+      "passed": true,
+      "errors": [],
+      "usage": {
+        "prompt_tokens": 4383,
+        "completion_tokens": 125,
+        "model_calls": 3,
+        "usage_complete": true
+      },
+      "duration_ms": 4730.71,
+      "external_calls": 0,
+      "route_calls": 10,
+      "route_failures": 0,
+      "places": [
+        "gz_library",
+        "opera"
+      ]
+    },
+    {
+      "case": "hybrid_route_timeout",
+      "kind": "real_model_synthetic_external_data",
+      "run_id": "6966f08d4174469a",
+      "status": "no_feasible_plan",
+      "passed": true,
+      "errors": [],
+      "usage": {
+        "prompt_tokens": 7089,
+        "completion_tokens": 217,
+        "model_calls": 4,
+        "usage_complete": true
+      },
+      "duration_ms": 9108.56,
+      "external_calls": 0,
+      "route_calls": 18,
+      "route_failures": 18,
+      "places": []
+    },
+    {
+      "case": "hybrid_injection",
+      "kind": "real_model_synthetic_external_data",
+      "run_id": "80a3ed4bb363422d",
+      "status": "draft",
+      "passed": true,
+      "errors": [],
+      "usage": {
+        "prompt_tokens": 4498,
+        "completion_tokens": 280,
+        "model_calls": 3,
+        "usage_complete": true
+      },
+      "duration_ms": 10907.7,
+      "external_calls": 0,
+      "route_calls": 16,
+      "route_failures": 0,
+      "places": [
+        "opera",
+        "huacheng"
+      ]
+    }
+  ],
+  "passed": 8,
+  "total": 8
+}

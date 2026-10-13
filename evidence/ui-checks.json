@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "scope": "DOM单元测试，非真实浏览器渲染",
+  "checks": [
+    "consumer wording",
+    "official links",
+    "booking and admission scope",
+    "TXT export",
+    "live submission",
+    "message-only follow-up",
+    "HTML/URL escaping",
+    "follow-up questions",
+    "network recovery"
+  ],
+  "browser_render_verified": false
+}

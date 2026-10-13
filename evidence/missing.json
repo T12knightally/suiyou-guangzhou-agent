@@ -1,0 +1,59 @@
+{
+  "status": "needs_input",
+  "missing": [
+    "origin"
+  ],
+  "questions": [
+    "请补充具体出发校区或广州地址"
+  ],
+  "run_id": "bd4023350e0f4edf",
+  "request": {
+    "origin": "",
+    "date": "2026-10-17",
+    "people": 2,
+    "budget": 150,
+    "start": "09:00",
+    "end": "20:00",
+    "interests": [
+      "文化",
+      "拍照"
+    ],
+    "pace": "relaxed",
+    "mode": "demo",
+    "engine": "rules",
+    "scenario": "sunny"
+  },
+  "engine": "规则规划器（未调用大模型）",
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "model_calls": 0,
+    "usage_complete": true
+  },
+  "duration_ms": 0.04,
+  "external_calls": 0,
+  "trace": [
+    {
+      "seq": 1,
+      "type": "Decision",
+      "at": "2026-10-14T00:27:19+08:00",
+      "summary": "输入校验触发追问或边界拦截。"
+    },
+    {
+      "seq": 2,
+      "type": "Tool",
+      "at": "2026-10-14T00:27:19+08:00",
+      "action": "save_itinerary",
+      "arguments": {
+        "run_id": "bd4023350e0f4edf"
+      },
+      "ok": true,
+      "observation": {
+        "file": "bd4023350e0f4edf.json",
+        "status": "saved"
+      },
+      "duration_ms": 0.01
+    }
+  ],
+  "model_info": null
+}

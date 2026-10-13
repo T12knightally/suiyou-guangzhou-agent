@@ -1,0 +1,135 @@
+{
+  "type": "function",
+  "function": {
+    "name": "extract_trip_requirements",
+    "description": "只提取本条用户消息明确表达的字段修改；每个字段附原文证据；模糊金额等主动追问。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "updates": {
+          "type": "object",
+          "properties": {
+            "origin": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "people": {
+              "type": "integer"
+            },
+            "budget": {
+              "type": "number"
+            },
+            "start": {
+              "type": "string"
+            },
+            "end": {
+              "type": "string"
+            },
+            "pace": {
+              "type": "string",
+              "enum": [
+                "relaxed",
+                "normal"
+              ]
+            },
+            "interests": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "文化",
+                  "拍照",
+                  "美食",
+                  "自然",
+                  "科技",
+                  "安静",
+                  "建筑"
+                ]
+              }
+            },
+            "exclude_place_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "must_visit_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "indoor_only": {
+              "type": "boolean"
+            },
+            "max_stops": {
+              "type": "integer",
+              "enum": [
+                1,
+                2
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "evidence": {
+          "type": "object",
+          "properties": {
+            "origin": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "people": {
+              "type": "string"
+            },
+            "budget": {
+              "type": "string"
+            },
+            "start": {
+              "type": "string"
+            },
+            "end": {
+              "type": "string"
+            },
+            "pace": {
+              "type": "string"
+            },
+            "interests": {
+              "type": "string"
+            },
+            "exclude_place_ids": {
+              "type": "string"
+            },
+            "must_visit_ids": {
+              "type": "string"
+            },
+            "indoor_only": {
+              "type": "string"
+            },
+            "max_stops": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4
+        }
+      },
+      "required": [
+        "updates",
+        "evidence",
+        "questions"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

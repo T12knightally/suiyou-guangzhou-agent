@@ -1,0 +1,4 @@
+# Optional, only for regenerating the report; not needed to run the app.
+reportlab>=4.0
+Pillow>=10.0
+pypdf>=5.0

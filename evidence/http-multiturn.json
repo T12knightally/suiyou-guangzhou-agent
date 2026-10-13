@@ -1,0 +1,4158 @@
+{
+  "first": {
+    "status": "needs_input",
+    "missing": [
+      "date",
+      "people",
+      "budget",
+      "start",
+      "end"
+    ],
+    "questions": [
+      "请补充出行日期 YYYY-MM-DD",
+      "请补充人数",
+      "请补充每人预算（元）",
+      "请补充出发时间 HH:MM",
+      "请补充最晚返回时间 HH:MM"
+    ],
+    "run_id": "b69b6567f4b04924",
+    "request": {
+      "origin": "广州大学大学城校区"
+    },
+    "engine": "规则规划器（未调用大模型）",
+    "usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "model_calls": 0,
+      "usage_complete": true
+    },
+    "duration_ms": 0.03,
+    "external_calls": 0,
+    "trace": [
+      {
+        "seq": 1,
+        "type": "Decision",
+        "at": "2026-10-14T00:38:56+08:00",
+        "summary": "输入校验触发追问或边界拦截。"
+      },
+      {
+        "seq": 2,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "save_itinerary",
+        "arguments": {
+          "run_id": "b69b6567f4b04924"
+        },
+        "ok": true,
+        "observation": {
+          "file": "b69b6567f4b04924.json",
+          "status": "saved"
+        },
+        "duration_ms": 0.02
+      }
+    ],
+    "model_info": null,
+    "session_id": "e60f4ce869d64873b3ee844cc210b9d0"
+  },
+  "second": {
+    "status": "draft",
+    "message": "已生成约束校验通过的估算草案；出发前须核实开放、预约、价格和路线。",
+    "weather": {
+      "status": "synthetic",
+      "rain": false,
+      "severe": false,
+      "summary": "合成晴天场景",
+      "source": "离线合成测试夹具；不是出行日天气预报",
+      "date": "2026-10-17",
+      "fetched_at": "2026-10-14T00:38:56+08:00"
+    },
+    "plan": {
+      "places": [
+        {
+          "id": "gd_museum",
+          "name": "广东省博物馆",
+          "lon": 113.321,
+          "lat": 23.118,
+          "area": "珠江新城",
+          "indoor": true,
+          "tags": [
+            "文化",
+            "艺术"
+          ],
+          "visit_minutes": 90,
+          "coordinate_status": "approximate_seed",
+          "factual_status": "synthetic",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "open_minutes": [
+            540,
+            1080
+          ],
+          "ticket": 0,
+          "closed": false,
+          "source": "synthetic_fixture",
+          "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+        },
+        {
+          "id": "opera",
+          "name": "广州大剧院外广场",
+          "lon": 113.321,
+          "lat": 23.115,
+          "area": "珠江新城",
+          "indoor": false,
+          "tags": [
+            "建筑",
+            "拍照"
+          ],
+          "visit_minutes": 45,
+          "coordinate_status": "approximate_seed",
+          "factual_status": "synthetic",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "open_minutes": [
+            540,
+            1080
+          ],
+          "ticket": 0,
+          "closed": false,
+          "source": "synthetic_fixture",
+          "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+        }
+      ],
+      "routes": [
+        {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        }
+      ],
+      "cost": {
+        "items": [
+          {
+            "category": "门票",
+            "label": "广东省博物馆",
+            "amount": 0,
+            "basis": "合成测试票价"
+          },
+          {
+            "category": "门票",
+            "label": "广州大剧院外广场",
+            "amount": 0,
+            "basis": "合成测试票价"
+          },
+          {
+            "category": "交通",
+            "label": "第 1 段（含返程）",
+            "amount": 8,
+            "basis": "synthetic_distance_formula"
+          },
+          {
+            "category": "交通",
+            "label": "第 2 段（含返程）",
+            "amount": 0,
+            "basis": "synthetic_distance_formula"
+          },
+          {
+            "category": "交通",
+            "label": "第 3 段（含返程）",
+            "amount": 8,
+            "basis": "synthetic_distance_formula"
+          },
+          {
+            "category": "餐饮",
+            "label": "午餐与饮水",
+            "amount": 35,
+            "basis": "用户可控制的消费上限假设"
+          },
+          {
+            "category": "预留",
+            "label": "应急缓冲",
+            "amount": 15,
+            "basis": "规划预留"
+          }
+        ],
+        "per_person": 66,
+        "group_total": 132,
+        "budget": 150,
+        "within_budget": true,
+        "unknown_prices": false,
+        "remaining": 84
+      },
+      "schedule": {
+        "entries": [
+          {
+            "kind": "travel",
+            "start": "09:00",
+            "end": "09:57",
+            "title": "模拟公共交通（非真实班次）",
+            "detail": "广州大学大学城校区 → 广东省博物馆",
+            "source": "synthetic_distance_formula"
+          },
+          {
+            "kind": "visit",
+            "id": "gd_museum",
+            "start": "09:57",
+            "end": "11:27",
+            "title": "广东省博物馆",
+            "detail": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知",
+            "indoor": true
+          },
+          {
+            "kind": "meal",
+            "start": "11:27",
+            "end": "12:12",
+            "title": "用餐与休息",
+            "detail": "餐饮饮水每人 35 元额度，未指定商户"
+          },
+          {
+            "kind": "travel",
+            "start": "12:12",
+            "end": "12:22",
+            "title": "模拟步行",
+            "detail": "广东省博物馆 → 广州大剧院外广场",
+            "source": "synthetic_distance_formula"
+          },
+          {
+            "kind": "visit",
+            "id": "opera",
+            "start": "12:22",
+            "end": "13:07",
+            "title": "广州大剧院外广场",
+            "detail": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知",
+            "indoor": false
+          },
+          {
+            "kind": "travel",
+            "start": "13:07",
+            "end": "14:04",
+            "title": "返程：模拟公共交通（非真实班次）",
+            "detail": "广州大剧院外广场 → 广州大学大学城校区",
+            "source": "synthetic_distance_formula"
+          }
+        ],
+        "return_time": "14:04",
+        "return_minute": 844,
+        "deadline": "20:00",
+        "within_time": true,
+        "walk_minutes": 72,
+        "walk_limit": 90,
+        "unknown_hours": false
+      },
+      "score": 207.6
+    },
+    "rain_backup": {
+      "places": [
+        {
+          "id": "gd_museum",
+          "name": "广东省博物馆",
+          "lon": 113.321,
+          "lat": 23.118,
+          "area": "珠江新城",
+          "indoor": true,
+          "tags": [
+            "文化",
+            "艺术"
+          ],
+          "visit_minutes": 90,
+          "coordinate_status": "approximate_seed",
+          "factual_status": "synthetic",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "open_minutes": [
+            540,
+            1080
+          ],
+          "ticket": 0,
+          "closed": false,
+          "source": "synthetic_fixture",
+          "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+        },
+        {
+          "id": "gz_library",
+          "name": "广州图书馆",
+          "lon": 113.322,
+          "lat": 23.12,
+          "area": "珠江新城",
+          "indoor": true,
+          "tags": [
+            "文化",
+            "安静"
+          ],
+          "visit_minutes": 60,
+          "coordinate_status": "approximate_seed",
+          "factual_status": "synthetic",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "open_minutes": [
+            540,
+            1080
+          ],
+          "ticket": 0,
+          "closed": false,
+          "source": "synthetic_fixture",
+          "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+        }
+      ],
+      "routes": [
+        {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        {
+          "minutes": 58,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        }
+      ],
+      "cost": {
+        "items": [
+          {
+            "category": "门票",
+            "label": "广东省博物馆",
+            "amount": 0,
+            "basis": "合成测试票价"
+          },
+          {
+            "category": "门票",
+            "label": "广州图书馆",
+            "amount": 0,
+            "basis": "合成测试票价"
+          },
+          {
+            "category": "交通",
+            "label": "第 1 段（含返程）",
+            "amount": 8,
+            "basis": "synthetic_distance_formula"
+          },
+          {
+            "category": "交通",
+            "label": "第 2 段（含返程）",
+            "amount": 0,
+            "basis": "synthetic_distance_formula"
+          },
+          {
+            "category": "交通",
+            "label": "第 3 段（含返程）",
+            "amount": 8,
+            "basis": "synthetic_distance_formula"
+          },
+          {
+            "category": "餐饮",
+            "label": "午餐与饮水",
+            "amount": 35,
+            "basis": "用户可控制的消费上限假设"
+          },
+          {
+            "category": "预留",
+            "label": "应急缓冲",
+            "amount": 15,
+            "basis": "规划预留"
+          }
+        ],
+        "per_person": 66,
+        "group_total": 132,
+        "budget": 150,
+        "within_budget": true,
+        "unknown_prices": false,
+        "remaining": 84
+      },
+      "schedule": {
+        "entries": [
+          {
+            "kind": "travel",
+            "start": "09:00",
+            "end": "09:57",
+            "title": "模拟公共交通（非真实班次）",
+            "detail": "广州大学大学城校区 → 广东省博物馆",
+            "source": "synthetic_distance_formula"
+          },
+          {
+            "kind": "visit",
+            "id": "gd_museum",
+            "start": "09:57",
+            "end": "11:27",
+            "title": "广东省博物馆",
+            "detail": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知",
+            "indoor": true
+          },
+          {
+            "kind": "meal",
+            "start": "11:27",
+            "end": "12:12",
+            "title": "用餐与休息",
+            "detail": "餐饮饮水每人 35 元额度，未指定商户"
+          },
+          {
+            "kind": "travel",
+            "start": "12:12",
+            "end": "12:22",
+            "title": "模拟步行",
+            "detail": "广东省博物馆 → 广州图书馆",
+            "source": "synthetic_distance_formula"
+          },
+          {
+            "kind": "visit",
+            "id": "gz_library",
+            "start": "12:22",
+            "end": "13:22",
+            "title": "广州图书馆",
+            "detail": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知",
+            "indoor": true
+          },
+          {
+            "kind": "travel",
+            "start": "13:22",
+            "end": "14:20",
+            "title": "返程：模拟公共交通（非真实班次）",
+            "detail": "广州图书馆 → 广州大学大学城校区",
+            "source": "synthetic_distance_formula"
+          }
+        ],
+        "return_time": "14:20",
+        "return_minute": 860,
+        "deadline": "20:00",
+        "within_time": true,
+        "walk_minutes": 72,
+        "walk_limit": 90,
+        "unknown_hours": false
+      },
+      "score": 207.5
+    },
+    "selection_reason": null,
+    "factual_coverage": {
+      "official_places": 0,
+      "total_places": 2,
+      "unknown_hours": false,
+      "unknown_prices": false
+    },
+    "provenance": "离线合成演示，不构成真实出行承诺",
+    "checklist": [
+      "核实目的地当天是否开放及预约名额",
+      "确认票价与学生优惠条件",
+      "出发当天复查天气及往返交通",
+      "室内备选仍有室外换乘，恶劣天气请改期"
+    ],
+    "run_id": "4a9013a44fa64c4b",
+    "request": {
+      "origin": "广州大学大学城校区",
+      "date": "2026-10-17",
+      "people": 2,
+      "budget": 150,
+      "start": "09:00",
+      "end": "20:00",
+      "interests": [
+        "文化",
+        "拍照"
+      ],
+      "pace": "relaxed",
+      "mode": "demo",
+      "engine": "rules",
+      "scenario": "sunny"
+    },
+    "engine": "规则规划器（未调用大模型）",
+    "usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "model_calls": 0,
+      "usage_complete": true
+    },
+    "duration_ms": 3.1,
+    "external_calls": 0,
+    "trace": [
+      {
+        "seq": 1,
+        "type": "Decision",
+        "at": "2026-10-14T00:38:56+08:00",
+        "summary": "先定位出发地，再获取天气、筛选地点；预算与时间使用确定性工具检查。"
+      },
+      {
+        "seq": 2,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "resolve_origin",
+        "arguments": {
+          "name": "广州大学大学城校区",
+          "coordinates": null
+        },
+        "ok": true,
+        "observation": [
+          113.376,
+          23.037
+        ],
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 3,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_weather",
+        "arguments": {
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "status": "synthetic",
+          "rain": false,
+          "severe": false,
+          "summary": "合成晴天场景",
+          "source": "离线合成测试夹具；不是出行日天气预报",
+          "date": "2026-10-17",
+          "fetched_at": "2026-10-14T00:38:56+08:00"
+        },
+        "duration_ms": 0.03
+      },
+      {
+        "seq": 4,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_places",
+        "arguments": {
+          "interests": [
+            "文化",
+            "拍照"
+          ],
+          "indoor": false
+        },
+        "ok": true,
+        "observation": [
+          {
+            "id": "lingnan",
+            "name": "岭南印象园",
+            "lon": 113.407,
+            "lat": 23.043,
+            "area": "大学城",
+            "indoor": false,
+            "tags": [
+              "文化",
+              "拍照"
+            ],
+            "visit_minutes": 90,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "gd_museum",
+            "name": "广东省博物馆",
+            "lon": 113.321,
+            "lat": 23.118,
+            "area": "珠江新城",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "艺术"
+            ],
+            "visit_minutes": 90,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "gz_library",
+            "name": "广州图书馆",
+            "lon": 113.322,
+            "lat": 23.12,
+            "area": "珠江新城",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "安静"
+            ],
+            "visit_minutes": 60,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "opera",
+            "name": "广州大剧院外广场",
+            "lon": 113.321,
+            "lat": 23.115,
+            "area": "珠江新城",
+            "indoor": false,
+            "tags": [
+              "建筑",
+              "拍照"
+            ],
+            "visit_minutes": 45,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "huacheng",
+            "name": "花城广场",
+            "lon": 113.323,
+            "lat": 23.121,
+            "area": "珠江新城",
+            "indoor": false,
+            "tags": [
+              "散步",
+              "拍照"
+            ],
+            "visit_minutes": 60,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "haixinsha",
+            "name": "海心沙公园",
+            "lon": 113.325,
+            "lat": 23.111,
+            "area": "珠江新城",
+            "indoor": false,
+            "tags": [
+              "散步",
+              "拍照"
+            ],
+            "visit_minutes": 60,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          }
+        ],
+        "duration_ms": 0.07
+      },
+      {
+        "seq": 5,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.321,
+            23.118
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.03
+      },
+      {
+        "seq": 6,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.118
+          ],
+          "to": [
+            113.322,
+            23.12
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 7,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.322,
+            23.12
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 58,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.03
+      },
+      {
+        "seq": 8,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.118
+          ],
+          "to": [
+            113.321,
+            23.115
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 9,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.115
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 10,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.118
+          ],
+          "to": [
+            113.323,
+            23.121
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 11,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.323,
+            23.121
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 58,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 12,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.118
+          ],
+          "to": [
+            113.325,
+            23.111
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 19,
+          "fare": 0,
+          "walk_minutes": 19,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 13,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.325,
+            23.111
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 55,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 14,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.322,
+            23.12
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 58,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 15,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.322,
+            23.12
+          ],
+          "to": [
+            113.321,
+            23.118
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 16,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.118
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 17,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.322,
+            23.12
+          ],
+          "to": [
+            113.321,
+            23.115
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 12,
+          "fare": 0,
+          "walk_minutes": 12,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 18,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.322,
+            23.12
+          ],
+          "to": [
+            113.323,
+            23.121
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 19,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.322,
+            23.12
+          ],
+          "to": [
+            113.325,
+            23.111
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 22,
+          "fare": 0,
+          "walk_minutes": 22,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 20,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.321,
+            23.115
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 21,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.115
+          ],
+          "to": [
+            113.321,
+            23.118
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 22,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.115
+          ],
+          "to": [
+            113.322,
+            23.12
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 12,
+          "fare": 0,
+          "walk_minutes": 12,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 23,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.115
+          ],
+          "to": [
+            113.323,
+            23.121
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 15,
+          "fare": 0,
+          "walk_minutes": 15,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 24,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.115
+          ],
+          "to": [
+            113.325,
+            23.111
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 13,
+          "fare": 0,
+          "walk_minutes": 13,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 25,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.323,
+            23.121
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 58,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 26,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.323,
+            23.121
+          ],
+          "to": [
+            113.321,
+            23.118
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 27,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.323,
+            23.121
+          ],
+          "to": [
+            113.322,
+            23.12
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.11
+      },
+      {
+        "seq": 28,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.323,
+            23.121
+          ],
+          "to": [
+            113.321,
+            23.115
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 15,
+          "fare": 0,
+          "walk_minutes": 15,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 29,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.323,
+            23.121
+          ],
+          "to": [
+            113.325,
+            23.111
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 29,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 30,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.325,
+            23.111
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 55,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 31,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.325,
+            23.111
+          ],
+          "to": [
+            113.321,
+            23.118
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 19,
+          "fare": 0,
+          "walk_minutes": 19,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 32,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.325,
+            23.111
+          ],
+          "to": [
+            113.322,
+            23.12
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 22,
+          "fare": 0,
+          "walk_minutes": 22,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 33,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.325,
+            23.111
+          ],
+          "to": [
+            113.321,
+            23.115
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 13,
+          "fare": 0,
+          "walk_minutes": 13,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 34,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.325,
+            23.111
+          ],
+          "to": [
+            113.323,
+            23.121
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 29,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 35,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.407,
+            23.043
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 35,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 36,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.407,
+            23.043
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 35,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 37,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "calculate_cost",
+        "arguments": {
+          "place_ids": [
+            "gd_museum",
+            "opera"
+          ],
+          "people": 2
+        },
+        "ok": true,
+        "observation": {
+          "items": [
+            {
+              "category": "门票",
+              "label": "广东省博物馆",
+              "amount": 0,
+              "basis": "合成测试票价"
+            },
+            {
+              "category": "门票",
+              "label": "广州大剧院外广场",
+              "amount": 0,
+              "basis": "合成测试票价"
+            },
+            {
+              "category": "交通",
+              "label": "第 1 段（含返程）",
+              "amount": 8,
+              "basis": "synthetic_distance_formula"
+            },
+            {
+              "category": "交通",
+              "label": "第 2 段（含返程）",
+              "amount": 0,
+              "basis": "synthetic_distance_formula"
+            },
+            {
+              "category": "交通",
+              "label": "第 3 段（含返程）",
+              "amount": 8,
+              "basis": "synthetic_distance_formula"
+            },
+            {
+              "category": "餐饮",
+              "label": "午餐与饮水",
+              "amount": 35,
+              "basis": "用户可控制的消费上限假设"
+            },
+            {
+              "category": "预留",
+              "label": "应急缓冲",
+              "amount": 15,
+              "basis": "规划预留"
+            }
+          ],
+          "per_person": 66,
+          "group_total": 132,
+          "budget": 150,
+          "within_budget": true,
+          "unknown_prices": false,
+          "remaining": 84
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 38,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "check_schedule",
+        "arguments": {
+          "deadline": "20:00",
+          "indoor": false
+        },
+        "ok": true,
+        "observation": {
+          "return_time": "14:04",
+          "return_minute": 844,
+          "deadline": "20:00",
+          "within_time": true,
+          "walk_minutes": 72,
+          "walk_limit": 90,
+          "unknown_hours": false
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 39,
+        "type": "Decision",
+        "at": "2026-10-14T00:38:56+08:00",
+        "summary": "候选筛选检查 26 个组合；排除原因：无；找到满足估算约束的草案。"
+      },
+      {
+        "seq": 40,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_places",
+        "arguments": {
+          "interests": [
+            "文化",
+            "拍照"
+          ],
+          "indoor": true
+        },
+        "ok": true,
+        "observation": [
+          {
+            "id": "gd_museum",
+            "name": "广东省博物馆",
+            "lon": 113.321,
+            "lat": 23.118,
+            "area": "珠江新城",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "艺术"
+            ],
+            "visit_minutes": 90,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "gz_library",
+            "name": "广州图书馆",
+            "lon": 113.322,
+            "lat": 23.12,
+            "area": "珠江新城",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "安静"
+            ],
+            "visit_minutes": 60,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "opera_museum",
+            "name": "粤剧艺术博物馆",
+            "lon": 113.231,
+            "lat": 23.117,
+            "area": "荔湾",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "艺术"
+            ],
+            "visit_minutes": 75,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "chen",
+            "name": "陈家祠",
+            "lon": 113.241,
+            "lat": 23.129,
+            "area": "荔湾",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "建筑"
+            ],
+            "visit_minutes": 75,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 30,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "nanyue",
+            "name": "南越王博物院王宫展区",
+            "lon": 113.271,
+            "lat": 23.128,
+            "area": "越秀",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "历史"
+            ],
+            "visit_minutes": 90,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "peasant",
+            "name": "农讲所纪念馆",
+            "lon": 113.28,
+            "lat": 23.13,
+            "area": "越秀",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "历史"
+            ],
+            "visit_minutes": 60,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          }
+        ],
+        "duration_ms": 0.05
+      },
+      {
+        "seq": 41,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.231,
+            23.117
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 77,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.03
+      },
+      {
+        "seq": 42,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.231,
+            23.117
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 77,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.04
+      },
+      {
+        "seq": 43,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "calculate_cost",
+        "arguments": {
+          "place_ids": [
+            "gd_museum",
+            "gz_library"
+          ],
+          "people": 2
+        },
+        "ok": true,
+        "observation": {
+          "items": [
+            {
+              "category": "门票",
+              "label": "广东省博物馆",
+              "amount": 0,
+              "basis": "合成测试票价"
+            },
+            {
+              "category": "门票",
+              "label": "广州图书馆",
+              "amount": 0,
+              "basis": "合成测试票价"
+            },
+            {
+              "category": "交通",
+              "label": "第 1 段（含返程）",
+              "amount": 8,
+              "basis": "synthetic_distance_formula"
+            },
+            {
+              "category": "交通",
+              "label": "第 2 段（含返程）",
+              "amount": 0,
+              "basis": "synthetic_distance_formula"
+            },
+            {
+              "category": "交通",
+              "label": "第 3 段（含返程）",
+              "amount": 8,
+              "basis": "synthetic_distance_formula"
+            },
+            {
+              "category": "餐饮",
+              "label": "午餐与饮水",
+              "amount": 35,
+              "basis": "用户可控制的消费上限假设"
+            },
+            {
+              "category": "预留",
+              "label": "应急缓冲",
+              "amount": 15,
+              "basis": "规划预留"
+            }
+          ],
+          "per_person": 66,
+          "group_total": 132,
+          "budget": 150,
+          "within_budget": true,
+          "unknown_prices": false,
+          "remaining": 84
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 44,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "check_schedule",
+        "arguments": {
+          "deadline": "20:00",
+          "indoor": true
+        },
+        "ok": true,
+        "observation": {
+          "return_time": "14:20",
+          "return_minute": 860,
+          "deadline": "20:00",
+          "within_time": true,
+          "walk_minutes": 72,
+          "walk_limit": 90,
+          "unknown_hours": false
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 45,
+        "type": "Decision",
+        "at": "2026-10-14T00:38:56+08:00",
+        "summary": "室内筛选检查 5 个组合；排除原因：无；找到满足估算约束的草案。"
+      },
+      {
+        "seq": 46,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "save_itinerary",
+        "arguments": {
+          "run_id": "4a9013a44fa64c4b"
+        },
+        "ok": true,
+        "observation": {
+          "file": "4a9013a44fa64c4b.json",
+          "status": "saved"
+        },
+        "duration_ms": 0.02
+      }
+    ],
+    "model_info": null,
+    "session_id": "e60f4ce869d64873b3ee844cc210b9d0"
+  },
+  "cross_site": {
+    "http_status": 403,
+    "response": {
+      "error": "跨站请求已拒绝"
+    }
+  },
+  "invalid": {
+    "status": "invalid",
+    "message": "每人预算必须为 1–2000 元的有限数值",
+    "run_id": "8c3a5310240e4fe9",
+    "request": {
+      "origin": "广州大学大学城校区",
+      "date": "2026-10-17",
+      "people": 2,
+      "budget": -1,
+      "start": "09:00",
+      "end": "20:00",
+      "interests": [
+        "文化",
+        "拍照"
+      ],
+      "pace": "relaxed",
+      "mode": "demo",
+      "engine": "rules",
+      "scenario": "sunny"
+    },
+    "engine": "规则规划器（未调用大模型）",
+    "usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "model_calls": 0,
+      "usage_complete": true
+    },
+    "duration_ms": 0.04,
+    "external_calls": 0,
+    "trace": [
+      {
+        "seq": 1,
+        "type": "Decision",
+        "at": "2026-10-14T00:38:56+08:00",
+        "summary": "输入校验触发追问或边界拦截。"
+      },
+      {
+        "seq": 2,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "save_itinerary",
+        "arguments": {
+          "run_id": "8c3a5310240e4fe9"
+        },
+        "ok": true,
+        "observation": {
+          "file": "8c3a5310240e4fe9.json",
+          "status": "saved"
+        },
+        "duration_ms": 0.02
+      }
+    ],
+    "model_info": null,
+    "session_id": "e60f4ce869d64873b3ee844cc210b9d0"
+  },
+  "after_invalid": {
+    "status": "draft",
+    "message": "已生成约束校验通过的估算草案；出发前须核实开放、预约、价格和路线。",
+    "weather": {
+      "status": "synthetic",
+      "rain": false,
+      "severe": false,
+      "summary": "合成晴天场景",
+      "source": "离线合成测试夹具；不是出行日天气预报",
+      "date": "2026-10-17",
+      "fetched_at": "2026-10-14T00:38:56+08:00"
+    },
+    "plan": {
+      "places": [
+        {
+          "id": "gd_museum",
+          "name": "广东省博物馆",
+          "lon": 113.321,
+          "lat": 23.118,
+          "area": "珠江新城",
+          "indoor": true,
+          "tags": [
+            "文化",
+            "艺术"
+          ],
+          "visit_minutes": 90,
+          "coordinate_status": "approximate_seed",
+          "factual_status": "synthetic",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "open_minutes": [
+            540,
+            1080
+          ],
+          "ticket": 0,
+          "closed": false,
+          "source": "synthetic_fixture",
+          "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+        },
+        {
+          "id": "opera",
+          "name": "广州大剧院外广场",
+          "lon": 113.321,
+          "lat": 23.115,
+          "area": "珠江新城",
+          "indoor": false,
+          "tags": [
+            "建筑",
+            "拍照"
+          ],
+          "visit_minutes": 45,
+          "coordinate_status": "approximate_seed",
+          "factual_status": "synthetic",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "open_minutes": [
+            540,
+            1080
+          ],
+          "ticket": 0,
+          "closed": false,
+          "source": "synthetic_fixture",
+          "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+        }
+      ],
+      "routes": [
+        {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        }
+      ],
+      "cost": {
+        "items": [
+          {
+            "category": "门票",
+            "label": "广东省博物馆",
+            "amount": 0,
+            "basis": "合成测试票价"
+          },
+          {
+            "category": "门票",
+            "label": "广州大剧院外广场",
+            "amount": 0,
+            "basis": "合成测试票价"
+          },
+          {
+            "category": "交通",
+            "label": "第 1 段（含返程）",
+            "amount": 8,
+            "basis": "synthetic_distance_formula"
+          },
+          {
+            "category": "交通",
+            "label": "第 2 段（含返程）",
+            "amount": 0,
+            "basis": "synthetic_distance_formula"
+          },
+          {
+            "category": "交通",
+            "label": "第 3 段（含返程）",
+            "amount": 8,
+            "basis": "synthetic_distance_formula"
+          },
+          {
+            "category": "餐饮",
+            "label": "午餐与饮水",
+            "amount": 35,
+            "basis": "用户可控制的消费上限假设"
+          },
+          {
+            "category": "预留",
+            "label": "应急缓冲",
+            "amount": 15,
+            "basis": "规划预留"
+          }
+        ],
+        "per_person": 66,
+        "group_total": 132,
+        "budget": 150,
+        "within_budget": true,
+        "unknown_prices": false,
+        "remaining": 84
+      },
+      "schedule": {
+        "entries": [
+          {
+            "kind": "travel",
+            "start": "09:00",
+            "end": "09:57",
+            "title": "模拟公共交通（非真实班次）",
+            "detail": "广州大学大学城校区 → 广东省博物馆",
+            "source": "synthetic_distance_formula"
+          },
+          {
+            "kind": "visit",
+            "id": "gd_museum",
+            "start": "09:57",
+            "end": "11:27",
+            "title": "广东省博物馆",
+            "detail": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知",
+            "indoor": true
+          },
+          {
+            "kind": "meal",
+            "start": "11:27",
+            "end": "12:12",
+            "title": "用餐与休息",
+            "detail": "餐饮饮水每人 35 元额度，未指定商户"
+          },
+          {
+            "kind": "travel",
+            "start": "12:12",
+            "end": "12:22",
+            "title": "模拟步行",
+            "detail": "广东省博物馆 → 广州大剧院外广场",
+            "source": "synthetic_distance_formula"
+          },
+          {
+            "kind": "visit",
+            "id": "opera",
+            "start": "12:22",
+            "end": "13:07",
+            "title": "广州大剧院外广场",
+            "detail": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知",
+            "indoor": false
+          },
+          {
+            "kind": "travel",
+            "start": "13:07",
+            "end": "14:04",
+            "title": "返程：模拟公共交通（非真实班次）",
+            "detail": "广州大剧院外广场 → 广州大学大学城校区",
+            "source": "synthetic_distance_formula"
+          }
+        ],
+        "return_time": "14:04",
+        "return_minute": 844,
+        "deadline": "20:00",
+        "within_time": true,
+        "walk_minutes": 72,
+        "walk_limit": 90,
+        "unknown_hours": false
+      },
+      "score": 207.6
+    },
+    "rain_backup": {
+      "places": [
+        {
+          "id": "gd_museum",
+          "name": "广东省博物馆",
+          "lon": 113.321,
+          "lat": 23.118,
+          "area": "珠江新城",
+          "indoor": true,
+          "tags": [
+            "文化",
+            "艺术"
+          ],
+          "visit_minutes": 90,
+          "coordinate_status": "approximate_seed",
+          "factual_status": "synthetic",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "open_minutes": [
+            540,
+            1080
+          ],
+          "ticket": 0,
+          "closed": false,
+          "source": "synthetic_fixture",
+          "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+        },
+        {
+          "id": "gz_library",
+          "name": "广州图书馆",
+          "lon": 113.322,
+          "lat": 23.12,
+          "area": "珠江新城",
+          "indoor": true,
+          "tags": [
+            "文化",
+            "安静"
+          ],
+          "visit_minutes": 60,
+          "coordinate_status": "approximate_seed",
+          "factual_status": "synthetic",
+          "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "open_minutes": [
+            540,
+            1080
+          ],
+          "ticket": 0,
+          "closed": false,
+          "source": "synthetic_fixture",
+          "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+        }
+      ],
+      "routes": [
+        {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        {
+          "minutes": 58,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        }
+      ],
+      "cost": {
+        "items": [
+          {
+            "category": "门票",
+            "label": "广东省博物馆",
+            "amount": 0,
+            "basis": "合成测试票价"
+          },
+          {
+            "category": "门票",
+            "label": "广州图书馆",
+            "amount": 0,
+            "basis": "合成测试票价"
+          },
+          {
+            "category": "交通",
+            "label": "第 1 段（含返程）",
+            "amount": 8,
+            "basis": "synthetic_distance_formula"
+          },
+          {
+            "category": "交通",
+            "label": "第 2 段（含返程）",
+            "amount": 0,
+            "basis": "synthetic_distance_formula"
+          },
+          {
+            "category": "交通",
+            "label": "第 3 段（含返程）",
+            "amount": 8,
+            "basis": "synthetic_distance_formula"
+          },
+          {
+            "category": "餐饮",
+            "label": "午餐与饮水",
+            "amount": 35,
+            "basis": "用户可控制的消费上限假设"
+          },
+          {
+            "category": "预留",
+            "label": "应急缓冲",
+            "amount": 15,
+            "basis": "规划预留"
+          }
+        ],
+        "per_person": 66,
+        "group_total": 132,
+        "budget": 150,
+        "within_budget": true,
+        "unknown_prices": false,
+        "remaining": 84
+      },
+      "schedule": {
+        "entries": [
+          {
+            "kind": "travel",
+            "start": "09:00",
+            "end": "09:57",
+            "title": "模拟公共交通（非真实班次）",
+            "detail": "广州大学大学城校区 → 广东省博物馆",
+            "source": "synthetic_distance_formula"
+          },
+          {
+            "kind": "visit",
+            "id": "gd_museum",
+            "start": "09:57",
+            "end": "11:27",
+            "title": "广东省博物馆",
+            "detail": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知",
+            "indoor": true
+          },
+          {
+            "kind": "meal",
+            "start": "11:27",
+            "end": "12:12",
+            "title": "用餐与休息",
+            "detail": "餐饮饮水每人 35 元额度，未指定商户"
+          },
+          {
+            "kind": "travel",
+            "start": "12:12",
+            "end": "12:22",
+            "title": "模拟步行",
+            "detail": "广东省博物馆 → 广州图书馆",
+            "source": "synthetic_distance_formula"
+          },
+          {
+            "kind": "visit",
+            "id": "gz_library",
+            "start": "12:22",
+            "end": "13:22",
+            "title": "广州图书馆",
+            "detail": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知",
+            "indoor": true
+          },
+          {
+            "kind": "travel",
+            "start": "13:22",
+            "end": "14:20",
+            "title": "返程：模拟公共交通（非真实班次）",
+            "detail": "广州图书馆 → 广州大学大学城校区",
+            "source": "synthetic_distance_formula"
+          }
+        ],
+        "return_time": "14:20",
+        "return_minute": 860,
+        "deadline": "20:00",
+        "within_time": true,
+        "walk_minutes": 72,
+        "walk_limit": 90,
+        "unknown_hours": false
+      },
+      "score": 207.5
+    },
+    "selection_reason": null,
+    "factual_coverage": {
+      "official_places": 0,
+      "total_places": 2,
+      "unknown_hours": false,
+      "unknown_prices": false
+    },
+    "provenance": "离线合成演示，不构成真实出行承诺",
+    "checklist": [
+      "核实目的地当天是否开放及预约名额",
+      "确认票价与学生优惠条件",
+      "出发当天复查天气及往返交通",
+      "室内备选仍有室外换乘，恶劣天气请改期"
+    ],
+    "run_id": "5288b03a507f4f8e",
+    "request": {
+      "origin": "广州大学大学城校区",
+      "date": "2026-10-17",
+      "people": 2,
+      "budget": 150,
+      "start": "09:00",
+      "end": "20:00",
+      "interests": [
+        "文化",
+        "拍照"
+      ],
+      "pace": "relaxed",
+      "mode": "demo",
+      "engine": "rules",
+      "scenario": "sunny"
+    },
+    "engine": "规则规划器（未调用大模型）",
+    "usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "model_calls": 0,
+      "usage_complete": true
+    },
+    "duration_ms": 1.58,
+    "external_calls": 0,
+    "trace": [
+      {
+        "seq": 1,
+        "type": "Decision",
+        "at": "2026-10-14T00:38:56+08:00",
+        "summary": "先定位出发地，再获取天气、筛选地点；预算与时间使用确定性工具检查。"
+      },
+      {
+        "seq": 2,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "resolve_origin",
+        "arguments": {
+          "name": "广州大学大学城校区",
+          "coordinates": null
+        },
+        "ok": true,
+        "observation": [
+          113.376,
+          23.037
+        ],
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 3,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_weather",
+        "arguments": {
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "status": "synthetic",
+          "rain": false,
+          "severe": false,
+          "summary": "合成晴天场景",
+          "source": "离线合成测试夹具；不是出行日天气预报",
+          "date": "2026-10-17",
+          "fetched_at": "2026-10-14T00:38:56+08:00"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 4,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_places",
+        "arguments": {
+          "interests": [
+            "文化",
+            "拍照"
+          ],
+          "indoor": false
+        },
+        "ok": true,
+        "observation": [
+          {
+            "id": "lingnan",
+            "name": "岭南印象园",
+            "lon": 113.407,
+            "lat": 23.043,
+            "area": "大学城",
+            "indoor": false,
+            "tags": [
+              "文化",
+              "拍照"
+            ],
+            "visit_minutes": 90,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "gd_museum",
+            "name": "广东省博物馆",
+            "lon": 113.321,
+            "lat": 23.118,
+            "area": "珠江新城",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "艺术"
+            ],
+            "visit_minutes": 90,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "gz_library",
+            "name": "广州图书馆",
+            "lon": 113.322,
+            "lat": 23.12,
+            "area": "珠江新城",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "安静"
+            ],
+            "visit_minutes": 60,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "opera",
+            "name": "广州大剧院外广场",
+            "lon": 113.321,
+            "lat": 23.115,
+            "area": "珠江新城",
+            "indoor": false,
+            "tags": [
+              "建筑",
+              "拍照"
+            ],
+            "visit_minutes": 45,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "huacheng",
+            "name": "花城广场",
+            "lon": 113.323,
+            "lat": 23.121,
+            "area": "珠江新城",
+            "indoor": false,
+            "tags": [
+              "散步",
+              "拍照"
+            ],
+            "visit_minutes": 60,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "haixinsha",
+            "name": "海心沙公园",
+            "lon": 113.325,
+            "lat": 23.111,
+            "area": "珠江新城",
+            "indoor": false,
+            "tags": [
+              "散步",
+              "拍照"
+            ],
+            "visit_minutes": 60,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          }
+        ],
+        "duration_ms": 0.04
+      },
+      {
+        "seq": 5,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.321,
+            23.118
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.02
+      },
+      {
+        "seq": 6,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.118
+          ],
+          "to": [
+            113.322,
+            23.12
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 7,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.322,
+            23.12
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 58,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 8,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.118
+          ],
+          "to": [
+            113.321,
+            23.115
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 9,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.115
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 10,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.118
+          ],
+          "to": [
+            113.323,
+            23.121
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 11,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.323,
+            23.121
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 58,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 12,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.118
+          ],
+          "to": [
+            113.325,
+            23.111
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 19,
+          "fare": 0,
+          "walk_minutes": 19,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 13,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.325,
+            23.111
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 55,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 14,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.322,
+            23.12
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 58,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 15,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.322,
+            23.12
+          ],
+          "to": [
+            113.321,
+            23.118
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 16,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.118
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 17,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.322,
+            23.12
+          ],
+          "to": [
+            113.321,
+            23.115
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 12,
+          "fare": 0,
+          "walk_minutes": 12,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 18,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.322,
+            23.12
+          ],
+          "to": [
+            113.323,
+            23.121
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 19,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.322,
+            23.12
+          ],
+          "to": [
+            113.325,
+            23.111
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 22,
+          "fare": 0,
+          "walk_minutes": 22,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 20,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.321,
+            23.115
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 57,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 21,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.115
+          ],
+          "to": [
+            113.321,
+            23.118
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 22,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.115
+          ],
+          "to": [
+            113.322,
+            23.12
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 12,
+          "fare": 0,
+          "walk_minutes": 12,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 23,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.115
+          ],
+          "to": [
+            113.323,
+            23.121
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 15,
+          "fare": 0,
+          "walk_minutes": 15,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 24,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.321,
+            23.115
+          ],
+          "to": [
+            113.325,
+            23.111
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 13,
+          "fare": 0,
+          "walk_minutes": 13,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 25,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.323,
+            23.121
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 58,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 26,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.323,
+            23.121
+          ],
+          "to": [
+            113.321,
+            23.118
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 27,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.323,
+            23.121
+          ],
+          "to": [
+            113.322,
+            23.12
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 10,
+          "fare": 0,
+          "walk_minutes": 10,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 28,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.323,
+            23.121
+          ],
+          "to": [
+            113.321,
+            23.115
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 15,
+          "fare": 0,
+          "walk_minutes": 15,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 29,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.323,
+            23.121
+          ],
+          "to": [
+            113.325,
+            23.111
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 29,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 30,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.325,
+            23.111
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 55,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 31,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.325,
+            23.111
+          ],
+          "to": [
+            113.321,
+            23.118
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 19,
+          "fare": 0,
+          "walk_minutes": 19,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 32,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.325,
+            23.111
+          ],
+          "to": [
+            113.322,
+            23.12
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 22,
+          "fare": 0,
+          "walk_minutes": 22,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 33,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.325,
+            23.111
+          ],
+          "to": [
+            113.321,
+            23.115
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 13,
+          "fare": 0,
+          "walk_minutes": 13,
+          "summary": "模拟步行",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 34,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.325,
+            23.111
+          ],
+          "to": [
+            113.323,
+            23.121
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 29,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 35,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.407,
+            23.043
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 35,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 36,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.407,
+            23.043
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 35,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 37,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "calculate_cost",
+        "arguments": {
+          "place_ids": [
+            "gd_museum",
+            "opera"
+          ],
+          "people": 2
+        },
+        "ok": true,
+        "observation": {
+          "items": [
+            {
+              "category": "门票",
+              "label": "广东省博物馆",
+              "amount": 0,
+              "basis": "合成测试票价"
+            },
+            {
+              "category": "门票",
+              "label": "广州大剧院外广场",
+              "amount": 0,
+              "basis": "合成测试票价"
+            },
+            {
+              "category": "交通",
+              "label": "第 1 段（含返程）",
+              "amount": 8,
+              "basis": "synthetic_distance_formula"
+            },
+            {
+              "category": "交通",
+              "label": "第 2 段（含返程）",
+              "amount": 0,
+              "basis": "synthetic_distance_formula"
+            },
+            {
+              "category": "交通",
+              "label": "第 3 段（含返程）",
+              "amount": 8,
+              "basis": "synthetic_distance_formula"
+            },
+            {
+              "category": "餐饮",
+              "label": "午餐与饮水",
+              "amount": 35,
+              "basis": "用户可控制的消费上限假设"
+            },
+            {
+              "category": "预留",
+              "label": "应急缓冲",
+              "amount": 15,
+              "basis": "规划预留"
+            }
+          ],
+          "per_person": 66,
+          "group_total": 132,
+          "budget": 150,
+          "within_budget": true,
+          "unknown_prices": false,
+          "remaining": 84
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 38,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "check_schedule",
+        "arguments": {
+          "deadline": "20:00",
+          "indoor": false
+        },
+        "ok": true,
+        "observation": {
+          "return_time": "14:04",
+          "return_minute": 844,
+          "deadline": "20:00",
+          "within_time": true,
+          "walk_minutes": 72,
+          "walk_limit": 90,
+          "unknown_hours": false
+        },
+        "duration_ms": 0.0
+      },
+      {
+        "seq": 39,
+        "type": "Decision",
+        "at": "2026-10-14T00:38:56+08:00",
+        "summary": "候选筛选检查 26 个组合；排除原因：无；找到满足估算约束的草案。"
+      },
+      {
+        "seq": 40,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_places",
+        "arguments": {
+          "interests": [
+            "文化",
+            "拍照"
+          ],
+          "indoor": true
+        },
+        "ok": true,
+        "observation": [
+          {
+            "id": "gd_museum",
+            "name": "广东省博物馆",
+            "lon": 113.321,
+            "lat": 23.118,
+            "area": "珠江新城",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "艺术"
+            ],
+            "visit_minutes": 90,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "gz_library",
+            "name": "广州图书馆",
+            "lon": 113.322,
+            "lat": 23.12,
+            "area": "珠江新城",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "安静"
+            ],
+            "visit_minutes": 60,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "opera_museum",
+            "name": "粤剧艺术博物馆",
+            "lon": 113.231,
+            "lat": 23.117,
+            "area": "荔湾",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "艺术"
+            ],
+            "visit_minutes": 75,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "chen",
+            "name": "陈家祠",
+            "lon": 113.241,
+            "lat": 23.129,
+            "area": "荔湾",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "建筑"
+            ],
+            "visit_minutes": 75,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 30,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "nanyue",
+            "name": "南越王博物院王宫展区",
+            "lon": 113.271,
+            "lat": 23.128,
+            "area": "越秀",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "历史"
+            ],
+            "visit_minutes": 90,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          },
+          {
+            "id": "peasant",
+            "name": "农讲所纪念馆",
+            "lon": 113.28,
+            "lat": 23.13,
+            "area": "越秀",
+            "indoor": true,
+            "tags": [
+              "文化",
+              "历史"
+            ],
+            "visit_minutes": 60,
+            "coordinate_status": "approximate_seed",
+            "factual_status": "synthetic",
+            "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
+            "fetched_at": "2026-10-14T00:38:56+08:00",
+            "open_minutes": [
+              540,
+              1080
+            ],
+            "ticket": 0,
+            "closed": false,
+            "source": "synthetic_fixture",
+            "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
+          }
+        ],
+        "duration_ms": 0.03
+      },
+      {
+        "seq": 41,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.376,
+            23.037
+          ],
+          "to": [
+            113.231,
+            23.117
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 77,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.03
+      },
+      {
+        "seq": 42,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "query_route",
+        "arguments": {
+          "from": [
+            113.231,
+            23.117
+          ],
+          "to": [
+            113.376,
+            23.037
+          ],
+          "date": "2026-10-17"
+        },
+        "ok": true,
+        "observation": {
+          "minutes": 77,
+          "fare": 8,
+          "walk_minutes": 16,
+          "summary": "模拟公共交通（非真实班次）",
+          "source": "synthetic_distance_formula",
+          "estimated": true,
+          "fetched_at": "2026-10-14T00:38:56+08:00",
+          "query_date": "2026-10-17"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 43,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "calculate_cost",
+        "arguments": {
+          "place_ids": [
+            "gd_museum",
+            "gz_library"
+          ],
+          "people": 2
+        },
+        "ok": true,
+        "observation": {
+          "items": [
+            {
+              "category": "门票",
+              "label": "广东省博物馆",
+              "amount": 0,
+              "basis": "合成测试票价"
+            },
+            {
+              "category": "门票",
+              "label": "广州图书馆",
+              "amount": 0,
+              "basis": "合成测试票价"
+            },
+            {
+              "category": "交通",
+              "label": "第 1 段（含返程）",
+              "amount": 8,
+              "basis": "synthetic_distance_formula"
+            },
+            {
+              "category": "交通",
+              "label": "第 2 段（含返程）",
+              "amount": 0,
+              "basis": "synthetic_distance_formula"
+            },
+            {
+              "category": "交通",
+              "label": "第 3 段（含返程）",
+              "amount": 8,
+              "basis": "synthetic_distance_formula"
+            },
+            {
+              "category": "餐饮",
+              "label": "午餐与饮水",
+              "amount": 35,
+              "basis": "用户可控制的消费上限假设"
+            },
+            {
+              "category": "预留",
+              "label": "应急缓冲",
+              "amount": 15,
+              "basis": "规划预留"
+            }
+          ],
+          "per_person": 66,
+          "group_total": 132,
+          "budget": 150,
+          "within_budget": true,
+          "unknown_prices": false,
+          "remaining": 84
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 44,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "check_schedule",
+        "arguments": {
+          "deadline": "20:00",
+          "indoor": true
+        },
+        "ok": true,
+        "observation": {
+          "return_time": "14:20",
+          "return_minute": 860,
+          "deadline": "20:00",
+          "within_time": true,
+          "walk_minutes": 72,
+          "walk_limit": 90,
+          "unknown_hours": false
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "seq": 45,
+        "type": "Decision",
+        "at": "2026-10-14T00:38:56+08:00",
+        "summary": "室内筛选检查 5 个组合；排除原因：无；找到满足估算约束的草案。"
+      },
+      {
+        "seq": 46,
+        "type": "Tool",
+        "at": "2026-10-14T00:38:56+08:00",
+        "action": "save_itinerary",
+        "arguments": {
+          "run_id": "5288b03a507f4f8e"
+        },
+        "ok": true,
+        "observation": {
+          "file": "5288b03a507f4f8e.json",
+          "status": "saved"
+        },
+        "duration_ms": 0.03
+      }
+    ],
+    "model_info": null,
+    "session_id": "e60f4ce869d64873b3ee844cc210b9d0"
+  }
+}

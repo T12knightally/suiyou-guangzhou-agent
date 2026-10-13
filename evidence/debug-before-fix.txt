@@ -1,0 +1,66 @@
+test_bad_time (test_agent.Tests.test_bad_time) ... ok
+test_closure (test_agent.Tests.test_closure) ... ok
+test_custom_origin (test_agent.Tests.test_custom_origin) ... ok
+test_external_injection (test_agent.Tests.test_external_injection) ... ok
+test_happy_path (test_agent.Tests.test_happy_path) ... ok
+test_live_past_date (test_agent.Tests.test_live_past_date) ... FAIL
+test_live_route_missing_walking_field (test_agent.Tests.test_live_route_missing_walking_field) ... FAIL
+test_live_unknown_ticket_is_not_free (test_agent.Tests.test_live_unknown_ticket_is_not_free) ... ok
+test_llm_function_contract (test_agent.Tests.test_llm_function_contract) ... ok
+test_llm_loop_bound (test_agent.Tests.test_llm_loop_bound) ... ok
+test_low_budget (test_agent.Tests.test_low_budget) ... ok
+test_missing (test_agent.Tests.test_missing) ... ok
+test_missing_api (test_agent.Tests.test_missing_api) ... ok
+test_nan_budget (test_agent.Tests.test_nan_budget) ... ok
+test_negative_budget (test_agent.Tests.test_negative_budget) ... ok
+test_outside_coordinates (test_agent.Tests.test_outside_coordinates) ... ok
+test_overnight (test_agent.Tests.test_overnight) ... ok
+test_payment (test_agent.Tests.test_payment) ... ok
+test_people_fraction (test_agent.Tests.test_people_fraction) ... ok
+test_rain_backup_validated (test_agent.Tests.test_rain_backup_validated) ... ok
+test_rain_replans (test_agent.Tests.test_rain_replans) ... ok
+test_return_included (test_agent.Tests.test_return_included) ... ok
+test_route_timeout (test_agent.Tests.test_route_timeout) ... ok
+test_save_trace (test_agent.Tests.test_save_trace) ... FAIL
+test_storm (test_agent.Tests.test_storm) ... ok
+test_tool_id_whitelist (test_agent.Tests.test_tool_id_whitelist) ... ok
+test_twenty_places (test_agent.Tests.test_twenty_places) ... ok
+test_unknown_origin (test_agent.Tests.test_unknown_origin) ... ok
+test_user_injection (test_agent.Tests.test_user_injection) ... ok
+test_weather_timeout (test_agent.Tests.test_weather_timeout) ... ok
+
+======================================================================
+FAIL: test_live_past_date (test_agent.Tests.test_live_past_date)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Documents\Codex\2026-10-11\3-agent-150-agent-20\outputs\广州周末Agent\tests\test_agent.py", line 53, in test_live_past_date
+    def test_live_past_date(self): self.assertEqual(self.run_agent(mode='live',date='2020-01-01')['status'],'invalid')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'needs_configuration' != 'invalid'
+- needs_configuration
++ invalid
+
+
+======================================================================
+FAIL: test_live_route_missing_walking_field (test_agent.Tests.test_live_route_missing_walking_field)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Documents\Codex\2026-10-11\3-agent-150-agent-20\outputs\广州周末Agent\tests\test_agent.py", line 63, in test_live_route_missing_walking_field
+    with self.assertRaises(ProviderError): p.route((113.3,23.1),(113.4,23.2),'2026-10-17')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ProviderError not raised
+
+======================================================================
+FAIL: test_save_trace (test_agent.Tests.test_save_trace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Documents\Codex\2026-10-11\3-agent-150-agent-20\outputs\广州周末Agent\tests\test_agent.py", line 52, in test_save_trace
+    self.assertEqual(r,saved); self.assertTrue(any(t.get('action')=='check_schedule' for t in r['trace']))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'sta[7636 chars]on': (113.376, 23.037), 'duration_ms': 0.01}, [22692 chars]01}]} != {'sta[7636 chars]on': [113.376, 23.037], 'duration_ms': 0.01}, [22692 chars]01}]}
+Diff is 72814 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.166s
+
+FAILED (failures=3)

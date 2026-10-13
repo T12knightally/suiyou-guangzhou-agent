@@ -1,0 +1,80 @@
+{
+  "max_age_days": 7,
+  "audit_note": "人工逐项核对官网原文；仅在核对的普通日期区间套用常规周历，临时公告与预约余量未自动核验。",
+  "venues": {
+    "gd_museum": {
+      "checked_at": "2026-10-14T00:09:34+08:00",
+      "ticket": 0,
+      "ticket_scope": "免费入馆与常设展；不含另行收费的特展和讲解",
+      "open_minutes": [
+        540,
+        1020
+      ],
+      "last_entry_minute": 960,
+      "closed_weekdays": [
+        0
+      ],
+      "calendar_valid_from": "2026-10-14",
+      "calendar_valid_to": "2026-10-20",
+      "reservation_required": true,
+      "reservation_note": "须在广东省博物馆官方微信公众号实名分时预约；名额由你自行确认",
+      "booking_url": "https://www.gdmuseum.com/col843/list",
+      "sources": [
+        {
+          "url": "https://www.gdmuseum.com/col666/list",
+          "title": "广东省博物馆参观指南",
+          "fetched_at": "2026-10-14T00:09:34+08:00",
+          "html_sha256": "3b90e50ad99451f345ade562f1beafec35e0ce70f945b7402000075d745309dd",
+          "snapshot": "evidence/official_sources/museum_guide.txt"
+        },
+        {
+          "url": "https://www.gdmuseum.com/",
+          "title": "广东省博物馆官网首页",
+          "fetched_at": "2026-10-14T00:09:34+08:00",
+          "html_sha256": "22cf76c21bda33c50e550a3e8dbe206341f35e49df6d2e3edb15b8ac2c6858c6",
+          "snapshot": "evidence/official_sources/museum_home.txt"
+        },
+        {
+          "url": "https://www.gdmuseum.com/col843/list",
+          "title": "广东省博物馆门票预约",
+          "fetched_at": "2026-10-14T00:09:34+08:00",
+          "html_sha256": "b8d57d2df5b014dc0a39e8ca95a24df23da6400a66a70012ef49143f5e6ea970",
+          "snapshot": "evidence/official_sources/museum_booking.txt"
+        }
+      ]
+    },
+    "gz_library": {
+      "checked_at": "2026-10-14T00:09:34+08:00",
+      "ticket": 0,
+      "ticket_scope": "普通阅览与公共文化空间免费，不含付费附加服务",
+      "open_minutes": [
+        540,
+        1050
+      ],
+      "last_entry_minute": null,
+      "closed_weekdays": [
+        2
+      ],
+      "calendar_valid_from": "2026-10-14",
+      "calendar_valid_to": "2026-10-20",
+      "reservation_required": null,
+      "reservation_note": "含专题馆的文化参观按17:30前结束安排；专用空间和活动另按报名规则",
+      "sources": [
+        {
+          "url": "https://www.gzlib.org.cn/opentime/index.jhtml",
+          "title": "广州图书馆开放时间",
+          "fetched_at": "2026-10-14T00:09:34+08:00",
+          "html_sha256": "b89571602ec8b5571bbb12f80f5e695288898b4cc061cdaabf8dc3ec4e1e6ec1",
+          "snapshot": "evidence/official_sources/library_hours.txt"
+        },
+        {
+          "url": "https://www.gzlib.org.cn/aboutlib/index.jhtml",
+          "title": "广州图书馆概况",
+          "fetched_at": "2026-10-14T00:09:34+08:00",
+          "html_sha256": "31d35910a694dfaf9d66aa20f656030a8ac0af48eb0494a30124e641c3915622",
+          "snapshot": "evidence/official_sources/library_intro.txt"
+        }
+      ]
+    }
+  }
+}

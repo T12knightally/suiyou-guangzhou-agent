@@ -1,0 +1,136 @@
+{
+  "checked_at": "2026-10-13T20:46:46+08:00",
+  "checks": [
+    {
+      "name": "qwen_tool_call",
+      "ok": true,
+      "result": {
+        "provider": "qwen",
+        "model": "qwen3.8-flash",
+        "tool_call_valid": true,
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"ok\": true}",
+              "name": "record_probe"
+            },
+            "id": "call_baab2ebe8f844f66a866c50e",
+            "index": 0,
+            "type": "function"
+          }
+        ],
+        "usage": {
+          "completion_tokens": 26,
+          "prompt_tokens": 294,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "text_tokens": 294
+          },
+          "total_tokens": 320
+        },
+        "response_id": "chatcmpl-bd272cc5-14c3-9df4-9dd3-d387150dd54a"
+      },
+      "duration_ms": 824.89
+    },
+    {
+      "name": "deepseek_tool_call",
+      "ok": true,
+      "result": {
+        "provider": "deepseek",
+        "model": "deepseek-flash",
+        "tool_call_valid": true,
+        "tool_calls": [
+          {
+            "index": 0,
+            "id": "call_00_nWcVNHC8ezotqSvrxph55224",
+            "type": "function",
+            "function": {
+              "name": "record_probe",
+              "arguments": "{\"ok\": true}"
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 281,
+          "completion_tokens": 38,
+          "total_tokens": 319,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 281
+        },
+        "response_id": "6b6a2a13-4638-4eba-971a-b6fa940b5c0f"
+      },
+      "duration_ms": 807.65
+    },
+    {
+      "name": "amap_geocode",
+      "ok": true,
+      "result": {
+        "coordinates": [
+          113.400704,
+          23.040717
+        ]
+      },
+      "duration_ms": 63.8
+    },
+    {
+      "name": "amap_poi",
+      "ok": true,
+      "result": {
+        "count": "3",
+        "pois": [
+          {
+            "name": "广东省博物馆",
+            "location": "113.326369,23.114763",
+            "adcode": "440106"
+          },
+          {
+            "name": "广东省博物馆地面停车场",
+            "location": "113.327525,23.114723",
+            "adcode": "440106"
+          },
+          {
+            "name": "广东省博物馆-免费参观领票处",
+            "location": "113.325379,23.114711",
+            "adcode": "440106"
+          }
+        ]
+      },
+      "duration_ms": 139.6
+    },
+    {
+      "name": "amap_transit",
+      "ok": true,
+      "result": {
+        "minutes": 62,
+        "fare": 5.0,
+        "walk_minutes": 11,
+        "summary": "地铁4号线(南沙客运港--黄村) → 地铁5号线(黄埔新港--滘口)",
+        "source": "高德 v3 公交路线 + 15 分钟缓冲",
+        "estimated": true,
+        "notice": "查询时路线估算，非指定日期班次承诺",
+        "fetched_at": "2026-10-13T20:46:44+08:00",
+        "query_date": "2026-10-13"
+      },
+      "duration_ms": 225.85
+    },
+    {
+      "name": "open_meteo",
+      "ok": true,
+      "result": {
+        "status": "forecast",
+        "rain": false,
+        "severe": false,
+        "probability": 0,
+        "weather_code": 0,
+        "source": "Open-Meteo forecast",
+        "date": "2026-10-13",
+        "fetched_at": "2026-10-13T20:46:46+08:00"
+      },
+      "duration_ms": 1975.43
+    }
+  ],
+  "note": "真实接口的小规模连通性与工具协议测试，不代表全流程行程验收；网络请求不自动重试模型。"
+}

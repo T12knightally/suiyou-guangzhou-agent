@@ -1,0 +1,18 @@
+{
+  "pages": 12,
+  "template_headings": 24,
+  "attachments": 4,
+  "fonts": [
+    "AAAAAA+SimHei",
+    "AAAAAB+SimHei",
+    "AAAAAC+SimHei",
+    "AAAAAD+SimHei"
+  ],
+  "text_colors": [
+    "(0.0, 0.0, 0.0)"
+  ],
+  "detected_enclosed_tables": 10,
+  "text_inside_page": true,
+  "latest_http_playback": true,
+  "browser_visual_test": false
+}

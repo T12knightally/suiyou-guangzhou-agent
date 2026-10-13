@@ -1,0 +1,138 @@
+{
+  "status": "needs_input",
+  "missing": [
+    "start",
+    "end"
+  ],
+  "questions": [
+    "请补充出发时间 HH:MM",
+    "请补充最晚返回时间 HH:MM"
+  ],
+  "run_id": "f7f2a579e1524e5d",
+  "request": {
+    "mode": "live",
+    "engine": "llm",
+    "message": "周六两个人从广州大学大学城校区出发，每人150元，想轻松一点",
+    "origin": "广州大学大学城校区",
+    "date": "2026-10-17",
+    "people": 2,
+    "budget": 150,
+    "pace": "relaxed"
+  },
+  "engine": "LLM function calling",
+  "usage": {
+    "prompt_tokens": 1030,
+    "completion_tokens": 135,
+    "model_calls": 1,
+    "usage_complete": true
+  },
+  "duration_ms": 2005.86,
+  "external_calls": 0,
+  "trace": [
+    {
+      "seq": 1,
+      "type": "Tool",
+      "at": "2026-10-14T00:23:35+08:00",
+      "action": "model_response",
+      "arguments": {
+        "provider": "qwen",
+        "model": "qwen3.8-flash",
+        "stage": "requirements",
+        "round": 1
+      },
+      "ok": true,
+      "observation": {
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"updates\": {\"origin\": \"广州大学大学城校区\", \"date\": \"2026-10-17\", \"people\": 2, \"budget\": 150, \"pace\": \"relaxed\"}, \"evidence\": {\"origin\": \"从广州大学大学城校区出发\", \"date\": \"周六\", \"people\": \"两个人\", \"budget\": \"每人150元\", \"pace\": \"想轻松一点\"}, \"questions\": \n[]\n\n}",
+              "name": "extract_trip_requirements"
+            },
+            "id": "call_066345583e9749d08642efeb",
+            "index": 0,
+            "type": "function"
+          }
+        ],
+        "usage": {
+          "completion_tokens": 135,
+          "prompt_tokens": 1030,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "text_tokens": 1030
+          },
+          "total_tokens": 1165
+        },
+        "response_id": "chatcmpl-ccb8efc5-4e2a-9f61-a6a2-63365773e9f4",
+        "duration_ms": 2004.46
+      },
+      "duration_ms": 0.08
+    },
+    {
+      "seq": 2,
+      "type": "Tool",
+      "at": "2026-10-14T00:23:35+08:00",
+      "action": "extract_trip_requirements",
+      "arguments": {
+        "updates": {
+          "origin": "广州大学大学城校区",
+          "date": "2026-10-17",
+          "people": 2,
+          "budget": 150,
+          "pace": "relaxed"
+        },
+        "evidence": {
+          "origin": "从广州大学大学城校区出发",
+          "date": "周六",
+          "people": "两个人",
+          "budget": "每人150元",
+          "pace": "想轻松一点"
+        },
+        "questions": []
+      },
+      "ok": true,
+      "observation": [
+        {
+          "origin": "广州大学大学城校区",
+          "date": "2026-10-17",
+          "people": 2,
+          "budget": 150,
+          "pace": "relaxed"
+        },
+        []
+      ],
+      "duration_ms": 0.71
+    },
+    {
+      "seq": 3,
+      "type": "Decision",
+      "at": "2026-10-14T00:23:35+08:00",
+      "summary": "按用户原文证据更新字段：origin, date, people, budget, pace"
+    },
+    {
+      "seq": 4,
+      "type": "Decision",
+      "at": "2026-10-14T00:23:35+08:00",
+      "summary": "输入校验触发追问或边界拦截。"
+    },
+    {
+      "seq": 5,
+      "type": "Tool",
+      "at": "2026-10-14T00:23:35+08:00",
+      "action": "save_itinerary",
+      "arguments": {
+        "run_id": "f7f2a579e1524e5d"
+      },
+      "ok": true,
+      "observation": {
+        "file": "f7f2a579e1524e5d.json",
+        "status": "saved"
+      },
+      "duration_ms": 0.02
+    }
+  ],
+  "model_info": {
+    "provider": "qwen",
+    "model": "qwen3.8-flash"
+  },
+  "session_id": "1cb351b01b0447d69bee217064ef611d"
+}

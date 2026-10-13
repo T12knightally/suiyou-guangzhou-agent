@@ -1,0 +1,1056 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="wap-font-scale" content="no"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="广图" />
+<meta name="keywords" content="广图" />
+<title>广州图书馆·广图概况</title>
+<link rel="stylesheet" type="text/css" href="/r/cms/www/lasttemp/js/My97DatePicker/skin/WdatePicker.css"/>
+<link rel="stylesheet" type="text/css" href="/r/cms/www/lasttemp/css/site_global.css?4052507572"/>
+<link rel="stylesheet" type="text/css" href="/r/cms/www/lasttemp/css/pages.css" id="pagesheet"/>
+<!-- 开发人员调整的个别样式 -->
+<link rel="stylesheet" type="text/css" href="/r/cms/www/lasttemp/css/few_pages.css"/>
+<link rel="icon" href="/r/cms/www/t_logo.ico" type="image/x-icon"/>
+
+<script type="text/javascript" src="/r/cms/jquery.js" ></script> 
+<!-- 弹窗窗口插件js -->
+<script type="text/javascript" src="/r/cms/www/lasttemp/js/zDrag.js"></script>
+<script type="text/javascript" src="/r/cms/www/lasttemp/js/zDialog.js"></script>
+<!-- 前台请求js -->
+<script type="text/javascript" src="/r/cms/front.js" ></script>
+<!-- 列表数据加载中的效果 -->
+<script type="text/javascript" src="/r/cms/jquery.blockUI.js" ></script> 
+<!-- 共用的js -->
+<script type="text/javascript" src="/r/cms/www/lasttemp/js/common.js"></script>
+<script type="text/javascript" src="/r/cms/www/lasttemp/js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="/r/cms/www/lasttemp/js/plugin/placeholder/jquery.placeholder.min.js"></script>
+
+<!--[if lt IE 11]>
+<style type="text/css">
+.phcolor{ color:#999;}
+</style>
+<script type="text/javascript">
+$(function(){  
+
+  //判断浏览器是否支持placeholder属性
+  supportPlaceholder='placeholder'in document.createElement('textarea'),
+
+  placeholder=function(input){
+
+    var text = input.attr('placeholder'),
+    inp_val=input.val(),
+    defaultValue = input.defaultValue;
+
+    if(!defaultValue&&!inp_val){
+
+      input.val(text).addClass("phcolor");
+    }
+
+    input.focus(function(){
+
+      if(input.val() == text){
+  
+        $(this).val("");
+      }
+    });
+
+ 
+    input.blur(function(){
+
+      if(input.val() == ""){
+      
+        $(this).val(text).addClass("phcolor");
+      }
+    });
+
+    //输入的字符不为灰色
+    input.keydown(function(){
+ 
+      $(this).removeClass("phcolor");
+    });
+  };
+
+  //当浏览器不支持placeholder属性时，调用placeholder函数
+  if(!supportPlaceholder){
+
+    $('textarea').each(function(){
+
+      text = $(this).attr("placeholder");
+		placeholder($(this));
+      
+    });
+  }
+
+});
+$(function(){  
+
+  //判断浏览器是否支持placeholder属性
+  supportPlaceholder='placeholder'in document.createElement('input'),
+
+  placeholder=function(input){
+
+    var text = input.attr('placeholder'),
+    inp_val=input.val(),
+    defaultValue = input.defaultValue;
+
+    if(!defaultValue&&!inp_val){
+
+      input.val(text).addClass("phcolor");
+    }
+
+    input.focus(function(){
+
+      if(input.val() == text){
+  
+        $(this).val("");
+      }
+    });
+
+ 
+    input.blur(function(){
+
+      if(input.val() == ""){
+      
+        $(this).val(text).addClass("phcolor");
+      }
+    });
+
+    //输入的字符不为灰色
+    input.keydown(function(){
+ 
+      $(this).removeClass("phcolor");
+    });
+  };
+
+  //当浏览器不支持placeholder属性时，调用placeholder函数
+  if(!supportPlaceholder){
+
+    $('input').each(function(){
+
+      text = $(this).attr("placeholder");
+
+      if($(this).attr("type") == "text"){
+
+        placeholder($(this));
+      }
+    });
+  }
+
+});
+</script>
+<![endif]-->
+<!-- 捕获键盘事件跳转到无障碍工具条  -->
+
+<!-- 退出登录 --> 
+<script type="text/javascript">
+$(function(){
+	document.onkeydown = function(e){ 
+	    var ev = document.all ? window.event : e;
+	    if(ev.keyCode==13) {
+	    	var q = $("input[name=q]").val();
+			if(q){
+				$("#sb2").click();
+				var url = $("#sb2").attr("href");
+				if(url){
+					window.open(url);
+				}
+			}
+	     }else if(event .altKey&&event.shiftKey&&event.keyCode==81){
+	 		window.location.href='/wca.jspx';
+	 	}
+	}
+	if(top.location != location){  
+		var w = $(window);
+		var ww = w.width();
+		if(ww>1180){
+			resetnav(100);	
+		}else if(ww>1124 && ww<1180){
+			resetnav(80);		
+		}else if(ww<=1124 && ww>720){
+			resetnav(70);	
+		}
+		$(".login_area").css({"width":"424px"});
+		$(".login_box a").each(function(index,element){
+			if("资源通道" == $(this).text()){
+				$(this).css({"width":"100px"});
+			}
+		});
+		$(".channel_nav .nav-lv1 li a").each(function(index,element){
+			if("关于我们" == $(this).text()){
+				$(this).css({"width":"144px"});
+			}
+		});
+		$(".search").css({"width":"818px"});
+		$(".dabiaoti").css({"line-height":"46px"});
+		$(".txt span").css({"line-height":"28px"});
+		$("#divselect ul").css({"width":"134px"});
+		$("#divselect").css({"width":"140px"});
+		$(".submit_btn").css({"line-height":"20px"});
+		$("#FooterMT").css({"width":"368px","right":"-7px"});
+		$("#FooterMT a").css({"height":"30px"});
+		$("#dayeventback").css({"width":"100px","height":"30px"});
+		
+		$(".channel-list-style1 div a").each(function(index,element){
+			if("下载" == $(this).text()){
+				$(this).parent().css({"width":"80px"});
+			}
+		});
+	} 
+	$('#logout_top').click(function () {
+		var isCliced = $("#logout_top").attr("disabled");
+		if("" == isCliced || null == isCliced || typeof(isCliced) =="undefinded"){
+			location="/logout.jspx?returnUrl=https%3A%2F%2Fwww.gzlib.org.cn%2Faboutlib%2Findex.jhtml";
+		}
+		$("#logout_top").attr({"disabled":"disabled"});
+		setTimeout("cleargd",50000);
+	});
+	if(''&& ''&& ''=='reader'){
+		opacbook('https%3A%2F%2Fwww.gzlib.org.cn%2Faboutlib%2Findex.jhtml','smjsopac','http://opac.gzlib.org.cn/opac/index/advance');
+	}
+});
+function resetnav(width){
+	$(".top_nav_link a").each(function(index,element){
+		if("关于我们" == $(this).text()){
+			$(this).css({"width":"134px"});
+		}else{
+			$(this).css({"width":width+"px"});
+		}
+	});
+}
+	
+function cleargd(){
+	$("#logout_top").removeAttr("disabled");
+}
+</script>
+
+<script type="text/javascript"> 
+$(function() {
+ 	Cms.siteFlow("", location.href, document.referrer,1,"visitotal");
+	$.cookie("_site_id_cookie","1",{path: '' });
+	 var user = "";
+	if(""!=user && user!=null && typeof(user)!="undefinded"){
+		countUnreadMsg();
+		setTimeout( "countUnreadMsg() ",1000*60*10); 
+	} 
+});
+function countUnreadMsg(){
+	 $.get("/member/message_countUnreadMsg.jspx", {
+		}, function(data) {
+			if(data.result){
+				if(data.count == 0){
+					$(".headnum").hide();
+				}else if(data.count > 0 && data.count < 100){
+					$(".headnum").show();
+				 	$(".headnum").html(""+data.count+"");
+				}else{
+					$(".headnum").show();
+					$(".headnum").html("99+");
+				}
+			}else{
+				alert("请先登录");
+			}
+		}, "json");
+	 setTimeout( "countUnreadMsg() ",1000*60*10);    
+}
+<!-- 搜索热搜 -->
+/*$(function(){
+	$.ajax({
+		url:"/resource/getIndexHotSearch.jspx",
+		data:{channelId:820,orderBy:22,pageSize:10},
+		success:function(date){
+			$("input[name='q']").attr("placeholder","热搜：《"+date.bookname+"》");
+		}
+	});
+});*/
+function opacbook(location,id,url){
+	var res=false;
+	$.ajax({
+		url:"/index/logintoken.jspx",
+		type:"post",
+		async : false,
+		data:{location:location,code:"zh_CN",targetUrl:url},
+		success:function(data){
+			if(""!=data && data != null && typeof(data) !="undefinded"){
+				var state = data.state;
+				if(state == 0 || state == 1) {
+					$("#"+id).attr("href",data.url);
+					if(state == 0){
+						$("#"+id).attr("target","_self");
+					}else if(state == 1){
+						$("#"+id).attr("target","_blank");
+					}
+					res=true;
+				}
+			}
+		}
+	}); 
+	return res;
+}
+function searchChinese(location,q,callno,id,isOpaclogin){
+	q =stripscript(stripscript(q,"[．·，：\\[\\]【】。]"," ")," ","%2B");
+	var nurl = "http://opac.gzlib.org.cn/opac/search?searchWay0=title&q0="+ easyUTF8(q) +"&searchSource=reader&logical0=AND&searchWay1=callno&q1="+callno+"&logical1=AND&sortWay=score&sortOrder=desc&rows=10&hasholding=1";
+	//var url = "http://opac.gzlib.org.cn/opac/search?searchWay=title&q="+easyUTF8(q)+"&view=&searchSource=reader&booktype=&scWay=dim&marcformat=&sortWay=callno_sort&sortOrder=asc&startPubdate=&endPubdate=&rows=10&hasholding=1&curlibcode=GT";
+	if(isOpaclogin){
+		nurl = "http://opac.gzlib.org.cn/opac/search?searchWay0=callno%26q0=" +callno+ "%26searchSource=reader%26logical0=AND%26searchWay1=title%26logical1=AND%26sortWay=score%26sortOrder=desc%26rows=10%26hasholding=1%26q1="+ easyUTF8(q);
+		return opacbook(location,id,nurl);
+	}else{
+		$("#"+id).attr("href",nurl);
+	}
+}
+function seacheDetailUrl(location,nurl,id,isOpaclogin){
+	if(isOpaclogin){
+		return opacbook(location,id,nurl);
+	}else{
+		$("#"+id).attr("href",nurl);
+	}
+}
+function stripscript(s,str,tg) 
+{ 
+var pattern = new RegExp(str) 
+var rs = ""; 
+for (var i = 0; i < s.length; i++) { 
+rs = rs+s.substr(i, 1).replace(pattern, tg); 
+} 
+return rs; 
+} 
+function logintoken(location,code){
+	var keyword = $("input[name=q]").val();
+	var hotsearch = $("input[name=hotsearch]").val();
+	if(hotsearch != keyword){
+	if(""!=keyword&&keyword!=null&&typeof(keyword)!="undefined"){
+		var searchType = $("#inputselect").val();
+		if("" !=searchType&&searchType !=null && typeof(searchType)!="undefinded"){
+			if(searchType == "0"){
+				var keywordtype = $("#inputselect1").val();
+				var targetUrl ="https://opac.gzlib.org.cn/opac/search?hasholding=1%26curlibcode=GT%26searchWay="+keywordtype+"%26q="+easyUTF8(keyword); 
+				var res=false;
+				$.ajax({
+					url:"/index/logintoken.jspx",
+					type:"post",
+					async : false,
+					data:{location:location,code:code,targetUrl:targetUrl},
+					success:function(data){
+						if(""!=data && data != null && typeof(data) !="undefinded"){
+							var state = data.state;
+							if(state == 0 || state == 1) {
+								$("#sb2").attr("href",data.url);
+								if(state == 0){
+									$("#sb2").attr("target","_self");
+								}else if(state == 1){
+									$("#sb2").attr("target","_blank");
+								}
+								res=true;
+							}
+						}
+					}
+				}); 
+				return res;
+			}
+		}
+	}
+	}
+	return false;
+}
+
+
+</script>
+
+<!--eWebEditor插件-->
+<script type="text/javascript"  src="/ewebeditor/ewebeditor.js"> </script></head>
+<body>
+  <!-- 顶部导航条 -->
+<script type="text/javascript">
+	//滚动后导航固定
+	$(function() {
+		$(window).scroll(function() {
+			height = $(window).scrollTop();
+			if (height > 374) {
+				$('#nav2').show().css("position", "fixed");
+				$('#nav1').hide();
+			} else {
+				$('#nav1').show();
+				$('#nav2').hide();
+			};
+		});
+	});
+	
+	function renew(location){
+		Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','续借','网页头部的续借按钮');
+	}
+	function memberIndex(location){
+		Cms.pageSiteLink('','http://www.gzlib.gov.cn/member/index.jspx','个人中心','读者访客登录后的点击个人中心链接数统计');
+	}
+	
+	function logintoken(location){
+		var keyword = $("input[name=q]").val();
+		if(""!=keyword&&keyword!=null&&typeof(keyword)!="undefined"){
+			var searchType = $("#inputselect").val();
+			if("" !=searchType&&searchType !=null && typeof(searchType)!="undefinded"){
+				if(searchType == "0"){
+					var keywordtype = $("#inputselect1").val();
+					var targetUrl ="http://opac.gzlib.org.cn/opac/search?hasholding=1%26curlibcode=GT%26searchWay="+keywordtype+"%26q="+easyUTF8(keyword); 
+					var res=false;
+					$.ajax({
+						url:"/index/logintoken.jspx",
+						type:"post",
+						async : false,
+						data:{location:location,code:"zh_CN",targetUrl:targetUrl},
+						success:function(data){
+							if(""!=data && data != null && typeof(data) !="undefinded"){
+								var state = data.state;
+								if(state == 0 || state == 1) {
+									$("#sb2").attr("href",data.url);
+									if(state == 0){
+										$("#sb2").attr("target","_self");
+									}else if(state == 1){
+										$("#sb2").attr("target","_blank");
+									}
+									res=true;
+								}
+							}
+						}
+					}); 
+					return res;
+				}
+			}
+		}
+		return false;
+	}
+	function openDialogs(title,htmlStr,isAutoClose){
+		var dlg=new Dialog();//定义Dialog对象
+		dlg.Model=true;
+		dlg.AutoClose=isAutoClose;
+		dlg.Width=350;//定义长度
+		dlg.Height=100;
+		dlg.OKEvent=function(){
+			dlg.close();
+		};
+		dlg.Title=title;
+		dlg.InnerHtml=htmlStr;
+		dlg.show();
+		
+	}
+	$(function(){
+		$.ajax({
+			url:"/index/checkClientIp.jspx",
+			
+			success:function(data){
+				changeUrlByIp(data.flag);
+			}
+		}); 
+	})
+
+	function changeUrlByIp(flag){
+		 if(flag){
+			 $("#kkjs").attr("href","http://muse.gzlib.org.cn:8000/muse/servlet/MusePeer?action=logon&errorTemplate=logon/gzlib/index.html&image2.x=174&image2.y=15&locale=&parameterName0=wwwAuthID&parameterName1=wwwAuthPwd&parameterValue0=trans&parameterValue1=&useProperties=false&userID=gzlib&userPwd=gzlib");
+				
+			 $("#frontmap a").each(function(){
+					changenIp($(this));
+			 });
+			 $("#nav-lv1 a").each(function(){
+				 changenIp($(this));
+			 });
+		}else{
+			//$("#kkjs").attr("href","http://resource.gzlib.gov.cn:8890/dipsDataSys/muse.jsp");
+			
+			$("#frontmap a").each(function(){
+				changewIp($(this));
+				
+			});
+			$("#nav-lv1 a").each(function(){
+				changewIp($(this));
+			});
+		}
+	}
+	function changewIp(v){
+		var url = v.attr("href");
+		if(url.indexOf("10.0.14.26") > -1){
+			var url2 = url.replace("10.0.14.26","www.gzlib.gov.cn:8080");
+			v.attr("href",url2);
+		}
+		/* if(url.indexOf("10.0.14.20") > -1){
+			var url3 = url.replace("10.0.14.20","video.gzlib.gov.cn");
+			v.attr("href",url3);
+		} */
+	}
+	function changenIp(v){
+		var url = v.attr("href");
+		if(url.indexOf("www.gzlib.gov.cn:8080") > -1){
+			var url2 = url.replace("www.gzlib.gov.cn:8080","10.0.14.26");
+			v.attr("href",url2);
+		}
+	/* 	if(url.indexOf("video.gzlib.gov.cn") > -1){
+			var url3 = url.replace("video.gzlib.gov.cn","10.0.14.20");
+			v.attr("href",url3);
+		} */
+	}
+	
+	//我的图书馆声明提示弹窗
+	function openDialogisAgreeMember(title,htmlStr,okUrl){
+		Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','我的图书馆','我的图书馆');
+		var dlg=new Dialog();//定义Dialog对象
+		dlg.Model=true;
+		var widthv = document.body.clientWidth / 2;
+		dlg.Width=widthv;//定义长度
+		dlg.Height=260;
+		dlg.Title="阅读声明";
+		dlg.InnerHtml="<table width='100%'>"+
+		"<tr>"+
+		"<td class='dialogCont' style='text-align:left;line-height: inherit;'>"+
+		"<p style='text-align: center;font-weight: bold; font-size: large;'>《广州图书馆电子资源使用管理办法》</p><br/>"+
+		"1.广州图书馆电子资源的合法用户必须是持有本馆有效读者证读者或到馆读者。<br/>"+
+		"2.合法用户在使用本馆电子资源时，应遵守法律、法规和本馆有关规定，并遵循合理使用的原则。不得非为个人阅读目的下载本馆电子资源，不得将本馆电子资源的合法使用权限或账号提供给他人使用，不得以私设代理的方式向非合法用户提供本馆电子资源，不得使用迅雷、flashget、电驴等网络下载工具批量下载或多线程下载图书馆购买的电子资源，不得连续、系统、集中、批量地进行下载、浏览及检索数据库等操作。电子资源下载行为均视为读者证持有人的本人行为。<br/>"+
+		"3.合法用户如违反上述规定，本馆将有权停止其使用电子资源的权限，情节严重的将注销其读者证并追究其相关法律责任。<br/>"+
+		"4. 本办法由广州图书馆负责解释。<br/>"+
+		"</td>"+
+		"</tr>"+
+		"</table>";
+		dlg.OKEvent=function(){
+			dlg.close();
+			location.href="https://opac.gzlib.org.cn:443/opac/special/toOpac";
+		}
+		dlg.CancelEvent=function(){
+			dlg.close();
+		}
+		dlg.show();
+		dlg.okButton.value="同意";
+		dlg.cancelButton.value="不同意";
+	};
+	//资源通道版权声明提示弹窗
+	function openDialogisAgreeTop(title,htmlStr,okUrl){
+		Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','资源通道','首页头部的资源通道按钮');
+		var dlg=new Dialog();//定义Dialog对象
+		dlg.Model=true;
+		var widthv = document.body.clientWidth / 2;
+		dlg.Width=widthv;//定义长度
+		dlg.Height=260;
+		dlg.Title="阅读声明";
+		dlg.InnerHtml="<table width='100%'>"+
+		"<tr>"+
+		"<td class='dialogCont' style='text-align:left;line-height: inherit;'>"+
+		"<p style='text-align: center;font-weight: bold; font-size: large;'>《广州图书馆电子资源使用管理办法》</p><br/>"+
+		"1.广州图书馆电子资源的合法用户必须是持有本馆有效读者证读者或到馆读者。<br/>"+
+		"2.合法用户在使用本馆电子资源时，应遵守法律、法规和本馆有关规定，并遵循合理使用的原则。不得非为个人阅读目的下载本馆电子资源，不得将本馆电子资源的合法使用权限或账号提供给他人使用，不得以私设代理的方式向非合法用户提供本馆电子资源，不得使用迅雷、flashget、电驴等网络下载工具批量下载或多线程下载图书馆购买的电子资源，不得连续、系统、集中、批量地进行下载、浏览及检索数据库等操作。电子资源下载行为均视为读者证持有人的本人行为。<br/>"+
+		"3.合法用户如违反上述规定，本馆将有权停止其使用电子资源的权限，情节严重的将注销其读者证并追究其相关法律责任。<br/>"+
+		"4. 本办法由广州图书馆负责解释。<br/>"+
+		"</td>"+
+		"</tr>"+
+		"</table>";
+		dlg.OKEvent=function(){
+			dlg.close();
+			location.href="https://resource3.gzlib.org.cn/por/login_psw.csp";
+		}
+		dlg.CancelEvent=function(){
+			dlg.close();
+			//history.go(-1);
+			//location.href="/myWorksCkkj.jhtml";
+			
+		}
+		dlg.show();
+		dlg.okButton.value="同意";
+		dlg.cancelButton.value="不同意";
+	};
+</script>
+
+<div class="header" id="nav1" style="position: fixed;" >
+     <!-- 登录按钮区域 -->
+     <div class="login_area">
+         <!-- 登录提示 -->
+         <div class="login_box">
+                		<a href="/login1.jspx?returnUrl=https%3A%2F%2Fwww.gzlib.org.cn%2Faboutlib%2Findex.jhtml&locale=zh_CN" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','登录','网页头部的登录按钮2');" title="登录" class="newicon ni-login">登录</a> 
+                <!--<a href="javascript:;" class="newicon ni-login">登录</a> -->
+                <a href="javascript:;" id="reg" class="newicon showreg-btn ni-reg" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','注册','网页头部的注册按钮');" title="注册">注册</a> 
+                
+                <a style="display:none;" href="/member/loanRenew.jspx" id="renew" onclick="return renew('https%3A%2F%2Fwww.gzlib.org.cn%2Faboutlib%2Findex.jhtml');" title="续借"  class="newicon ni-xu">续借</a> 
+                <a style="display:none;" href="javascript:;" title="资源通道" onclick="openDialogisAgreeTop(1,1,1);" class="newicon ni-xu">资源通道</a> 
+               		<a href="/login1.jspx?returnUrl=https%3A%2F%2Fwww.gzlib.org.cn%2Faboutlib%2Findex.jhtml&locale=zh_CN" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','我的图书馆','我的图书馆');" title="我的图书馆" class="newicon ni-xu">我的图书馆</a> 
+            	<a href="/digitalresources.jhtml" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/digitalresources.jhtml','数字资源导航','首页数字资源导航');" title="数字资源导航" class="newicon ni-xu" style="width: 98px;">数字资源导航</a>
+                <a href="/frontMap.jspx" title="本站导航" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','本站导航','首页头部的本站导航按钮');" target="_blank" class="newicon ni-xu">本站导航</a>
+                <div class="top-reg" id="bothreg" style="display: none;">
+                    <a href="http://opac.gzlib.org.cn/opac/reader/register" class="top-reg-ol" target="_blank" title="在线注册"></a>
+                    <a href="/register.jspx" target="_blank" class="top-reg-guest" title="访客注册"></a>
+                </div>
+            </div>
+         <!-- 登录提示end -->
+     </div>
+     <!-- 登录按钮区域 end -->
+</div>
+
+  <div class="header" id="nav2" style="display: none;">
+        <!-- 登录按钮区域 -->
+        <div class="login_area">
+            <!-- 登录提示 -->
+            <div class="login_box">
+               		 <a href="/login1.jspx?returnUrl=https%3A%2F%2Fwww.gzlib.org.cn%2Faboutlib%2Findex.jhtml&locale=zh_CN" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','登录','网页头部的登录按钮');" title="登录" class="newicon ni-login">登录</a> 
+                <!--<a href="javascript:;" class="newicon ni-login">登录</a> -->
+                <a href="javascript:;" id="reg" class="newicon showreg-btn ni-reg" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','注册','网页头部的注册按钮');" title="注册">注册</a> 
+                
+                <a style="display:none;" href="/member/loanRenew.jspx" id="renew" onclick="return renew('https%3A%2F%2Fwww.gzlib.org.cn%2Faboutlib%2Findex.jhtml');" title="续借"  class="newicon ni-xu" style="text-decoration: none;">续借</a>
+				<a style="display:none;" href="javascript:;" title="资源通道" onclick="openDialogisAgreeTop(1,1,1);" class="newicon ni-xu" style="text-decoration: none;">资源通道</a>
+				<a href="javascript:;" alt="我的图书馆" title="我的图书馆" onclick="openDialogisAgreeMember(1,1,1);" class="newicon ni-xu" style="text-decoration: none;">我的图书馆</a>
+				<a href="/digitalresources.jhtml" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/digitalresources.jhtml','数字资源导航','首页数字资源导航');" title="数字资源导航" class="newicon ni-xu" style="width: 98px;">数字资源导航</a>
+				<a href="/frontMap.jspx" title="本站导航" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','本站导航','首页头部的本站导航按钮');" target="_blank" class="newicon ni-xu">本站导航</a>
+                 
+                <div class="top-reg" id="bothreg" style="display: none;">
+                    <a href="http://opac.gzlib.org.cn/opac/reader/register" class="top-reg-ol" target="_blank" title="在线注册"></a>
+                    <a href="/register.jspx" target="_blank" class="top-reg-guest" title="访客注册"></a>
+                </div>
+            </div>
+            <!-- 登录提示end -->
+        </div>
+        <!-- 登录按钮区域 end -->
+        
+        <!-- 顶部导航按钮 -->
+        <div class="top_nav" style="position: absolute;right: 0;">
+            <a id="navtoggleBtn" href="javascript:;" class="toggle_nav_btn"></a>
+            <div class="top_nav_link">
+                        <a href="https://www.gzlib.org.cn:443/" title="首页" alt="首页"  target="_self">首页</a>
+                        <a href="/rrppchuangy1/index.jhtml" title="融融共读" alt="融融共读"   target="_self">融融共读</a>
+                        <a href="/digitalresources.jhtml" title="资源" alt="资源"   target="_self">资源</a>
+                        <a href="/opentime/index.jhtml" title="服务" alt="服务"   target="_self">服务</a>
+                        <a href="/hdActForecast/index.jhtml" title="活动" alt="活动"   target="_self">活动</a>
+                        <a href="/hudbookname/index.jhtml" title="互动" alt="互动"   target="_self">互动</a>
+                        <a href="https://www.gzlib.org.cn/xxgcddesd/index.jhtml" title="专题" alt="专题"   target="_self">专题</a>
+            </div>
+        </div>  
+    </div>  <!-- 顶部导航end -->
+
+    <!-- 内容 -->
+    <div class="pagecontent">
+
+  <!-- 栏目头部 -->
+        <div class="channel-header">
+            <!-- 搜索 -->
+                <div id="search" class="search_box ">
+                    <div class="logo_box">
+                        <img src="/r/cms/www/lasttemp/images/index/logo.png" alt="logo">
+                    </div>
+                    <!-- 搜索form -->
+                    <div class="search clearfix">
+                        
+                        <div id="divselect" class="_divselect book_check">
+                            <div>书目检索</div>
+                             <ul>
+                                <li><a href="javascript:;" title="书目检索" selectid="0" id="smjs">书目检索</a></li>
+                                <li><a onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','跨库检索','首页跨库检索');" href="https://muse.gzlib.org.cn:8000/docs/search" id="kkjs" title="跨库检索" target="_blank" selectid="1">跨库检索</a></li>
+                                <li><a href="javascript:;" title="站内搜索" selectid="2">站内搜索</a></li>
+                            </ul>
+                            <input name="" type="hidden" value="0" id="inputselect" />
+                        </div>
+                        <div class="form_group">
+                            <!--说明value 0=书目检索 1=跨库检索 2=站内搜索-->
+                            <div id="divselect1" class="_divselect title_check">
+                                <div>题名</div>
+                                 <ul>
+                                    <li><a href="javascript:;" title="题名" selectid="title">题名</a></li>
+                                    <li><a href="javascript:;" title="任意词" selectid="marc">任意词</a></li>
+                                    <li><a href="javascript:;" title="ISBN/ISSN" selectid="isbn">ISBN/ISSN</a></li>
+                                    <li><a href="javascript:;" title="著者" selectid="author">著者</a></li>
+                                    <li><a href="javascript:;" title="主题" selectid="subject">主题</a></li>
+                                    <li><a href="javascript:;" title="分类号" selectid="class">分类号</a></li>
+                                    <li><a href="javascript:;" title="出版社" selectid="publish">出版社</a></li>
+                                    <li><a href="javascript:;" title="索书号" selectid="callno">索书号</a></li>
+                                </ul>
+                            </div>
+                            <input name="" type="hidden" value="title" id="inputselect1" />
+                            <span class="split"></span>
+                            <input
+                            id="q"  name="q" class="keyword" data-value=""  placeholder="" type="text" />
+                            <!--<i class="icon"></i>-->
+                            <form action="/search.jspx" method="post" id="qFrom">
+							   <input type="hidden" name="queryq" value=""  />
+							   <input type="hidden" name="hotsearch" value=""  />
+							</form>
+                        </div>
+                        <input class="submit_btn" type="button" onclick="checkSousoType();" value="检索"/>
+                        <a id="sb2"   class="submit_btn2" onclick="checkSousoType();"></a>
+                    </div>
+                    <!-- 搜索form end -->
+
+                    <!-- 滚动公告 -->
+                    <!-- <div class="scroll_news">
+                        <div class="news_list">
+                            <a href="#">“触碰光明 融合社会”非视觉摄影学员作品展览</a>
+                        </div>
+                        <a href="#" class="more_link">更多&nbsp;〉〉</a>    
+                    </div> -->
+                    <!-- 滚动公告end -->
+                </div>
+                <!-- 搜索end -->
+        </div>
+        <!-- 栏目头部 end -->
+
+        <!-- 导航条 如果部分页面不属于栏目,则导航单独在该页面写,不然面包屑比较难控制-->
+        <div class="channel_nav">
+            <ul id="nav-lv1" class="nav-lv1">
+                 <li ><a href="https://www.gzlib.org.cn:443/" title="首页" alt="首页" target="_self">首页</a></li>
+					   			<li >
+						    		<a href="/rrppchuangy1/index.jhtml"  title="融融共读" alt="融融共读"  target="_self">融融共读</a>
+						    		<ul>
+						    						<li><a href="/rrppchuangy1/index.jhtml"   target="_self">融融共读</a></li>
+						    						<li><a href="/rrzyjs/index.jhtml"   target="_self">融资源</a></li>
+						    						<li><a href="/rrhuodongyg1/index.jhtml"   target="_self">融活动</a></li>
+						    						<li><a href="/rrzypeixun1/index.jhtml"   target="_self">融志愿</a></li>
+						            </ul>
+					    		</li>
+					   			<li >
+						    		<a href="/digitalresources.jhtml" onclick="channelVeiw('90')"; title="资源" alt="资源"  target="_self">资源</a>
+						    		<ul>
+						    						<li><a href="/erbook/index.jhtml"   target="_self">实体资源</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/digitalresources.jhtml"   target="_self">数字资源导航</a></li>
+						    						<li><a href="/newlibrary/index.jhtml"   target="_self">资源推荐</a></li>
+						    						<li><a href="http://opac.gzlib.org.cn/opac/index/advance"onclick="channelVeiw('1393')";   target="_blank">书目检索</a></li>
+						    						<li><a href="https://muse.gzlib.org.cn:8000/docs/search"onclick="channelVeiw('5663')";   target="_blank">跨库检索</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/downloadArea/index.jhtml"   target="_self">下载专区</a></li>
+						            </ul>
+					    		</li>
+					   			<li >
+						    		<a href="/opentime/index.jhtml"  title="服务" alt="服务"  target="_self">服务</a>
+						    		<ul>
+						    						<li><a href="/opentime/index.jhtml"   target="_self">服务指南</a></li>
+						    						<li><a href="/findConsultRe/index.jhtml"   target="_self">参考咨询</a></li>
+						    						<li><a href="/servactivForec/index.jhtml"   target="_self">多元文化</a></li>
+						    						<li><a href="/dfactforecast/index.jhtml"   target="_self">地方人文</a></li>
+						    						<li><a href="/svcCysjHdyg/index.jhtml"   target="_self">创意设计</a></li>
+						    						<li><a href="/childSite/index.jhtml"   target="_blank">少儿服务</a></li>
+						    						<li><a href="/rrgdffzn/index.jhtml"   target="_self">视障服务</a></li>
+						    						<li><a href="/ysSvcNotice/index.jhtml"   target="_self">延伸服务</a></li>
+						    						<li><a href="/jlpzjjj/index.jhtml"   target="_self">纪录片</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/onlineExhibit/index.jhtml"   target="_self">在线展览</a></li>
+						    						<li><a href="https://opac.gzlib.org.cn/opac/reader/login?returnUrl=/reader/space"onclick="channelVeiw('5520')";   target="_self">送书上门</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/cjmtc/index.jhtml"   target="_self">问题与帮助</a></li>
+						            </ul>
+					    		</li>
+					   			<li >
+						    		<a href="/hdActForecast/index.jhtml"  title="活动" alt="活动"  target="_self">活动</a>
+						    		<ul>
+						    						<li><a href="https://www.gzlib.org.cn:443/hdActForecast.jhtml"   target="_self">活动预告</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/hdActReport/index.jhtml"   target="_self">活动报道</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/program/index.jhtml"   target="_self">活动品牌</a></li>
+						            </ul>
+					    		</li>
+					   			<li >
+						    		<a href="/hudbookname/index.jhtml"  title="互动" alt="互动"  target="_self">互动</a>
+						    		<ul>
+														<li><a id="wdlmember" href="/login1.jspx?returnUrl=https://www.gzlib.org.cn/member/guessYouLike.jspx&locale=zh_CN" target="_blank">我的空间</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/hudreaderrecom.jhtml"   target="_self">读者荐购</a></li>
+						    						<li><a href="http://www.gzlib.org.cn/hudbookname/index.jhtml"   target="_self">赠书</a></li>
+						    						<li><a href="https://venue.gzlib.org.cn/irms/web/index.html"onclick="channelVeiw('225')";   target="_blank">场地预约</a></li>
+						    						<li><a href="https://volun.gzlib.org.cn/tworker/ssologin"onclick="channelVeiw('226')";   target="_blank">广图志愿者</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/hudresur.jhtml"   target="_self">读者调查</a></li>
+						    						<li><a href="/guestBook/index.jhtml"   target="_self">读者留言</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/contactus/index.jhtml"   target="_self">联系我们</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/dzwyh/index.jhtml"   target="_self">读者委员会</a></li>
+						            </ul>
+					    		</li>
+					   			<li >
+						    		<a href="https://www.gzlib.org.cn/xxgcddesd/index.jhtml"  title="专题" alt="专题"  target="_self">专题</a>
+						    		<ul>
+						    						<li><a href="https://www.gzlib.org.cn:443/xxgcddesshi/index.jhtml"   target="_self">学习贯彻党的二十届四中全会精神</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/xxgcddesd/index.jhtml"   target="_self">学习贯彻党的二十届三中全会精神</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/zhutijiaoyu/index.jhtml"   target="_self">主题教育</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/gzlibssn/index.jhtml"   target="_self">广州图书馆40年</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/xrgczybxgdjs/index.jhtml"   target="_self">深入贯彻中央八项规定精神学习教育</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/djyd/index.jhtml"   target="_self">党建园地</a></li>
+						            </ul>
+					    		</li>
+					   			<li  class="active">
+						    		<a href="/aboutlib/index.jhtml"  title="关于广图" alt="关于广图"  target="_self">关于广图</a>
+						    		<ul>
+						    						<li><a href="https://www.gzlib.org.cn:443/aboutlib/index.jhtml"   class="active" target="_self">广图概况</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/histlEvolution/index.jhtml"   target="_self">历史沿革</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/setup/index.jhtml"   target="_self">机构设置</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/bunotice/index.jhtml"   target="_self">广图公告</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/ztPublicLibAffairs/index.jhtml"   target="_self">馆务公开</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/gygtgtzc/index.jhtml"   target="_self">广图章程</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/devplan1/index.jhtml"   target="_self">发展规划</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/yearProject/index.jhtml"   target="_self">年度计划</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/gzlibYearReport/index.jhtml"   target="_self">广图年报</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/statistics/index.jhtml"   target="_self">统计数字</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/cwgs/index.jhtml"   target="_self">财务公示</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/gzlibcom/index.jhtml"   target="_self">广图通讯</a></li>
+						    						<li><a href="http://www.gzlib.org.cn/society/index.jspx"onclick="channelVeiw('1992')";   target="_blank">广图学会</a></li>
+						    						<li><a href="https://www.gzlib.org.cn:443/gygtlsh/index.jhtml"   target="_self">理事会</a></li>
+						            </ul>
+					    		</li>
+				
+            </ul>
+            <div id="lv2box" class="nav-lv2">
+                <div class="scrollNav">
+                    <a id="n_left" href="javascript:;" class="nav_left">△</a>
+                    <div id="navslv2" class="nav-box">
+                        <ul class="nav-menu-scroll">
+							
+                        </ul>
+                       
+                    </div>
+                    <a id="n_right" href="javascript:;" class="nav_right">▽</a>
+                </div>
+                
+            </div>
+
+            <!-- 面包屑 -->
+           
+            <div class="nav-breadcrumb">
+		        <div class="w960">
+		            <div class="breadcrumb">
+		            	您现在的位置是： <a href="https://www.gzlib.org.cn:443/">首页</a> 
+							  	 &gt; <a href='/aboutlib/index.jhtml' target='_self' style="color: #333">关于广图</a>
+							  								  	&gt; <span style="color: #38b4e6">广图概况</span> 
+		            </div>
+		        </div>
+		     </div>
+		     
+            <!-- 面包屑END -->
+        </div>
+        <!-- 导航条end -->
+ <!-- 侧边导航 -->
+    <div id="sidebox" class="side_box">
+        <div id="sicons" class="sicons">
+          <a href="/childSite/index.jhtml" target="_blank" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','少儿版','侧边导航的少儿版按钮');" class="sicon si-1" alt="少儿版" title="少儿版"></a>
+            <!-- <a href="javascript:;" class="sicon si-2" alt="移动版" title="移动版"></a>
+            <div  class="sicon si-3" title="微博">
+                <div class="wb-box">
+                    <a href="http://t.qq.com/gzlib-cn" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','腾讯微博','侧边导航的腾讯微博按钮');" target="_blank"  title="腾讯微博"></a>
+                    
+                </div>
+            </div> -->
+			<a href="http://weibo.com/gzlib" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','新浪微博','侧边导航的新浪微博按钮');" target="_blank" class="sicon si-3" title="新浪微博" alt="新浪微博"></a>
+            <div class="sicon si-4" alt="微信" title="微信">
+                <div class="side-qr">
+                    <img src="/r/cms/www/lasttemp/images/qr.jpg" onclick="__qrCode(),Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','微信二维码','侧边导航的微信二维码图片');" alt="微信二维码" />  
+                </div>
+            </div>
+               <input id="gb2big5"  type="hidden" value="繁"/>
+            <a    id="gb2big52" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','繁体中文版','首页侧边导航的繁体中文版按钮');" target="_blank" class="siconft" alt="繁体中文版" title="繁体中文版"></a>
+            <a    style="display: none;"   id="gb2big51" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','简体中文版','首页侧边导航的简体中文版按钮');" target="_blank" class="siconjt" alt="简体中文版" title="简体中文版"></a>
+			<div class="si-lan" alt="多语言" title="多语言">
+                <div class="side-qr-lan">
+                	<a href="/english/index.jhtml" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','英文版','首页侧边导航的英文版按钮');" target="_blank" class="siconenglish" alt="英文版" title="英文版"></a> 
+                    <a href="/Japan/index.jhtml" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','日语版','首页侧边导航的日语版按钮');" target="_blank" class="siconja" alt="日语版" title="日语版"></a>
+            		<a href="/French/index.jhtml" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','法语版','首页侧边导航的法语版按钮');" target="_blank" class="siconfrench" alt="法语版" title="法语版"></a>
+					<a href="/Russia/index.jhtml" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','俄语版','首页侧边导航的俄语版按钮');" target="_blank" class="siconrussia" alt="俄语版" title="俄语版"></a>            
+                </div>
+            </div>
+            <a style="display: none;" href="/gtapp.jspx" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','手机APP','侧边导航的手机APP按钮');" target="_blank" class="sicon si-6" alt="手机APP" title="手机APP"></a>
+           <a href="/wca.jspx" onclick="Cms.pageSiteLink('','https://www.gzlib.org.cn/aboutlib/index.jhtml','无障碍工具条','侧边导航的无障碍工具条按钮');" id="wza" class="sicon si-7" alt="无障碍工具条" title="无障碍工具条"></a>
+        </div>
+        <!-- <a id="sidetoggle" href="javascript:;"></a> -->
+    </div>
+    <!-- 侧边导航end -->   
+    
+     <script type="text/javascript">
+ function channelVeiw(channelId){
+		
+		$.ajax({
+			url:"/channel_view.jspx",
+			type:"get",
+			async : false,
+			data:{channelId:channelId},
+			success:function(data){
+				
+			}
+		}); 
+	}
+</script> 
+        <!-- 栏目内容 -->
+        <div class="channel_content">
+
+            <div class="channels">
+                <div class="channel-title">
+                    <i class="c-icon c-book">&nbsp;</i>
+                    <label>广图概况</label>
+
+               
+                </div>
+                <div class="channel-detail">
+
+                    <div class="channel-box">
+                    	<div class="content gzlib-txt-content">
+                          <div class="txt" style="border: #fff;">
+							      &nbsp;
+<table width="715" align="center" style="font-family: simsun;" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td class="text" valign="top" style="color: rgb(77, 76, 76); line-height: 14pt;">
+      <p style="text-align: justify;">&nbsp;</p>
+      </td>
+    </tr>
+    <tr>
+      <td height="15" style="text-align: justify; line-height: 14pt; font-size: 9pt;">
+      <p style="text-align: justify; color: rgb(77, 76, 76); line-height: 2em;">　　</p>
+      <p style="text-align: justify; line-height: 2em; text-indent: 24px;"></p>
+      <p style="background: white; margin: 0cm 0cm 0pt; text-align: justify; line-height: 24pt; text-indent: 18pt; font-family: 宋体; font-size: 12pt; -ms-text-justify: inter-ideograph;"></p>
+      <p style='margin: 0cm 0cm 0pt; text-align: justify; text-indent: 18pt; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'></p>
+      <p style='margin: 0cm 0cm 0pt; text-align: justify; line-height: 150%; text-indent: 18pt; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'></p>
+      <p style="margin: 0cm 0cm 0pt; text-align: justify; line-height: 1.5; text-indent: 18pt; font-family: Calibri, sans-serif; font-size: 10.5pt;"></p>
+      <p style="margin: 0cm 0cm 0pt; text-align: justify; line-height: 2; font-family: Calibri, sans-serif; font-size: 10.5pt;"><span style="font-family: 宋体; font-size: 9pt;">&nbsp; </span></p>
+      <p style='margin: 0cm 0cm 0pt; text-align: justify; line-height: 200%; text-indent: 18pt; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'></p>
+      <p style='background: white; margin: 0cm 0cm 0pt; text-align: justify; line-height: 21pt; text-indent: 18pt; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="font-family: 宋体; font-size: 9pt;">广州图书馆是由广州市政府设立的公益性公共文化机构，面向社会公众免费开放，以纸质文献、音像制品、数字资源等文献信息资源的收集、整理和存储为基础，提供资源借阅与传递、信息咨询、展览讲座、艺术鉴赏、文化展示和数字化网络服务及公众学习、研究、交流空间，开展社会阅读推广活动。以“连接世界智慧，丰富阅读生活”为愿景，“建设以人为中心、国际一流的大都市图书馆”为总目标，以建设体系中心、知识平台、学习平台、文化平台、交流平台为使命，秉持“理性、开放、平等、包容”的理念，致力成为促进阅读、交流与分享，激发理性、灵感与想象力，倡导社会和谐包容的公众共享空间。</span></p>
+      <p style='background: white; margin: 0cm 0cm 0pt; text-align: justify; line-height: 21pt; text-indent: 18pt; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="font-family: 宋体; font-size: 9pt;">广州图书馆坐落于广州市的新城市中心、有“城市客厅”美誉的花城广场，面向广州塔，与周边的广东省博物馆、广州大剧院、广州市第二少年宫形成文化共同体，成为广州的文化窗口。占地面积<span>2.1</span>万平方米，总建筑面积<span>9.8</span>万平方米，是世界上规模最大的城市图书馆之一，以“美丽书籍”为设计理念，依托城市新中轴线景观，采取东西走向、南北塔楼、独特的“之”字优雅体造型，突出层叠的建筑肌理，寓意书籍的重叠和历史文化的沉积，同时融入骑楼等文化元素，体现了岭南建筑艺术特色，入选“新广州好”百景。</span></p>
+      <p style='background: white; margin: 0cm 0cm 0pt; text-align: justify; line-height: 21pt; text-indent: 18pt; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="font-family: 宋体; font-size: 9pt;"><span style="font-family: 宋体; font-size: 9pt;">广州图书馆藏量1185.2万册（件），阅览座位4500个，公用计算机418台，有线网络节点4000个，无线网络全覆盖，实现藏、借、阅、咨一体化，全面应用无线射频识别技术（RFID）、文献自动分拣系统、自助服务设备，为公众提供便捷高效的文献信息服务。日均接待公众访问2.7万人次、外借文献3.7万册次，创造了我国公共图书馆的服务纪录，跻身世界公共图书馆前列。</span></span></p>
+      <p style='margin: 0cm 0cm 0pt; text-align: justify; line-height: 200%; text-indent: 18pt; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'></p>
+      <p style='margin: 0cm 0cm 0pt; text-align: justify; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span>&nbsp;</span></p>
+      <p style='margin: 0cm 0cm 0pt; text-align: justify; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'></p>
+      <p style="text-align: justify; line-height: 2em; text-indent: 24px;"></p>
+      <span style="color: rgb(77, 76, 76); font-size: 9pt;">&nbsp;</span>
+      <p style="margin: 0cm 0cm 0pt; text-align: justify; color: rgb(77, 76, 76); font-family:; font-size: 10.5pt;" serif;"="" roman",="" new="" times=""></p>
+      <p style="margin: 0cm 0cm 0pt; text-align: justify; color: rgb(77, 76, 76); font-family: Calibri, sans-serif; font-size: 10.5pt;"></p>
+      <p style="margin: 0cm 0cm 0pt; text-align: justify; color: rgb(77, 76, 76); font-family: Calibri, sans-serif; font-size: 10.5pt;"></p>
+      <p style="color: rgb(77, 76, 76);"></p>
+      <p style="color: rgb(77, 76, 76);">&nbsp;</p>
+      <p align="center" style="color: rgb(77, 76, 76);"><img style="width: 500px; height: 297px;" border="0" src="/u/cms/www/20190325/20190325163356486.jpg"><br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="text" id="gtgktable" valign="top" style="color: rgb(77, 76, 76); line-height: 14pt;">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<!-- 附件列表 -->
+							      
+<!-- 附件列表 -->
+							      
+<!-- 附件列表 -->
+							      
+<!-- 附件列表 -->
+							      
+<!-- 附件列表 -->
+							      
+<!-- 附件列表 -->
+							      
+<!-- 附件列表 -->
+							      
+<!-- 附件列表 -->
+							      
+<!-- 附件列表 -->
+                        </div>
+                        </div>
+                    </div>
+                     <!-- 论坛 begin -->
+				<!-- 论坛 end -->
+                </div>
+            </div>
+        </div>
+        <!-- 栏目内容end -->
+
+    </div>
+    <!-- 内容end -->
+
+
+	<!-- 底部 -->
+<!-- <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/20/296/0000/40702126/CA202960000407021260003.js'  type='text/javascript'%3E%3C/script%3E"));</script> -->
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261180831'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261180831' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">
+$(function(){
+	  $.ajax({
+	url:"/gywm/getFooterMsg.jspx",
+	data:{siteId:1,editionId:1},
+	timeout:30000,
+	dataType:"json",
+	success:function(data){
+		var address = data.company.address;
+		if(""!=address && address!=null && typeof(address)!="undefinded"){
+			$("#address").html(address);
+		}
+		var website = data.company.website;
+		if(""!=website && website!=null && typeof(website)!="undefinded"){
+			$("#website").html(website);
+		}
+		var zipcode = data.company.zipcode;
+		if(""!=zipcode && zipcode!=null && typeof(zipcode)!="undefinded"){
+			$("#zipcode").html(zipcode);
+		}
+		var contact = data.company.contact;
+		if(""!=contact && contact!=null && typeof(contact)!="undefinded"){
+			$("#contact").html(contact);
+		}
+		var email = data.company.email;
+		if(""!=email && email!=null && typeof(email)!="undefinded"){
+			$("#email").html(email);
+		}
+		var fax = data.company.fax;
+		if(""!=fax && fax!=null && typeof(fax)!="undefinded"){
+			$("#fax").html(fax);
+		}
+		var cover = data.company.cover;
+		if(""!=cover && cover!=null && typeof(cover)!="undefinded"){
+			$("#cover7").attr("src",cover);
+		}
+		var description = data.company.description;
+		if(""!=description && description!=null && typeof(description)!="undefinded"){
+			$("#description7").html(description);
+		}
+	}
+});  
+	 $("#cnzz_stat_icon_1261180831").hide();
+	 $("#_ideConac").hide();
+});
+</script>
+<!-- 底部 -->
+<div id="footer" class="footer wzadefsize">
+   	<a id="" class="footer-tips"></a>
+   	<a id="footer-tips" href="/frontMap.jspx" target="_blank" title="本站导航" class="uptotop"></a>
+       <div class="content">
+           <div class="lib-info">
+               <div class="lib-table clearfix">
+               		
+                       <div class="t">地址：</div>
+                       <div class="c" id="address">广州市珠江东路4号</div>
+                       <div class="t">邮编：</div>
+                       <div class="c" id="zipcode">510623</div>
+                       <div class="t">网址：</div>
+                       <div class="c" id="website">www.gzlib.gov.cn</div>
+                   	   <div class="t">总机：</div>
+                       <div class="c" id="contact">(020)83836666</div>
+                       <div class="t">邮箱：</div>
+                       <div class="c" id="email">dzyj@gzlib.org.cn</div>
+                       <div class="t">传真：</div>
+                       <div class="c" id="fax">(020)83340290</div>
+               </div>
+           </div>
+
+           <!-- 友情链接 -->
+           <div class="friend-link">
+               
+
+               <a href="https://beian.miit.gov.cn/#/Integrated/recordQuery" target="_blank" class="f_link flnk-l" alt="广东省通信管理局" title="广东省通信管理局" style="background-image:url(/r/cms/www/lasttemp/images/lv2/yqlj-1.jpg) "></a>
+               
+               <a href="http://www.gzjd.gov.cn/gzjdw/jmhd/index.shtml" target="_blank" class="f_link flnk-r" alt="广州网络警察报警平台" title="广州网络警察报警平台" style="background-image:url(/r/cms/www/lasttemp/images/lv2/yqlj-4.jpg) "></a>
+				<a href="//bszs.conac.cn/sitename?method=show&amp;id=3EA1FD96FFAD4CFEE053022819AC422A" target="_blank" style="position: absolute;left: 101%;top: -43px;"><img id="imgConac" vspace="0" hspace="0" border="0" src="//dcs.conac.cn/image/blue.png" data-bd-imgshare-binded="1"></a>
+               <div class="copy-info">
+                   <p>版权所有©广州图书馆</p>
+                   <p><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010602008391" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                   			<img src="/r/cms/www/lasttemp/images/lv2/batb.png" />
+                   			<span style="position: relative;top: -4px;left: 4px;">粤公网安备44010602008391号</span>
+                   	  </a>
+		 			</p>
+                   <p><label id="visitotal"></label></p>
+                   <!-- <div style="display: none;"><script src="http://v1.cnzz.com/stat.php?id=1371344&web_id=1371344" language="JavaScript"></script></div> -->
+               </div>
+           </div>
+       
+       </div>
+</div>
+<style>
+.footer .lib-info .lib-table .t, .footer .lib-info .lib-table .c{
+	height:auto;
+	}
+.footer .lib-info .lib-table .t ins, .footer .lib-info .lib-table .c ins{
+	line-height:2em;
+	height:auto;
+	white-space:normal;
+	}
+.footer .lib-info{
+	max-width:630px;
+	}
+</style>
+<!-- 底部end -->
+	<script  type="text/javascript" src="/r/cms/gb2big5.js" ></script>    <!-- 底部end -->
+    
+</body>
+</html>

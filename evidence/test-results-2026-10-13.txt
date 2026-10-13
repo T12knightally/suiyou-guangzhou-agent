@@ -1,0 +1,40 @@
+test_bad_time (test_agent.Tests.test_bad_time) ... ok
+test_closure (test_agent.Tests.test_closure) ... ok
+test_custom_origin (test_agent.Tests.test_custom_origin) ... ok
+test_external_injection (test_agent.Tests.test_external_injection) ... ok
+test_happy_path (test_agent.Tests.test_happy_path) ... ok
+test_live_past_date (test_agent.Tests.test_live_past_date) ... ok
+test_live_route_missing_walking_field (test_agent.Tests.test_live_route_missing_walking_field) ... ok
+test_live_unknown_ticket_is_not_free (test_agent.Tests.test_live_unknown_ticket_is_not_free) ... ok
+test_llm_function_contract (test_agent.Tests.test_llm_function_contract) ... ok
+test_llm_loop_bound (test_agent.Tests.test_llm_loop_bound) ... ok
+test_low_budget (test_agent.Tests.test_low_budget) ... ok
+test_missing (test_agent.Tests.test_missing) ... ok
+test_missing_api (test_agent.Tests.test_missing_api) ... ok
+test_nan_budget (test_agent.Tests.test_nan_budget) ... ok
+test_negative_budget (test_agent.Tests.test_negative_budget) ... ok
+test_outside_coordinates (test_agent.Tests.test_outside_coordinates) ... ok
+test_overnight (test_agent.Tests.test_overnight) ... ok
+test_payment (test_agent.Tests.test_payment) ... ok
+test_people_fraction (test_agent.Tests.test_people_fraction) ... ok
+test_rain_backup_validated (test_agent.Tests.test_rain_backup_validated) ... ok
+test_rain_replans (test_agent.Tests.test_rain_replans) ... ok
+test_return_included (test_agent.Tests.test_return_included) ... ok
+test_route_timeout (test_agent.Tests.test_route_timeout) ... ok
+test_save_trace (test_agent.Tests.test_save_trace) ... ok
+test_storm (test_agent.Tests.test_storm) ... ok
+test_tool_id_whitelist (test_agent.Tests.test_tool_id_whitelist) ... ok
+test_twenty_places (test_agent.Tests.test_twenty_places) ... ok
+test_unknown_origin (test_agent.Tests.test_unknown_origin) ... ok
+test_user_injection (test_agent.Tests.test_user_injection) ... ok
+test_weather_timeout (test_agent.Tests.test_weather_timeout) ... ok
+test_auth_failure_does_not_repeat (test_model_config.ModelConfigTests.test_auth_failure_does_not_repeat) ... ok
+test_deepseek_non_thinking (test_model_config.ModelConfigTests.test_deepseek_non_thinking) ... ok
+test_keys_redacted_recursively (test_model_config.ModelConfigTests.test_keys_redacted_recursively) ... ok
+test_non_dict_response_rejected (test_model_config.ModelConfigTests.test_non_dict_response_rejected) ... ok
+test_qwen_non_thinking (test_model_config.ModelConfigTests.test_qwen_non_thinking) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 0.222s
+
+OK
