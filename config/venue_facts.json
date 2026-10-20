@@ -1,6 +1,6 @@
 {
   "max_age_days": 7,
-  "audit_note": "人工逐项核对官网原文；仅在核对的普通日期区间套用常规周历，临时公告与预约余量未自动核验。",
+  "audit_note": "10处有官方来源：4处有开放规则（其中农讲所门票未知），6处仅官方介绍；常规周历仅用于核对区间。南越王宫按2026-10-04临时公告覆盖常规入口。",
   "venues": {
     "gd_museum": {
       "checked_at": "2026-10-14T00:09:34+08:00",
@@ -73,6 +73,150 @@
           "fetched_at": "2026-10-14T00:09:34+08:00",
           "html_sha256": "31d35910a694dfaf9d66aa20f656030a8ac0af48eb0494a30124e641c3915622",
           "snapshot": "evidence/official_sources/library_intro.txt"
+        }
+      ]
+    },
+    "nanyue": {
+      "checked_at": "2026-10-14T01:06:21+08:00",
+      "open_minutes": [
+        540,
+        1050
+      ],
+      "last_entry_minute": 1020,
+      "closed_weekdays": [
+        0
+      ],
+      "calendar_valid_from": "2026-10-14",
+      "calendar_valid_to": "2026-10-20",
+      "ticket": 0,
+      "ticket_scope": "仅王宫展区免费，不适用于另收费的王墓展区和讲解",
+      "reservation_required": true,
+      "reservation_note": "按官网须通过南越王博物院公众号实名预约，余量自行确认",
+      "visit_scope": "南汉宫殿馆、陈列楼及古代水井馆；不包含南越宫苑馆",
+      "current_notice": "官网2026-10-04公告：10月8日起南越宫苑馆及东门暂停开放，恢复时间另行通知；其余公告列明区域开放",
+      "entry_note": "按最新公告从北京路西门出入；地图匹配原出口位置，到场以馆方指引为准",
+      "poi_query": "广州南越王宫博物馆 出口",
+      "poi_names": [
+        "广州南越王宫博物馆(出口)"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nywmuseum.org.cn/News/Details/tzgg?nid=12621",
+          "title": "王宫展区南越宫苑馆及东门暂停开放公告",
+          "fetched_at": "2026-10-14T01:06:21+08:00",
+          "html_sha256": "f8b0c9dffa512f480d7d5d272121480a1d98aa4b24fb8090a220c98393aa9e3e",
+          "snapshot": "evidence/official_sources/nanyue_closure.txt"
+        },
+        {
+          "url": "https://www.nywmuseum.org.cn/News/VisitIndex/Visit",
+          "title": "南越王博物院参观指南",
+          "fetched_at": "2026-10-14T01:06:21+08:00",
+          "html_sha256": "371450a89a9b763bbbe1dd9def8c233ec2fee9b978d5e562129aa6f11ad1a22a",
+          "snapshot": "evidence/official_sources/nanyue_visit.txt"
+        }
+      ]
+    },
+    "peasant": {
+      "checked_at": "2026-10-14T01:06:21+08:00",
+      "open_minutes": [
+        540,
+        1050
+      ],
+      "last_entry_minute": 1020,
+      "closed_weekdays": [
+        0
+      ],
+      "calendar_valid_from": "2026-10-14",
+      "calendar_valid_to": "2026-10-20",
+      "ticket": null,
+      "ticket_scope": "指南确认开放和入馆方式，未明确门票金额；保留费用预留，免费讲解不等于已核实免费门票",
+      "reservation_required": false,
+      "reservation_note": "当前参观指南明确免预约、无需身份证、安检入馆；以当天最新公告为准",
+      "sources": [
+        {
+          "url": "https://www.gznjs.cn/cgzhinan/1.htm",
+          "title": "农讲所纪念馆参观指南",
+          "fetched_at": "2026-10-14T01:06:21+08:00",
+          "html_sha256": "2ce88546d2205494a36e365ae694ab40010f1f686ddacbd72a8534ad0af6c6de",
+          "snapshot": "evidence/official_sources/peasant_guide.txt"
+        }
+      ]
+    },
+    "opera_museum": {
+      "kind": "description_only",
+      "checked_at": "2026-10-14T01:06:21+08:00",
+      "sources": [
+        {
+          "url": "https://www.lw.gov.cn/zjlw/lwdt/yzlw/content/post_9058747.html",
+          "title": "粤剧艺术博物馆官方介绍",
+          "fetched_at": "2026-10-14T01:06:21+08:00",
+          "html_sha256": "6246920231d978af4c3cf1930ef3abf2bfd12e3b71c13346a3ae82ef955c9e08",
+          "snapshot": "evidence/official_sources/opera_museum_guide.txt"
+        }
+      ]
+    },
+    "chen": {
+      "kind": "description_only",
+      "checked_at": "2026-10-14T01:06:21+08:00",
+      "sources": [
+        {
+          "url": "https://www.lw.gov.cn/zjlw/lwdt/yzlw/content/post_9051669.html",
+          "title": "陈家祠官方介绍",
+          "fetched_at": "2026-10-14T01:06:21+08:00",
+          "html_sha256": "119dc45e0f898f4a2e271531692ca8b469195793087c4f1cc9343eee7c4e69dd",
+          "snapshot": "evidence/official_sources/chen_guide.txt"
+        }
+      ]
+    },
+    "shamian": {
+      "kind": "description_only",
+      "checked_at": "2026-10-14T01:06:21+08:00",
+      "sources": [
+        {
+          "url": "https://www.lw.gov.cn/zjlw/lwdt/yzlw/content/post_9051671.html",
+          "title": "沙面建筑群官方介绍",
+          "fetched_at": "2026-10-14T01:06:21+08:00",
+          "html_sha256": "8741b5fd69923b8374d40853161fa8b25d9698f69a338b50b147fb83bdd02222",
+          "snapshot": "evidence/official_sources/shamian_guide.txt"
+        }
+      ]
+    },
+    "yongqing": {
+      "kind": "description_only",
+      "checked_at": "2026-10-14T01:06:21+08:00",
+      "sources": [
+        {
+          "url": "https://www.lw.gov.cn/zjlw/lwdt/yzlw/content/post_9058821.html",
+          "title": "永庆坊官方介绍",
+          "fetched_at": "2026-10-14T01:06:21+08:00",
+          "html_sha256": "3933f19e9fb145eecaf0dbc7816edba6b7b367f4fa3492e46d7ebddc6e63b8e1",
+          "snapshot": "evidence/official_sources/yongqing_guide.txt"
+        }
+      ]
+    },
+    "liwan": {
+      "kind": "description_only",
+      "checked_at": "2026-10-14T01:06:21+08:00",
+      "sources": [
+        {
+          "url": "https://www.lw.gov.cn/zjlw/lwdt/yzlw/content/post_9059783.html",
+          "title": "荔湾湖公园官方介绍",
+          "fetched_at": "2026-10-14T01:06:21+08:00",
+          "html_sha256": "80a7f2ec71bc0fc0cd40a10cec5bedee2164b8f4fe25566570ce3c48a38fc6d8",
+          "snapshot": "evidence/official_sources/liwan_official.txt"
+        }
+      ]
+    },
+    "yuexiu": {
+      "kind": "description_only",
+      "checked_at": "2026-10-14T01:06:21+08:00",
+      "sources": [
+        {
+          "url": "https://lyylj.gz.gov.cn/stly/gyjq/yxgy/jqjj/index.html",
+          "title": "越秀公园官方介绍",
+          "fetched_at": "2026-10-14T01:06:21+08:00",
+          "html_sha256": "fe1499046e6e03da1b295432e6321a3812cd787d21e99aa9734f382317100af2",
+          "snapshot": "evidence/official_sources/yuexiu_intro.txt"
         }
       ]
     }

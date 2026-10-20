@@ -51,8 +51,14 @@ test_official_monday_closed (test_repairs.Repairs.test_official_monday_closed) .
 test_outside_audited_calendar_unknown (test_repairs.Repairs.test_outside_audited_calendar_unknown) ... ok
 test_walking_failure_falls_back_to_transit (test_repairs.Repairs.test_walking_failure_falls_back_to_transit) ... ok
 test_walking_uses_road_response (test_repairs.Repairs.test_walking_uses_road_response) ... ok
+test_approved_entry_poi_used_for_route (test_source_expansion.SourceExpansion.test_approved_entry_poi_used_for_route) ... ok
+test_description_is_not_operating_evidence (test_source_expansion.SourceExpansion.test_description_is_not_operating_evidence) ... ok
+test_expired_notice_cannot_override_map (test_source_expansion.SourceExpansion.test_expired_notice_cannot_override_map) ... ok
+test_free_guidance_does_not_imply_free_admission (test_source_expansion.SourceExpansion.test_free_guidance_does_not_imply_free_admission) ... ok
+test_partial_closure_keeps_other_areas_open (test_source_expansion.SourceExpansion.test_partial_closure_keeps_other_areas_open) ... ok
+test_wrong_gate_not_silently_used (test_source_expansion.SourceExpansion.test_wrong_gate_not_silently_used) ... ok
 
 ----------------------------------------------------------------------
-Ran 53 tests in 0.267s
+Ran 59 tests in 0.264s
 
 OK

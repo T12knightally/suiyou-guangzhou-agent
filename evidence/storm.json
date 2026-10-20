@@ -8,9 +8,9 @@
     "summary": "合成雷暴预警",
     "source": "离线合成测试夹具；不是出行日天气预报",
     "date": "2026-10-17",
-    "fetched_at": "2026-10-14T00:27:19+08:00"
+    "fetched_at": "2026-10-14T01:09:46+08:00"
   },
-  "run_id": "cf60b148f1e6453d",
+  "run_id": "62a9e40e77214e6e",
   "request": {
     "origin": "广州大学大学城校区",
     "date": "2026-10-17",
@@ -40,13 +40,13 @@
     {
       "seq": 1,
       "type": "Decision",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "summary": "先定位出发地，再获取天气、筛选地点；预算与时间使用确定性工具检查。"
     },
     {
       "seq": 2,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "resolve_origin",
       "arguments": {
         "name": "广州大学大学城校区",
@@ -62,7 +62,7 @@
     {
       "seq": 3,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_weather",
       "arguments": {
         "date": "2026-10-17"
@@ -75,21 +75,21 @@
         "summary": "合成雷暴预警",
         "source": "离线合成测试夹具；不是出行日天气预报",
         "date": "2026-10-17",
-        "fetched_at": "2026-10-14T00:27:19+08:00"
+        "fetched_at": "2026-10-14T01:09:46+08:00"
       },
       "duration_ms": 0.01
     },
     {
       "seq": 4,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "save_itinerary",
       "arguments": {
-        "run_id": "cf60b148f1e6453d"
+        "run_id": "62a9e40e77214e6e"
       },
       "ok": true,
       "observation": {
-        "file": "cf60b148f1e6453d.json",
+        "file": "62a9e40e77214e6e.json",
         "status": "saved"
       },
       "duration_ms": 0.01

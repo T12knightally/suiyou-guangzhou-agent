@@ -8,7 +8,7 @@
     "summary": "合成晴天场景",
     "source": "离线合成测试夹具；不是出行日天气预报",
     "date": "2026-10-17",
-    "fetched_at": "2026-10-14T00:27:19+08:00"
+    "fetched_at": "2026-10-14T01:09:46+08:00"
   },
   "plan": {
     "places": [
@@ -27,7 +27,7 @@
         "coordinate_status": "approximate_seed",
         "factual_status": "synthetic",
         "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "open_minutes": [
           540,
           1080
@@ -52,7 +52,7 @@
         "coordinate_status": "approximate_seed",
         "factual_status": "synthetic",
         "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "open_minutes": [
           540,
           1080
@@ -71,7 +71,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       {
@@ -81,7 +81,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       {
@@ -91,7 +91,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       }
     ],
@@ -226,7 +226,7 @@
         "coordinate_status": "approximate_seed",
         "factual_status": "synthetic",
         "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "open_minutes": [
           540,
           1080
@@ -251,7 +251,7 @@
         "coordinate_status": "approximate_seed",
         "factual_status": "synthetic",
         "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "open_minutes": [
           540,
           1080
@@ -270,7 +270,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       {
@@ -280,7 +280,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       {
@@ -290,7 +290,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       }
     ],
@@ -422,7 +422,7 @@
     "出发当天复查天气及往返交通",
     "室内备选仍有室外换乘，恶劣天气请改期"
   ],
-  "run_id": "d43d9a08c4ca4aea",
+  "run_id": "ea0218e2e83540d9",
   "request": {
     "origin": "广州大学大学城校区",
     "date": "2026-10-17",
@@ -446,19 +446,19 @@
     "model_calls": 0,
     "usage_complete": true
   },
-  "duration_ms": 1.0,
+  "duration_ms": 1.07,
   "external_calls": 0,
   "trace": [
     {
       "seq": 1,
       "type": "Decision",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "summary": "先定位出发地，再获取天气、筛选地点；预算与时间使用确定性工具检查。"
     },
     {
       "seq": 2,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "resolve_origin",
       "arguments": {
         "name": "广州大学大学城校区",
@@ -474,7 +474,7 @@
     {
       "seq": 3,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_weather",
       "arguments": {
         "date": "2026-10-17"
@@ -487,14 +487,14 @@
         "summary": "合成晴天场景",
         "source": "离线合成测试夹具；不是出行日天气预报",
         "date": "2026-10-17",
-        "fetched_at": "2026-10-14T00:27:19+08:00"
+        "fetched_at": "2026-10-14T01:09:46+08:00"
       },
       "duration_ms": 0.01
     },
     {
       "seq": 4,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_places",
       "arguments": {
         "interests": [
@@ -520,7 +520,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -545,7 +545,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -570,7 +570,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -595,7 +595,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -620,7 +620,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -645,7 +645,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -656,12 +656,12 @@
           "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
         }
       ],
-      "duration_ms": 0.04
+      "duration_ms": 0.03
     },
     {
       "seq": 5,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -682,7 +682,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -690,7 +690,7 @@
     {
       "seq": 6,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -711,7 +711,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -719,7 +719,7 @@
     {
       "seq": 7,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -740,7 +740,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -748,7 +748,7 @@
     {
       "seq": 8,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -769,7 +769,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -777,7 +777,7 @@
     {
       "seq": 9,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -798,7 +798,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -806,7 +806,7 @@
     {
       "seq": 10,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -827,7 +827,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -835,7 +835,7 @@
     {
       "seq": 11,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -856,7 +856,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -864,7 +864,7 @@
     {
       "seq": 12,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -885,7 +885,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -893,7 +893,7 @@
     {
       "seq": 13,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -914,7 +914,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -922,7 +922,7 @@
     {
       "seq": 14,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -943,7 +943,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -951,7 +951,7 @@
     {
       "seq": 15,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -972,7 +972,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -980,7 +980,7 @@
     {
       "seq": 16,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1001,15 +1001,15 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
-      "duration_ms": 0.01
+      "duration_ms": 0.0
     },
     {
       "seq": 17,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1030,7 +1030,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1038,7 +1038,7 @@
     {
       "seq": 18,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1059,7 +1059,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1067,7 +1067,7 @@
     {
       "seq": 19,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1088,7 +1088,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1096,7 +1096,7 @@
     {
       "seq": 20,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1117,7 +1117,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1125,7 +1125,7 @@
     {
       "seq": 21,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1146,7 +1146,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1154,7 +1154,7 @@
     {
       "seq": 22,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1175,7 +1175,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1183,7 +1183,7 @@
     {
       "seq": 23,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1204,7 +1204,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1212,7 +1212,7 @@
     {
       "seq": 24,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1233,7 +1233,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1241,7 +1241,7 @@
     {
       "seq": 25,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1262,7 +1262,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1270,7 +1270,7 @@
     {
       "seq": 26,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1291,7 +1291,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1299,7 +1299,7 @@
     {
       "seq": 27,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1320,7 +1320,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1328,7 +1328,7 @@
     {
       "seq": 28,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1349,7 +1349,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1357,7 +1357,7 @@
     {
       "seq": 29,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1378,7 +1378,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1386,7 +1386,7 @@
     {
       "seq": 30,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1407,7 +1407,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1415,7 +1415,7 @@
     {
       "seq": 31,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1436,7 +1436,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1444,7 +1444,7 @@
     {
       "seq": 32,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1465,7 +1465,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1473,7 +1473,7 @@
     {
       "seq": 33,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1494,7 +1494,7 @@
         "summary": "模拟步行",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1502,7 +1502,7 @@
     {
       "seq": 34,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1523,7 +1523,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1531,7 +1531,7 @@
     {
       "seq": 35,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1552,7 +1552,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1560,7 +1560,7 @@
     {
       "seq": 36,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1581,15 +1581,15 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
-      "duration_ms": 0.0
+      "duration_ms": 0.01
     },
     {
       "seq": 37,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "calculate_cost",
       "arguments": {
         "place_ids": [
@@ -1656,7 +1656,7 @@
     {
       "seq": 38,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "check_schedule",
       "arguments": {
         "deadline": "20:00",
@@ -1677,13 +1677,13 @@
     {
       "seq": 39,
       "type": "Decision",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "summary": "候选筛选检查 26 个组合；排除原因：无；找到满足估算约束的草案。"
     },
     {
       "seq": 40,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_places",
       "arguments": {
         "interests": [
@@ -1709,7 +1709,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -1734,7 +1734,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -1759,7 +1759,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -1784,7 +1784,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -1809,7 +1809,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -1834,7 +1834,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -1850,7 +1850,7 @@
     {
       "seq": 41,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1871,7 +1871,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1879,7 +1879,7 @@
     {
       "seq": 42,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1900,7 +1900,7 @@
         "summary": "模拟公共交通（非真实班次）",
         "source": "synthetic_distance_formula",
         "estimated": true,
-        "fetched_at": "2026-10-14T00:27:19+08:00",
+        "fetched_at": "2026-10-14T01:09:46+08:00",
         "query_date": "2026-10-17"
       },
       "duration_ms": 0.01
@@ -1908,7 +1908,7 @@
     {
       "seq": 43,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "calculate_cost",
       "arguments": {
         "place_ids": [
@@ -1975,7 +1975,7 @@
     {
       "seq": 44,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "check_schedule",
       "arguments": {
         "deadline": "20:00",
@@ -1996,20 +1996,20 @@
     {
       "seq": 45,
       "type": "Decision",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "summary": "室内筛选检查 5 个组合；排除原因：无；找到满足估算约束的草案。"
     },
     {
       "seq": 46,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "save_itinerary",
       "arguments": {
-        "run_id": "d43d9a08c4ca4aea"
+        "run_id": "ea0218e2e83540d9"
       },
       "ok": true,
       "observation": {
-        "file": "d43d9a08c4ca4aea.json",
+        "file": "ea0218e2e83540d9.json",
         "status": "saved"
       },
       "duration_ms": 0.01

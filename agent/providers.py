@@ -116,19 +116,22 @@ class Provider:
                          notice='门票与 09:00-18:00 开放区间均为测试数据，预约政策未知')
             else:
                 p.update(open_minutes=None,ticket=None,closed=False,source='unverified_seed',notice='票价、日期对应开放时间及预约要求待官方核实')
+                apply_facts(p,self.day or now()[:10],now()[:10])
                 try:
                     key=('poi',p['id'])
                     if key not in self.cache:
-                        self.cache[key]=self.amap('v5/place/text',keywords=p['name'],region='440100',city_limit='true',show_fields='business',page_size=3)
+                        self.cache[key]=self.amap('v5/place/text',keywords=p.get('poi_query',p['name']),region='440100',city_limit='true',show_fields='business',page_size=5)
                     pois=self.cache[key].get('pois',[])
-                    exact=[x for x in pois if x.get('name')==p['name'] and str(x.get('adcode','')).startswith('4401')]
+                    exact=[x for x in pois if x.get('name') in p.get('poi_names',[p['name']]) and str(x.get('adcode','')).startswith('4401')]
                     if exact:
                         q=exact[0]; p['lon'],p['lat']=map(float,q['location'].split(','))
                         p['coordinate_status']='amap_exact_name'; p['source']='高德 v5/place/text'
                         p['address']=q.get('address',''); p['provider_opening_text']=str(q.get('business',{}).get('opentime_week','未知'))[:300]
                     else: p['notice']+='；名称未精确匹配，坐标仍为候选种子'
                 except (ProviderError,ValueError,KeyError): p['notice']+='；地点接口不可用'
-                apply_facts(p,self.day or now()[:10],now()[:10])
+                if p.get('entry_note') and p.get('coordinate_status')!='amap_exact_name':
+                    p['closed']=True
+                    p['notice']+='；当前出入口位置未匹配，暂不纳入规划（不代表全馆闭馆）'
         return rows
 
     def route(self, start, end, day):

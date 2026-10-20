@@ -1,5 +1,5 @@
 """Report matching the assignment template; source all measurements from saved evidence."""
-import json, sys, hashlib
+import json, sys, hashlib, shutil
 from pathlib import Path
 from xml.sax.saxutils import escape
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, Image
@@ -19,7 +19,7 @@ FIX=json.loads((E/'repairs/2026-10-14T00-23-33+08-00/summary.json').read_text(en
 D=ROOT/FIX['evidence_dir']
 R=json.loads((D/'conversation_2_complete.json').read_text(encoding='utf-8'))
 CHAT=[json.loads((D/f'conversation_{i}_{n}.json').read_text(encoding='utf-8')) for i,n in [(1,'missing'),(2,'complete'),(3,'adjust')]]
-EV=json.loads((D/'offline-evaluation.json').read_text(encoding='utf-8'))
+EV=json.loads((E/'evaluation.json').read_text(encoding='utf-8'))
 M=json.loads((E/'http-multiturn.json').read_text(encoding='utf-8'))
 STD=json.loads((E/'standard.json').read_text(encoding='utf-8'))
 PROMPT=(ROOT/'prompts/system.md').read_text(encoding='utf-8').strip()
@@ -102,8 +102,8 @@ story.append(Spacer(1,18));p('《基于 AI Agent 的业务落地实操》\n项�
 p('穗游：面向广州大学生的低预算周末出行 Agent','h2')
 table(['基本信息','填写内容'],[
  ['学生姓名','待填写'],['学号','待填写'],['专业/班级','待填写'],['项目名称','穗游广州周末出行 Agent'],
- ['代码仓库/Demo 链接','远程仓库 / 公网 Demo：待填写（尚未发布）\n本机：http://127.0.0.1:8765/（仅本机可访问）'],['提交日期','2026年10月14日']],[125,362])
-p('版本说明：已实现真实模型工具编排、自然语言多轮补参、官方常规资料校验、真实步行路线与有界重规划。证据截至2026年10月14日，北京时间。','small')
+ ['代码仓库/Demo 链接','https://github.com/T12knightally/suiyou-guangzhou-agent\n本机：http://127.0.0.1:8765/；应用未公网部署'],['提交日期','2026年10月20日']],[125,362])
+p('版本1.0-defense：已实现真实模型工具编排、自然语言多轮补参、官方常规资料校验、真实步行路线与有界重规划。证据截至2026年10月20日，北京时间。','small')
 h1('目录')
 table(['模板章节','页码'],[['一、 业务背景与场景定义','2'],['二、 系统架构与流程设计','3-5'],['三、 实际运行效果与案例验证','6-8'],['四、 异常处理与边界测试','9'],['五、 调试过程与技术反思','10-11'],['六、 交付件清单与附录','12']],[420,67])
 p('证据口径：真实模型与真实外部接口、真实模型与模拟故障、离线规则测试分别统计。Decision表示可审计的决策摘要，不是模型隐藏思维链。PDF附有最新原始Trace与评测文件。','small')
@@ -120,9 +120,9 @@ p('目标用户：广州出发的1-12人大学生小组，重视预算、步行�
 table(['Agent职责范围','能力边界与免责（Out of Scope）'],[
  ['解析表单与自然语言；缺参数时追问；允许后续修改。','只支持广州同日行程；模糊金额、无法核对的值继续追问。'],
  ['查询地图天气，核算去程、停留、休息与返程。','路线为查询时估算，不承诺未来班次；不自动订票、付款。'],
- ['应用省博、广图官方常规开放、免费范围及预约说明。','20个种子中仅2处完成官方规则核对；临时公告和名额未实时核验。'],
+ ['官方资料分层：10处来源，4处运营规则，3处明确票价。','20处中另6处仅有介绍来源；公告和名额非实时核验。'],
  ['闭馆排除、降雨选室内、失败时最多两次候选重选。','资料过期或日期超出核对区间时降为未知；不编造票价与营业时间。'],
- ['提供行程、来源链接、TXT、打印及完整服务端日志。','无用户画像、登录和公网发布；本机地址不能转发给外部使用。']],[235,252])
+ ['提供行程、来源链接、TXT、打印及完整服务端日志。','无画像和登录；源码已公开，应用仍仅本机访问。']],[235,252])
 h2('1.3 输入与预期交付物')
 p('业务初始输入：origin、date、people、budget（每人元数）、start/end；可选interests、pace、message、must_visit_ids、exclude_place_ids、indoor_only、max_stops。每人预算1-2000元，同日可用时间至少2小时。')
 p('业务最终产出：按时间排列的行程、真实道路路线、费用明细、返回时刻、步行估算与室内备选；附官方来源及核验日期、免费范围和预约提醒。无可行方案时给出追问、失败原因或改期建议。')
@@ -166,7 +166,7 @@ p('需求阶段仅暴露提取工具，规划阶段仅暴露天气、地点与bu
 code('build_plan: candidate_ids = 1-3个不同的已返回ID\nreason = 可选，最长240字\nadditionalProperties = false\n需求更新：{updates: {...}, evidence: {字段: "用户原文"},\n questions: [...]}；证据不匹配则追问','text')
 h2('2.5 记忆机制与状态管理（Memory & State）')
 p('短期记忆：session_id映射结构化条件；明确的新字段覆盖旧值；必去/排除名单增量合并并撤销相反偏好。上一轮message不自动重放，非法或越权输入不污染会话。网页追问只提交新message，不用表单默认值覆盖历史。')
-p('长期记忆/知识：无向量库或画像。20个地点种子用于发现，2处官方规则提供可溯源资料；有效期7天，当前常规周历覆盖10月14-20日，过期降级。runs保存历史而非自学习。内存会话重启丢失，约200会话后清理。')
+p('长期记忆/知识：无向量库或画像。20个种子中10处有官方来源；4处有运营规则，3处有明确票价，另6处仅介绍；有效期7天，当前常规周历覆盖10月14-20日，过期降级。runs保存历史而非自学习。内存会话重启丢失，约200会话后清理。')
 p('单任务缓存按室内条件与起终点复用，失败路线也缓存；不跨日期复用。单任务messages记录真实tool_calls与工具观察。','small')
 page()
 
@@ -234,10 +234,10 @@ table(['测试场景','输入 / 模拟异常','预期行为','实际表现','符
  ['会话污染','同会话预算改成负数','拒绝且保留之前合法预算','下一轮仍按150元规划','是'],
  ['伪造解析值','模型值与引用不一致','字段拒绝或追问','单元测试阻断','是'],
  ['步行字段缺失','地图未给distance','不可按直线距离填充','抛ProviderError，再查公交','是']],[67,132,105,139,44])
-p(f"本轮{EV['unit_tests']['total']}项单元/契约测试通过；12/12个合成场景通过；8/8个真实模型检查点通过（其中3个使用合成外部数据）；HTTP 5项、网页DOM 9项通过。评测从票价/车费与时间条目重新计算，不仅检查程序自己返回的布尔标志。",'small')
+p(f"当前{EV['unit_tests']['total']}项单元/契约测试通过；12/12个合成场景通过；历史8/8真实模型检查点通过（3个为合成外部数据；早于新增资料）；HTTP 5项、网页DOM 9项通过。评测从票价/车费与时间条目重新计算，不仅检查程序自己返回的布尔标志。",'small')
 h2('4.2 安全与护栏设计（Guardrails）')
 p('防幻觉：无票价保留null并显示预留，官方资料限定适用范围和日期；无路线不输出虚构班次。防越权：工具白名单、严格参数、候选ID来源核对，预算和返程由程序检查；不提供交易、Shell或任意URL工具。外部文本不提升为系统指令。')
-p('输入正则只是早期筛查；需求提取还校验引用、数值、日期及地点。前端HTML转义，官方链接只允许HTTPS与两家官网域名。密钥仅在服务端，日志递归脱敏，归档扫描配置密钥。单次注入通过不等于覆盖所有攻击。','small')
+p('输入正则只是早期筛查；需求提取还校验引用、数值、日期及地点。前端HTML转义，官方链接只允许HTTPS与受信官方域名。密钥仅在服务端，日志递归脱敏，归档扫描配置密钥。单次注入通过不等于覆盖所有攻击。','small')
 page()
 
 # Page 10
@@ -253,7 +253,7 @@ label('问题3：表单补参不是自然语言多轮；非法值会污染会话
 p('修复：添加真实模型提取工具，每个更新字段附原文并经过规则核对；新消息仅增量提交，旧message不重放；被拒绝的输入不落入会话。验证：真实三轮“缺时间→补时间/必去→改80元/排除省博”成功；HTTP负预算后恢复150元通过。')
 label('问题4：模型首次失败就停止；循环和文档缺少统一边界')
 p('修复：首次无方案将观察返回模型，允许第二次选点；保持8次规划响应/12次工具上限与120秒预算，传递剩余网络超时。配置Schema从代码导出。真实路线超时夹具触发4次响应后停止；脚本协议验证首次闭馆、第二次换广图成功。')
-p('历史失败记录继续保留：过去日期未前置拦截、缺步行字段被当作0、tuple与JSON list不一致曾使30测试中3项失败。当前回归扩为53项且通过。历史证据debug-before-fix.txt不覆盖。','small')
+p('历史失败记录继续保留：过去日期未前置拦截、缺步行字段被当作0、tuple与JSON list不一致曾使30测试中3项失败。当前回归扩为59项且通过。历史证据debug-before-fix.txt不覆盖。','small')
 page()
 
 # Page 11
@@ -266,8 +266,8 @@ p(f"离线规则引擎50次基准：P50={EV['latency']['p50_ms']}ms，P95={EV['l
 label('系统并发与高可用')
 p('本机服务并发上限4，地图全局节流；没有公网认证、任务队列、分布式缓存与压力测试。120秒通过工具前检查和剩余网络超时控制，是尽力而为的预算，不是独立进程强制终止；慢速响应读取仍有超时边界。模型单请求45秒、不自动重试；数据请求6秒、至多重试一次。')
 label('业务容错度')
-p('仅2/20目的地有核对过的官方规则，当前适用周历到10月20日；临时闭馆、节假日、预约余量未自动抓取。资料维护需要人工审阅。未知门票30元、车费10元只是占位额度，不保证实际费用上界。步行估算未覆盖坡度、排队、无障碍和个体差异。')
-p('本轮仅4次真实行程、同一出行日期、3个校区，无法推出广泛成功率；单个真实模型注入用例不构成安全证明。无学生真实用户调研、无人民币账单。最新浏览器截图和公网仓库仍待补充，不能标为已完成。','small')
+p('20处中10处有官方来源，4处运营规则、3处明确票价；另6处仅介绍。新增南越王宫部分闭馆与西门规则已作单元验证，未重跑完整在线行程。周历到10月20日；公告与预约余量非实时抓取。未知门票30元、车费10元只是占位额度，不保证实际费用上界。步行估算未覆盖坡度、排队、无障碍和个体差异。')
+p('本轮仅4次真实行程、同一出行日期、3个校区，无法推出广泛成功率；单个真实模型注入用例不构成安全证明。无学生真实用户调研、无人民币账单。源码仓库已发布；新版浏览器截图、公网应用及真实用户反馈尚未取得。','small')
 page()
 
 # Page 12
@@ -276,11 +276,11 @@ h2('6.1 提交代码及文件清单')
 table(['文件 / 目录','交付内容'],[
  ['app.py、agent/、web/','HTTP会话、需求提取、规划/核算、地图天气、消费者网页。'],
  ['prompts/、config/、.env.example','规划Prompt、两阶段Schema、官方规则库与无密钥配置。'],
- ['tests/、evaluate.py、verify_http.py','53项单元/契约测试、12场景独立复算、HTTP 5项。'],
+ ['tests/、evaluate.py、verify_http.py','59项单元/契约测试、12场景独立复算、HTTP 5项。'],
  ['tools/evaluate_repairs.py、verify_ui.cjs','真实模型8检查点与DOM 9项验证；前者消耗API额度。'],
  ['evidence/、README.md、资料维护说明.md','真实/模拟分离日志、官方来源与维护方法、环境及复现。'],
  ['本PDF、报告.md、源码ZIP','模板24个标题顺序一致；黑色黑体、表格全框；不含.env。']],[202,285])
-p('代码仓库/Demo链接：待填写本人可访问的GitHub/Gitee仓库或正式应用。当前是本地可运行源码包，未发布公网；未提供发布目标，不擅自使用他人账户。姓名、学号、专业班级按用户要求留待填写，提交前按“学号_姓名_项目名称.pdf”改名。','small')
+p('源码：https://github.com/T12knightally/suiyou-guangzhou-agent；docs含同版报告与答辩详解。版本1.0-defense，应用未公网部署。姓名、学号、专业班级保留待填写；提交前按规定改名。','small')
 h2('6.2 本地运行与复现指南')
 p('运行环境：Python 3.10+，业务仅标准库。报告生成另需reportlab、Pillow、pypdf及SimHei中文字体；DOM检查需Node.js，非启动网站必需。','small')
 code('# 在源码目录执行；已有.env时不要覆盖\nCopy-Item .env.example .env\n# 编辑AMAP_KEY、LLM_API_KEY、LLM_BASE_URL、LLM_MODEL\npython app.py\n# 浏览器 http://127.0.0.1:8765/\npython -m unittest discover -s tests -v\npython evaluate.py\npython verify_http.py\nnode tools/verify_ui.cjs\n# 真实模型与地图测试，需要额度；固定案例日期10月17日\npython tools/evaluate_repairs.py\n# 新版已保存结果：/?run='+R['run_id'],'powershell')
@@ -295,15 +295,18 @@ assert headings==expected
 def footer(c,doc):
  c.setStrokeColor(INK);c.line(54,48,541,48)
  c.setFont('CN',7);c.setFillColor(MUTED);c.drawString(54,33,'穗游 SUIYOU  |  AI Agent 业务落地实操项目报告');c.drawRightString(541,33,f'{doc.page:02d}')
- if doc.page>1:c.drawString(54,807,'按课程统一模板编排');c.drawRightString(541,807,'2026.10.14')
+ if doc.page>1:c.drawString(54,807,'按课程统一模板编排');c.drawRightString(541,807,'2026.10.20')
 path=OUT/'待填学号_待填姓名_穗游广州周末出行Agent.pdf'
 doc=SimpleDocTemplate(str(path),pagesize=(595.28,841.89),leftMargin=54,rightMargin=54,topMargin=57,bottomMargin=58,title='《基于 AI Agent 的业务落地实操》项目报告 - 穗游',author='待填写')
 doc.build(story,onFirstPage=footer,onLaterPages=footer)
 reader=PdfReader(path); count=len(reader.pages)
 if count!=12:raise RuntimeError(f'Expected 12 pages, got {count}. Inspect layout before delivering.')
 writer=PdfWriter();writer.clone_document_from_reader(reader)
-for name,file in [('current-live-trace.json',D/'conversation_2_complete.json'),('repair-evaluation.json',D/'summary.json'),('offline-evaluation.json',D/'offline-evaluation.json')]:writer.add_attachment(name,file.read_bytes())
+for name,file in [('current-live-trace.json',D/'conversation_2_complete.json'),('repair-evaluation.json',D/'summary.json'),('offline-evaluation.json',E/'evaluation.json')]:writer.add_attachment(name,file.read_bytes())
 writer.add_attachment('real-model-conversation.json',json.dumps(CHAT,ensure_ascii=False,indent=2).encode('utf-8'))
 with path.open('wb') as f:writer.write(f)
 (OUT/'穗游广州周末出行Agent_报告.md').write_text('\n'.join(md),encoding='utf-8')
+(ROOT/'docs').mkdir(exist_ok=True)
+shutil.copyfile(path,ROOT/'docs'/path.name)
+(ROOT/'docs/穗游广州周末出行Agent_报告.md').write_text('\n'.join(md).replace('(广州周末Agent/evidence/','(../evidence/'),encoding='utf-8')
 print(json.dumps({'pdf':str(path),'pages':count,'headings':len(headings),'chars':[len(p.extract_text()) for p in reader.pages],'attachments':4},ensure_ascii=False))

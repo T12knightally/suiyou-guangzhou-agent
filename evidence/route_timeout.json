@@ -8,7 +8,7 @@
     "summary": "合成晴天场景",
     "source": "离线合成测试夹具；不是出行日天气预报",
     "date": "2026-10-17",
-    "fetched_at": "2026-10-14T00:27:19+08:00"
+    "fetched_at": "2026-10-14T01:09:46+08:00"
   },
   "plan": null,
   "rain_backup": null,
@@ -21,7 +21,7 @@
     "出发当天复查天气及往返交通",
     "室内备选仍有室外换乘，恶劣天气请改期"
   ],
-  "run_id": "8af2f67d6344445e",
+  "run_id": "49366b68e6ea4f63",
   "request": {
     "origin": "广州大学大学城校区",
     "date": "2026-10-17",
@@ -45,19 +45,19 @@
     "model_calls": 0,
     "usage_complete": true
   },
-  "duration_ms": 0.36,
+  "duration_ms": 0.38,
   "external_calls": 0,
   "trace": [
     {
       "seq": 1,
       "type": "Decision",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "summary": "先定位出发地，再获取天气、筛选地点；预算与时间使用确定性工具检查。"
     },
     {
       "seq": 2,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "resolve_origin",
       "arguments": {
         "name": "广州大学大学城校区",
@@ -73,7 +73,7 @@
     {
       "seq": 3,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_weather",
       "arguments": {
         "date": "2026-10-17"
@@ -86,14 +86,14 @@
         "summary": "合成晴天场景",
         "source": "离线合成测试夹具；不是出行日天气预报",
         "date": "2026-10-17",
-        "fetched_at": "2026-10-14T00:27:19+08:00"
+        "fetched_at": "2026-10-14T01:09:46+08:00"
       },
       "duration_ms": 0.01
     },
     {
       "seq": 4,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_places",
       "arguments": {
         "interests": [
@@ -119,7 +119,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -144,7 +144,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -169,7 +169,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -194,7 +194,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -219,7 +219,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -244,7 +244,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -255,12 +255,12 @@
           "notice": "门票与 09:00-18:00 开放区间均为测试数据，预约政策未知"
         }
       ],
-      "duration_ms": 0.03
+      "duration_ms": 0.04
     },
     {
       "seq": 5,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -282,7 +282,7 @@
     {
       "seq": 6,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -304,7 +304,7 @@
     {
       "seq": 7,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -326,7 +326,7 @@
     {
       "seq": 8,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -348,7 +348,7 @@
     {
       "seq": 9,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -370,7 +370,7 @@
     {
       "seq": 10,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -392,7 +392,7 @@
     {
       "seq": 11,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -414,7 +414,7 @@
     {
       "seq": 12,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -436,7 +436,7 @@
     {
       "seq": 13,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -458,7 +458,7 @@
     {
       "seq": 14,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -480,7 +480,7 @@
     {
       "seq": 15,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -502,7 +502,7 @@
     {
       "seq": 16,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -524,7 +524,7 @@
     {
       "seq": 17,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -546,7 +546,7 @@
     {
       "seq": 18,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -568,7 +568,7 @@
     {
       "seq": 19,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -590,7 +590,7 @@
     {
       "seq": 20,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -612,7 +612,7 @@
     {
       "seq": 21,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -634,7 +634,7 @@
     {
       "seq": 22,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -656,7 +656,7 @@
     {
       "seq": 23,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -678,7 +678,7 @@
     {
       "seq": 24,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -700,7 +700,7 @@
     {
       "seq": 25,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -722,7 +722,7 @@
     {
       "seq": 26,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -744,7 +744,7 @@
     {
       "seq": 27,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -766,7 +766,7 @@
     {
       "seq": 28,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -788,7 +788,7 @@
     {
       "seq": 29,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -810,7 +810,7 @@
     {
       "seq": 30,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -832,7 +832,7 @@
     {
       "seq": 31,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -854,7 +854,7 @@
     {
       "seq": 32,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -871,12 +871,12 @@
       "observation": {
         "error": "故障注入：路线接口超时"
       },
-      "duration_ms": 0.0
+      "duration_ms": 0.01
     },
     {
       "seq": 33,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -898,7 +898,7 @@
     {
       "seq": 34,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -920,7 +920,7 @@
     {
       "seq": 35,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -942,7 +942,7 @@
     {
       "seq": 36,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -964,13 +964,13 @@
     {
       "seq": 37,
       "type": "Decision",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "summary": "候选筛选检查 26 个组合；排除原因：路线缺失；无可验证方案。"
     },
     {
       "seq": 38,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_places",
       "arguments": {
         "interests": [
@@ -996,7 +996,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -1021,7 +1021,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -1046,7 +1046,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -1071,7 +1071,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -1096,7 +1096,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -1121,7 +1121,7 @@
           "coordinate_status": "approximate_seed",
           "factual_status": "synthetic",
           "reference": "高德地点检索（接入后按名称核验）；官方公告须另行核验",
-          "fetched_at": "2026-10-14T00:27:19+08:00",
+          "fetched_at": "2026-10-14T01:09:46+08:00",
           "open_minutes": [
             540,
             1080
@@ -1137,7 +1137,7 @@
     {
       "seq": 39,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1159,7 +1159,7 @@
     {
       "seq": 40,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "query_route",
       "arguments": {
         "from": [
@@ -1181,20 +1181,20 @@
     {
       "seq": 41,
       "type": "Decision",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "summary": "室内筛选检查 5 个组合；排除原因：路线缺失；无可验证方案。"
     },
     {
       "seq": 42,
       "type": "Tool",
-      "at": "2026-10-14T00:27:19+08:00",
+      "at": "2026-10-14T01:09:46+08:00",
       "action": "save_itinerary",
       "arguments": {
-        "run_id": "8af2f67d6344445e"
+        "run_id": "49366b68e6ea4f63"
       },
       "ok": true,
       "observation": {
-        "file": "8af2f67d6344445e.json",
+        "file": "49366b68e6ea4f63.json",
         "status": "saved"
       },
       "duration_ms": 0.01

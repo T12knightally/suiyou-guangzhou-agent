@@ -19,6 +19,8 @@ function visitNotes(place) {
   if (place.facts_status === 'official_regular_rules') {
     if (place.ticket_scope) notes.push(place.ticket_scope);
     if (place.reservation_note) notes.push(place.reservation_note);
+    if (place.current_notice) notes.push(place.current_notice);
+    if (place.entry_note) notes.push(place.entry_note);
     if (place.last_entry_minute != null) notes.push(`最晚入场 ${String(Math.floor(place.last_entry_minute/60)).padStart(2,'0')}:${String(place.last_entry_minute%60).padStart(2,'0')}`);
     notes.push('临时开放调整以场馆公告为准');
   }
@@ -56,7 +58,7 @@ function timeline(plan) {
   return `<div class="timeline">${plan.schedule.entries.map(e => `<div class="stop ${esc(e.kind)}"><time>${esc(e.start)}<br>— ${esc(e.end)}</time><div class="body"><h4>${esc(e.title)}</h4><p>${esc(entryDetail(e, plan))}</p></div></div>`).join('')}</div>`;
 }
 function officialLinks(plan) {
-  const safe = u => {try {const x = new URL(u); return x.protocol === 'https:' && ['www.gdmuseum.com','www.gzlib.org.cn'].includes(x.hostname);} catch {return false;}};
+  const safe = u => {try {const x = new URL(u); return x.protocol === 'https:' && ['www.gdmuseum.com','www.gzlib.org.cn','www.nywmuseum.org.cn','www.gznjs.cn','www.lw.gov.cn','lyylj.gz.gov.cn'].includes(x.hostname);} catch {return false;}};
   return plan.places.filter(p => p.official_sources?.length).map(p => `<details class="source-note"><summary>${esc(p.name)} · 查看场馆信息</summary><p>${esc(p.opening_basis || '常规资料需重新核对')} · 资料核对于 ${esc((p.facts_checked_at || '').slice(0,10))}</p>${p.official_sources.filter(s => safe(s.url)).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a>`).join(' · ')}<p>${esc(p.reservation_note || '请查看最新预约说明')}</p></details>`).join('');
 }
 function costs(plan) {

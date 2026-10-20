@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>南越王博物院-参观</title>
+	<link rel="shortcut icon" href="../../Contents/img/favicon.ico" type="image/x-icon" />
+    <script src="../../Contents/js/jquery-1.10.1.min.js"></script>
+    <script src="../../Contents/js/common.js"></script>
+    <link rel="stylesheet" href="../../Contents/css/all.css" />
+</head>
+<style>
+.inner-secmenu{display:none;}
+.list_box ul li{list-style-type: disc;}
+</style>
+<body>
+    
+
+<header>
+    <div class="allcenter">
+        <a href="/Home/Index">
+            <div class="logo"></div>
+        </a>
+        <div id="headmenu">
+            
+
+<ul class="fsmenu">
+            <li >
+                <a href="/Home/Index" >首页</a>
+
+            </li>
+            <li class=active>
+                <a href="/News/VisitIndex/Visit" >参观</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/News/VisitIndex/Visit#kfzn" >开放时间</a>
+                            </li>
+                            <li >
+                                <a href="/News/VisitIndex/Visit#jtzy" >交通指引</a>
+                            </li>
+                            <li >
+                                <a href="/News/VisitIndex/Visit#pwxx" >票务信息</a>
+                            </li>
+                            <li >
+                                <a href="/News/VisitIndex/Visit#gnfw" >馆内服务</a>
+                            </li>
+                            <li >
+                                <a href="/News/VisitIndex/Visit#cgxz" >参观须知</a>
+                            </li>
+                    </ul>
+            </li>
+            <li >
+                <a href="/News/TextList/yfzx" >资讯</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/News/TextList/yfzx" >院方资讯</a>
+                            </li>
+                            <li >
+                                <a href="/News/TextList/tzgg" >通知公告</a>
+                            </li>
+                            <li >
+                                <a href="/News/List/wbzx" >文博资讯</a>
+                            </li>
+                            <li >
+                                <a href="/News/List/djgz" >党建工作</a>
+                            </li>
+                            <li >
+                                <a href="/News/List/zwgk" >财务预决算公开</a>
+                            </li>
+                            <li >
+                                <a href="/News/List/esdjs" >学习宣传贯彻党的二十大精神</a>
+                            </li>
+                    </ul>
+            </li>
+            <li >
+                <a href="/Exhibition/Index/Exhibition" >展览</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/Exhibition/BList/jbcl" >基本陈列</a>
+                            </li>
+                            <li >
+                                <a href="/Exhibition/TList/lszl" >临时展览</a>
+                            </li>
+                            <li >
+                                <a href="/News/ImgList/yzzs" >遗址展示</a>
+                            </li>
+                            <li >
+                                <a href="/Exhibition/TList/xszt" >线上展厅</a>
+                            </li>
+                    </ul>
+            </li>
+            <li >
+                <a href="/Collection/List/zyzb" >典藏</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/Collection/List/zyzb" >明星文物</a>
+                            </li>
+                            <li >
+                                <a href="/Collection/List/dcjp" >典藏精品</a>
+                            </li>
+                    </ul>
+            </li>
+            <li >
+                <a href="/News/ImgList/pphd" >教育</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/News/ImgList/pphd" >品牌活动</a>
+                            </li>
+                            <li >
+                                <a href="/News/Details/tshd" >特色活动</a>
+                            </li>
+                            <li >
+                                <a href="/News/Details/fwjs" >服务建设</a>
+                            </li>
+                            <li >
+                                <a href="/News/Details/zyz" >志愿者</a>
+                            </li>
+                    </ul>
+            </li>
+            <li >
+                <a href="/News/VideoList/dsp" >视频</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/News/VideoList/dsp" >短视频</a>
+                            </li>
+                            <li >
+                                <a href="/News/VideoList/dsjm" >电视节目</a>
+                            </li>
+                            <li >
+                                <a href="/News/VideoList/cfbd" >采访报道</a>
+                            </li>
+                            <li >
+                                <a href="/News/VideoList/zbhf" >无障碍影像</a>
+                            </li>
+                            <li >
+                                <a href="/News/VideoList/jjsp" >讲解视频</a>
+                            </li>
+                    </ul>
+            </li>
+            <li >
+                <a href="/About/Index/bwyjj" >关于</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/About/Index/bwyjj" >博物院简介</a>
+                            </li>
+                            <li >
+                                <a href="/About/Index/jgsz" >机构设置</a>
+                            </li>
+                            <li >
+                                <a href="/About/Index/wgzq" >王宫展区</a>
+                            </li>
+                            <li >
+                                <a href="/About/Index/wmzq" >王墓展区</a>
+                            </li>
+                    </ul>
+            </li>
+</ul>
+
+        </div>
+        <div class="quickmenu">
+            
+            <span><a href="/Home/Index">中</a><a href="/En/News/About">EN</a></span>
+            <span>
+                
+                <a class="search" href="/Other/FullTextSearch" target="_blank"><i class="iconfont icon-chazhao"></i></a>
+            </span>
+        </div>
+    </div>
+    <div class="secmenu-bg"></div>
+</header>
+
+<div class="inner-banner">
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("header .fsmenu>li").hover(
+            function () {
+                if (!$(this).has("ul").length) {
+                    return;
+                }
+                $(".secmenu-bg").addClass("active");
+            },
+            function () {
+                $(".secmenu-bg").removeClass("active");
+            }
+        );
+    });
+
+    //注销
+    function Logout() {
+        $.ajax({
+            url: '/AjaxAccount/LogOut',
+            type: 'POST',
+            success: function () {
+                location.reload();
+            }
+        });
+    }
+</script>
+
+    <div class="inner-cont visitbg">
+        <div class="kfznbg"></div>
+        <div class="allcenter">
+            
+
+
+
+
+    <ul class="inner-secmenu">
+            <li class=""><a href="/News/VisitIndex/Visit#kfzn">开放时间</a></li>
+            <li class=""><a href="/News/VisitIndex/Visit#jtzy">交通指引</a></li>
+            <li class=""><a href="/News/VisitIndex/Visit#pwxx">票务信息</a></li>
+            <li class=""><a href="/News/VisitIndex/Visit#gnfw">馆内服务</a></li>
+            <li class=""><a href="/News/VisitIndex/Visit#cgxz">参观须知</a></li>
+    </ul>
+
+            <div class="kfzn" id="kfzn">
+                <p>
+                    周二至周日9:00-17:30，17:00停止领票及进场。<br />
+                    王宫展区免费参观；王墓展区购票进场。<br />
+                    逢周一闭馆，遇国家法定假期照常开放。<br />
+
+                </p>
+                <img src="../../Contents/img/visit/kfzn-img.png" alt="" />
+            </div>
+            <div class="jtzy" id="jtzy">
+                <img src="../../Contents/img/visit/jtzy-img.png" alt="" />
+                <div class="box">
+                    <div class="visit-title">交通指引</div>
+                    <p>
+                        王宫展区<br />
+                        地址：广州市越秀区中山四路316号<br />
+                        地铁：一、二号线公园前站F出口；公交：财厅站、中山五路站
+                    </p>
+                    <p>
+                        王墓展区<br />
+                        地址：广州市越秀区解放北路867号<br />
+                        地铁：二号线越秀公园站E出口；公交：越秀公园站、解放北路口站、盘福路站
+                    </p>
+                </div>
+            </div>
+            <div class="pwxx" id="pwxx">
+                <div class="visit-title">票务信息</div>
+                <div class="flexbox">
+                    <div class="box">
+                        <p><strong>王宫展区</strong><br />免费预约参观，请从南越王博物院官方公众号点击菜单栏“王宫展区”→“门票讲解预约”进行预约，成功预约后无需取票，中国大陆观众到闸机刷身份证入场，港澳台及海外观众刷二维码入场。请从王宫展区东门（位于中山四路316号，近城隍庙）进入展区，并从王宫展区西门（位于北京路374号，近广东省财政厅）离开展区。</p>
+                        <p>
+                            <strong>王墓展区</strong><br />全票10.00元，半价票5.00元。门票不含南越文王墓墓室下层参观，墓室下层参观票需另行预约，请前往南越王博物院微信公众号进行预约。<br />
+                            <br/>
+							半价票细则：全日制大学本科及以下学历学生、60周岁（含）-64周岁（含）人士。盲人、智力残疾人、双下肢残疾人和其他重度残疾人的1名陪护人员。<br />
+                            <br/>
+							免费票细则：
+							免费人员免费不免票。①65周岁（含）以上长者、18周岁（不含）以下未成年人；②残障人士；现役军人、残疾军人、军队离退休干部、退役军人和三属（烈属及因公牺牲军人、病故军人遗属）；在职、退休、残疾消防救援人员和消防救援院校学员；无偿献血优待对象；民政部门确认的最低生活保障家庭、特困人员、最低生活保障边缘家庭、支出型困难家庭等基本生活困难群体。<br/>
+							（①类免费人群入展区参观前，需凭相关证件线上预约或者人工窗口申领免费票进场；②类免费人群入展区参观前，需凭相关证件在人工窗口申领免费票进场。）南越文王墓墓室下层参观票需另行预约，一人一票。可提前一天通过"南越王博物院"微信公众号“王墓展区→门票讲解预约→墓室下层参观”免费预约。凭身份证核验参观。
+							
+                        </p>
+                    </div>
+                    <div class="box">
+                        <p>关注"南越王博物院"微信公众号进行门票预约。</p>
+                        <div class="ewm">
+                            <i><img src="../../Contents/img/common/wb.jpg" alt="" />官方微博</i>
+                            <i><img src="../../Contents/img/common/wx.jpg" alt="" />官方微信</i>
+                            <i><img src="../../Contents/img/common/nxy.jpg" alt="" />南小越</i>
+                        </div>
+                        <p>
+                            咨询电话：<br />
+                            020-83896501（王宫展区）<br />
+                            020-36182920（王墓展区）
+                        </p>
+						<div style="display:block; width:800px">
+							<img style="object-fit:contain;width:800px;" src="../../Contents/img/visit/buyinfo.jpg" alt="南越王博物院（王墓展区）购票指引" />
+							<!--img style="object-fit:contain;width:800px;" src="../../Contents/img/visit/mfkf-img.jpg" alt="2025年免费开放日" /-->
+						</div>
+                    </div>
+                    <img src="../../Contents/img/visit/pwxx-img.png" alt="" />
+                </div>
+            </div>
+            <div class="visit-title gnfw-visit-title" id="gnfw">馆内服务</div>
+            <div class="gnfw">
+                <img src="../../Contents/img/visit/gnfw-img.png" alt="" />
+                <div class="box">
+                    <p>
+                        一、行李寄存服务：
+                    </p>
+					<p>
+						1.王宫展区：提供免费行李寄存服务
+					</p>
+					
+					<p>
+						2.王墓展区：提供自助行李寄存柜
+					</p>
+					<p>
+						<img style="width:800px" object-fit: contain; src="../../Contents/img/visit/gnfw-bg.jpg" alt="" />
+					</p>
+					<p>
+                        二、导览服务：
+                    </p>
+					<p>免费讲解服务：南越王博物院提供线上语音导览服务及免费定时定点讲解服务。两个展区提供免费定时定点讲解服务（王墓展区每天9:30、王宫展区每天9:30），限20人，额满即止，详询服务台。</p>
+					<p>收费讲解服务：南越王博物院提供官方收费人工讲解服务，可于综合陈列楼一楼“收费讲解服务台”购买讲解服务产品。</p>
+					<p>
+                        三、其它服务：
+                    </p>
+					<p>● 提供咨询、受理投诉处理、应急医药箱。</p>
+					<p>● 爱心服务预约：需要无障碍服务的观众可提前2天，电话预约入展区当日的爱心服务。</p>
+					<p>● 租借服务：老花镜、助听器、婴儿车、拐杖、轮椅、盲文简介。</p>
+					<p>● 手语导赏：需提前7个工作日扫码预约（长按识别下方二维码进入预约页面）。</p>
+					<img width="300" height="300" src="../../Contents/img/visit/sydsqr-img.jpg" alt="" />
+                </div>
+            </div>
+            <div class="visit-title cgxz-visit-title" id="cgxz">参观须知</div>
+            <div class="cgxz">
+                <p>
+                    1、我院实行全员预约参观制度，请关注我院微信服务号“南越王博物院”，点击“王墓展区”或“王宫展区”—“门票预约”进行实名制预约。<br />
+2、预约成功后，请务必按您所预约的参观时段到达我院，如您在非预约时段到达，会给您的入场带来不便。<br />
+3、到达我院后，请配合现场工作人员指引，验票后有序进入展区。<br />
+4、如有疑问，请致电020-36182920（王墓展区）、020-83896501（王宫展区）。
+                </p>
+                <img src="../../Contents/img/visit/cgxz-img.png" alt="" />
+            </div>
+        </div>
+    </div>
+    
+<footer>
+    <div class="firstpart">
+        <div class="allcenter">
+            <div id="footmenu">
+                
+
+<ul class="fsmenu">
+            <li >
+                <a href="/Home/Index" >首页</a>
+
+            </li>
+            <li >
+                <a href="/News/VisitIndex/Visit" >参观</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/News/VisitIndex/Visit#kfzn" >开放时间</a>
+                            </li>
+                            <li >
+                                <a href="/News/VisitIndex/Visit#jtzy" >交通指引</a>
+                            </li>
+                            <li >
+                                <a href="/News/VisitIndex/Visit#pwxx" >票务信息</a>
+                            </li>
+                            <li >
+                                <a href="/News/VisitIndex/Visit#gnfw" >馆内服务</a>
+                            </li>
+                            <li >
+                                <a href="/News/VisitIndex/Visit#cgxz" >参观须知</a>
+                            </li>
+                    </ul>
+            </li>
+            <li >
+                <a href="/News/TextList/yfzx" >资讯</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/News/TextList/yfzx" >院方资讯</a>
+                            </li>
+                            <li >
+                                <a href="/News/TextList/tzgg" >通知公告</a>
+                            </li>
+                            <li >
+                                <a href="/News/List/wbzx" >文博资讯</a>
+                            </li>
+                            <li >
+                                <a href="/News/List/djgz" >党建工作</a>
+                            </li>
+                            <li >
+                                <a href="/News/List/zwgk" >财务预决算公开</a>
+                            </li>
+                            <li >
+                                <a href="/News/List/esdjs" >学习宣传贯彻党的二十大精神</a>
+                            </li>
+                    </ul>
+            </li>
+            <li >
+                <a href="/Exhibition/Index/Exhibition" >展览</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/Exhibition/BList/jbcl" >基本陈列</a>
+                            </li>
+                            <li >
+                                <a href="/Exhibition/TList/lszl" >临时展览</a>
+                            </li>
+                            <li >
+                                <a href="/News/ImgList/yzzs" >遗址展示</a>
+                            </li>
+                            <li >
+                                <a href="/Exhibition/TList/xszt" >线上展厅</a>
+                            </li>
+                    </ul>
+            </li>
+            <li >
+                <a href="/Collection/List/zyzb" >典藏</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/Collection/List/zyzb" >明星文物</a>
+                            </li>
+                            <li >
+                                <a href="/Collection/List/dcjp" >典藏精品</a>
+                            </li>
+                    </ul>
+            </li>
+            <li >
+                <a href="/News/ImgList/pphd" >教育</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/News/ImgList/pphd" >品牌活动</a>
+                            </li>
+                            <li >
+                                <a href="/News/Details/tshd" >特色活动</a>
+                            </li>
+                            <li >
+                                <a href="/News/Details/fwjs" >服务建设</a>
+                            </li>
+                            <li >
+                                <a href="/News/Details/zyz" >志愿者</a>
+                            </li>
+                    </ul>
+            </li>
+            <li >
+                <a href="/News/VideoList/dsp" >视频</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/News/VideoList/dsp" >短视频</a>
+                            </li>
+                            <li >
+                                <a href="/News/VideoList/dsjm" >电视节目</a>
+                            </li>
+                            <li >
+                                <a href="/News/VideoList/cfbd" >采访报道</a>
+                            </li>
+                            <li >
+                                <a href="/News/VideoList/zbhf" >无障碍影像</a>
+                            </li>
+                            <li >
+                                <a href="/News/VideoList/jjsp" >讲解视频</a>
+                            </li>
+                    </ul>
+            </li>
+            <li >
+                <a href="/About/Index/bwyjj" >关于</a>
+
+                    <ul class="secmenu">
+                            <li >
+                                <a href="/About/Index/bwyjj" >博物院简介</a>
+                            </li>
+                            <li >
+                                <a href="/About/Index/jgsz" >机构设置</a>
+                            </li>
+                            <li >
+                                <a href="/About/Index/wgzq" >王宫展区</a>
+                            </li>
+                            <li >
+                                <a href="/About/Index/wmzq" >王墓展区</a>
+                            </li>
+                    </ul>
+            </li>
+</ul>
+
+            </div>
+            <ul class="ewmbox">
+                <li>
+                    <img src="../../Contents/img/common/wx.jpg" alt="官方微信" />
+                    <p>官方微信</p>
+                </li>
+                <li>
+                    <img src="../../Contents/img/common/wb.jpg" alt="官方微博" />
+                    <p>官方微博</p>
+                </li>
+                <li>
+                    <img src="../../Contents/img/common/nxy.jpg" alt="南小越" />
+                    <p>南小越</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="secpart">
+        <div class="allcenter" id="divLink">
+            
+        </div>
+    </div>
+	<div style="display:flex;justify-content:center;align-items:center;height:80px;">
+			<script type="text/javascript">
+				document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript  src='https://dcs.conac.cn/js/nis/44/01/00/d9b3c40f3a0232a9340d667248e6442d/12440100MB2D98066L-20001294.js' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+		</div>
+    <div class="thirdpart">
+		
+        &copy;<span class="yearnow" id="yearnow"></span>南越王博物院
+        <a href="https://beian.miit.gov.cn/"
+           class="beian"
+           target="_blank"
+           rel="noopener noreferrer">
+            粤ICP备2022084889号-1
+        </a>
+        <!-- <div class="gongan">
+          <img src="../../Contents/img/common/gongan.png" alt="浙公网安备" />
+          <p>粤公网安备 1111号</p>
+        </div>
+        <div class="sybox">
+          <span id="_ideConac" class="sydw">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img
+                id="imgConac"
+                src="//dcs.conac.cn/image/blue.png"
+                data-bd-imgshare-binded="1"
+                alt="事业单位"
+              />
+            </a>
+          </span>
+        </div> -->   
+        <div class="gongan">
+            网站访问量：1559204 人  &nbsp;&nbsp;&nbsp;&nbsp; 
+        </div>             
+    </div>      
+    <!--访问-->
+    <input type="hidden" id="channelno" value="" />
+    <input type="hidden" id="channelname" value="" />
+    
+    <input type="hidden" id="userid" value="" />
+    <input type="hidden" id="username" value="访客" />
+    <script src="../../Contents/js/Sata.js" type="text/javascript"></script>
+</footer>
+<script>
+    $(function () {
+        var year = new Date().getFullYear();
+        $("#yearnow").html(year);
+        f_getLink();
+    });
+
+    //友情链接
+    function f_getLink() {
+        $.ajax({
+            url: "/AjaxCommon/GetLinks",
+            type: "POST",
+            datatype: "json",
+            success: function (jdata) {
+                var strHtml = '';
+                for (var i = 0; i < jdata.length; i++) {
+                    strHtml += ' <a href="' + jdata[i].LinkUrl + '" target="_blank">' + jdata[i].Title + '</a>';
+                }
+                $("#divLink").html(strHtml);
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

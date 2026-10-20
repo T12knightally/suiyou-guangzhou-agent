@@ -1,0 +1,36 @@
+{
+  "version": "1.0-defense",
+  "assembled_on": "2026-10-20",
+  "runtime_evidence_date": "2026-10-14",
+  "repository": "https://github.com/T12knightally/suiyou-guangzhou-agent",
+  "unit_tests": 59,
+  "synthetic_scenarios": "12/12",
+  "historical_real_model_checkpoints": 8,
+  "official_sources": 10,
+  "operating_rules": 4,
+  "known_admissions": 3,
+  "report_pages": 12,
+  "defense_pages": 18,
+  "limitations": [
+    "Historical trip date 2026-10-17; not a current forecast",
+    "Official calendar covers 2026-10-14 through 2026-10-20; not extended by documentation release",
+    "New source rules have unit regression evidence, not new end-to-end live itinerary runs",
+    "No public application deployment, new browser visual validation, or real student study"
+  ],
+  "sha256": {
+    "app.py": "8297505eb364cbaafe4cadc70c9aaa410538d4eb9a0956e60275fb05347d0e4d",
+    "agent/core.py": "cfd89500f22e3c61c6baaf4410ead7f2dcf9b925a9288b811fa09dc6658e360d",
+    "agent/providers.py": "df66e58b8ef85e1b9505208d952b25dc2d290fd6645a21b4bf57580eb2bdc6c8",
+    "agent/requirements.py": "cb4f8a54286dfde38a699812c6723d3645a6571744ab7a25fb0494bf3d00fac0",
+    "agent/venue_facts.py": "79ffa8c533e5809f5012a8d215301417f91c63060196ec93fcbab6da9b2026ee",
+    "config/venue_facts.json": "74a404680e170a0c0d2c53bf5f7994f672eb0355f312ddb120abc1bb94be6022",
+    "web/app.js": "6058a9540c023b30bc6aa6014f769c72ec00db47f650703bb608c39ddf4ef035",
+    "tests/test_source_expansion.py": "1e1174e184cbd4dd73ea387253e3c32a369e4fed8c6718f3de59bdb208058378",
+    "evidence/evaluation.json": "b0c488d196e611da59890db15ae0635fd5547dba3a562dfc083ba6b62e4d2d29",
+    "evidence/report-final-checks.json": "60df2f0a9bb7cb7e49156054964106e89541a3a55bfcf26b50b065fd3166c2d9",
+    "docs/穗游_答辩精细讲解稿.pdf": "542565b267e7df2227ef2e80f2bd3fa9f37ecb6e56241fe9575619df8b2a8afc",
+    "docs/穗游_答辩精细讲解稿.md": "ece2c5019d89c5f7c98ae270c27d429a598b064f1b89fd27ade398efea6bc76e",
+    "docs/待填学号_待填姓名_穗游广州周末出行Agent.pdf": "5fc4fd5a9ba19fdf587eda31c17622093e78849f15cc4c43b8c837c9fee0778c",
+    "docs/穗游广州周末出行Agent_报告.md": "511c1dd03b0d2eb415926179c9f64cc26228f1f7cb2cf6f3c5218c0c5bc7849e"
+  }
+}

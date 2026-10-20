@@ -15,6 +15,10 @@ def apply_facts(place,day,today):
     if not fact:return place
     place['official_sources']=fact['sources']
     place['facts_checked_at']=fact['checked_at']
+    if fact.get('kind')=='description_only':
+        place['facts_status']='official_description_only'
+        place['opening_basis']='官方页面仅提供景点介绍，未核实当日开放与价格'
+        return place
     age=(date.fromisoformat(today)-date.fromisoformat(fact['checked_at'][:10])).days
     if age<0 or age>catalog['max_age_days']:
         place['notice']+='；官方常规资料已过核验期'
@@ -28,6 +32,8 @@ def apply_facts(place,day,today):
     place['booking_url']=fact.get('booking_url')
     place['facts_status']='official_regular_rules'
     place['factual_status']='official_reference'
+    for field in ['poi_query','poi_names','visit_scope','current_notice','entry_note']:
+        if field in fact:place[field]=fact[field]
     # The current audit covers this normal working week only, not every future holiday.
     if fact['calendar_valid_from']<=day<=fact['calendar_valid_to']:
         place['closed']=date.fromisoformat(day).weekday() in fact['closed_weekdays']
@@ -37,5 +43,5 @@ def apply_facts(place,day,today):
     else:
         place['open_minutes']=None
         place['opening_basis']='超出已核对日历区间，节假日或临时开放安排需确认'
-    place['notice']='；'.join([fact['ticket_scope'],fact['reservation_note'],place['opening_basis']])
+    place['notice']='；'.join(x for x in [fact['ticket_scope'],fact['reservation_note'],place['opening_basis'],fact.get('current_notice'),fact.get('entry_note')] if x)
     return place

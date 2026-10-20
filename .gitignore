@@ -1,8 +1,5 @@
 .env
 __pycache__/
 runs/
-.test_work/
 .venv/
-node_modules/
-server.log
-evidence/benchmark_runs/
+.test_work/

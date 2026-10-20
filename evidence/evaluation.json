@@ -1,6 +1,6 @@
 {
   "unit_tests": {
-    "total": 53,
+    "total": 59,
     "failures": 0,
     "errors": 0
   },
@@ -13,8 +13,8 @@
       "actual": "draft",
       "passed": true,
       "independent_errors": [],
-      "latency_ms": 1.0,
-      "run_id": "d43d9a08c4ca4aea",
+      "latency_ms": 1.07,
+      "run_id": "ea0218e2e83540d9",
       "tool_events": 43,
       "within_budget": true,
       "within_time": true
@@ -25,8 +25,8 @@
       "actual": "draft",
       "passed": true,
       "independent_errors": [],
-      "latency_ms": 0.46,
-      "run_id": "d54a6f1ad2f04901",
+      "latency_ms": 0.5,
+      "run_id": "883d0fd192264cf7",
       "tool_events": 24,
       "within_budget": true,
       "within_time": true
@@ -37,8 +37,8 @@
       "actual": "draft",
       "passed": true,
       "independent_errors": [],
-      "latency_ms": 0.73,
-      "run_id": "39f5c0d470804037",
+      "latency_ms": 0.71,
+      "run_id": "26468759079e49fe",
       "tool_events": 33,
       "within_budget": true,
       "within_time": true
@@ -49,8 +49,8 @@
       "actual": "no_feasible_plan",
       "passed": true,
       "independent_errors": [],
-      "latency_ms": 0.36,
-      "run_id": "8af2f67d6344445e",
+      "latency_ms": 0.38,
+      "run_id": "49366b68e6ea4f63",
       "tool_events": 39,
       "within_budget": null,
       "within_time": null
@@ -62,7 +62,7 @@
       "passed": true,
       "independent_errors": [],
       "latency_ms": 1.01,
-      "run_id": "1d6b1f58c09b4777",
+      "run_id": "6a4bccb4c4ae4900",
       "tool_events": 43,
       "within_budget": true,
       "within_time": true
@@ -74,7 +74,7 @@
       "passed": true,
       "independent_errors": [],
       "latency_ms": 0.06,
-      "run_id": "cf60b148f1e6453d",
+      "run_id": "62a9e40e77214e6e",
       "tool_events": 3,
       "within_budget": null,
       "within_time": null
@@ -85,8 +85,8 @@
       "actual": "no_feasible_plan",
       "passed": true,
       "independent_errors": [],
-      "latency_ms": 1.05,
-      "run_id": "f51e6d7fac764b17",
+      "latency_ms": 1.36,
+      "run_id": "5dde9b376b854045",
       "tool_events": 39,
       "within_budget": null,
       "within_time": null
@@ -97,8 +97,8 @@
       "actual": "needs_input",
       "passed": true,
       "independent_errors": [],
-      "latency_ms": 0.04,
-      "run_id": "bd4023350e0f4edf",
+      "latency_ms": 0.03,
+      "run_id": "019be06c884a467e",
       "tool_events": 1,
       "within_budget": null,
       "within_time": null
@@ -109,8 +109,8 @@
       "actual": "draft",
       "passed": true,
       "independent_errors": [],
-      "latency_ms": 1.57,
-      "run_id": "2926665f71cd4d71",
+      "latency_ms": 1.24,
+      "run_id": "3e7aa1d95eb24ba8",
       "tool_events": 43,
       "within_budget": true,
       "within_time": true
@@ -122,7 +122,7 @@
       "passed": true,
       "independent_errors": [],
       "latency_ms": 0.02,
-      "run_id": "918e424aa7e94c04",
+      "run_id": "a594e6153d2848cf",
       "tool_events": 1,
       "within_budget": null,
       "within_time": null
@@ -133,8 +133,8 @@
       "actual": "draft",
       "passed": true,
       "independent_errors": [],
-      "latency_ms": 1.08,
-      "run_id": "35091728f4694f48",
+      "latency_ms": 1.49,
+      "run_id": "94d4592c6abb42be",
       "tool_events": 43,
       "within_budget": true,
       "within_time": true
@@ -145,8 +145,8 @@
       "actual": "invalid",
       "passed": true,
       "independent_errors": [],
-      "latency_ms": 0.04,
-      "run_id": "c8f6b8721fff44b1",
+      "latency_ms": 0.03,
+      "run_id": "189abd3b3ce24fcb",
       "tool_events": 1,
       "within_budget": null,
       "within_time": null
@@ -154,8 +154,8 @@
   ],
   "latency": {
     "runs": 50,
-    "p50_ms": 11.4,
-    "p95_ms": 12.6,
+    "p50_ms": 10.78,
+    "p95_ms": 12.06,
     "scope": "本机离线规则引擎；含 JSON 落盘，不含浏览器，不代表在线接口时延"
   },
   "model_validation": "仅脚本化 API 契约测试；没有调用真实模型",

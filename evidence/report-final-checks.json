@@ -1,18 +1,66 @@
 {
-  "pages": 12,
-  "template_headings": 24,
-  "attachments": 4,
-  "fonts": [
-    "AAAAAA+SimHei",
-    "AAAAAB+SimHei",
-    "AAAAAC+SimHei",
-    "AAAAAD+SimHei"
-  ],
-  "text_colors": [
-    "(0.0, 0.0, 0.0)"
-  ],
-  "detected_enclosed_tables": 10,
-  "text_inside_page": true,
-  "latest_http_playback": true,
-  "browser_visual_test": false
+  "report": {
+    "pages": 12,
+    "fonts": [
+      "AAAAAA+SimHei",
+      "AAAAAB+SimHei",
+      "AAAAAC+SimHei",
+      "AAAAAD+SimHei"
+    ],
+    "all_text_black": true,
+    "bounds_ok": true,
+    "table_count": 10,
+    "page_char_counts": [
+      506,
+      1021,
+      955,
+      1246,
+      1229,
+      945,
+      843,
+      760,
+      830,
+      945,
+      950,
+      1524
+    ],
+    "attachments": [
+      "current-live-trace.json",
+      "offline-evaluation.json",
+      "real-model-conversation.json",
+      "repair-evaluation.json"
+    ]
+  },
+  "defense": {
+    "pages": 18,
+    "fonts": [
+      "AAAAAA+SimHei",
+      "AAAAAB+SimHei",
+      "AAAAAC+SimHei",
+      "AAAAAD+SimHei"
+    ],
+    "all_text_black": true,
+    "bounds_ok": true,
+    "table_count": 12,
+    "page_char_counts": [
+      811,
+      762,
+      816,
+      909,
+      876,
+      952,
+      785,
+      810,
+      889,
+      833,
+      844,
+      843,
+      805,
+      1016,
+      863,
+      874,
+      906,
+      1359
+    ]
+  }
 }
